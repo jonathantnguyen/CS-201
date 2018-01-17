@@ -41,6 +41,7 @@ exit;
 
 void permutationBank()
 { 
+	int i = 0;
 	int numberBank[9];
 	while(numberBank[9] != NULL)
 	{
@@ -50,7 +51,9 @@ void permutationBank()
 		{
 			numberBank[i] = tempNumber;
 			printf("Number: %i\n",tempNumber);
+			i++;
 		}
+
 	}
 }
 
