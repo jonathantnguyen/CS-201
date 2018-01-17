@@ -47,14 +47,10 @@ void permutationBank()
 
 	while(i <= 9)
 	{
-		printf("In 9 While \n");
 		int tempNumber = (rand() % 9);
-		printf("Random Number: %i \n", tempNumber);
-
 		if(numberChecker(tempNumber, numberBank))
 		{
 			numberBank[i] = tempNumber;
-			printf("Number: %i\n",tempNumber);
 			i++;
 		}
 	}
@@ -67,7 +63,7 @@ int numberChecker(int tempNumber, int numberBank[])
 	{ 
 		if (tempNumber == numberBank[j])
 		{
-			printf("In j loop\n");
+			printf("Number: \n", tempNumber);
 			return 0;
 		}
 	}
