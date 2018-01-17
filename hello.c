@@ -16,7 +16,7 @@ int main()
 
 	int topArray[] = {theFirst, quick, brown, fox, jumps, over, theSecond, lazy, dog}; 
 	
-	printf("%s\n",theFirst);
+	printf("%s\n",theFirst); 
 
 
 
