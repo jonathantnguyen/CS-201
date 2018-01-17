@@ -65,7 +65,7 @@ int permutationBank(int i, int tempNumber)
 int numberChecker(int tempNumber, int numberBank[])
 {
 	int j;
-	int numberBank[] = int * numberBank;
+	
 	for(j = 0; j <= 8; j++ )
 	{
 		if (tempNumber != numberBank[j])
