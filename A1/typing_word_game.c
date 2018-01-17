@@ -42,8 +42,8 @@ exit;
 void permutationBank()
 { 
 	int i = 0;
-	int numberBank[9];
-	while(numberBank[9] != NULL)
+	int numberBank[9] = NULL;
+	while(numberBank[9] == NULL)
 	{
 		int tempNumber = (rand() % 9);
 
@@ -53,7 +53,6 @@ void permutationBank()
 			printf("Number: %i\n",tempNumber);
 			i++;
 		}
-
 	}
 }
 
