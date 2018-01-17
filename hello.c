@@ -23,9 +23,10 @@ int main()
 	
 	srand(time(NULL));
 
-	numberBank = rand() % 9 + 1;
+	
 	for (i=1; i<= 9; i++)
 		{
+			numberBank = rand() % 9 + 1;
 			printf("Random number: %i\n",numberBank);
 		}
 	//printf("%s\n",topArray[i]); 
