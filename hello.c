@@ -14,7 +14,7 @@ int main()
 	char lazy[] = {'l','a','z', 'y'};
 	char dog[] = {'d','o','g'};
 
-	int topArray[] = {theFirst, quick, brown, fox, jumps, over, theSecond, lazy, dog}; 
+	int *topArray[] = {&theFirst, &quick, &brown, &fox, &jumps, &over, &theSecond, &lazy, &dog}; 
 	
 	printf("%s\n",topArray[0]); 
 
