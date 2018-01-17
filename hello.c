@@ -16,7 +16,7 @@ int main()
 	char dog[] = {'d','o','g'};
 
 
-	int topArray[r] = {theFirst, quick, brown, fox, jumps, over, the, lazy, dog};
+	int topArray[r] = {theFirst[], quick[], brown[], fox[], jumps[], over[], the[], lazy[], dog[]};
 
 	printf("%s", theFirst);
 
