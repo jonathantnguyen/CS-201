@@ -45,9 +45,10 @@ void permutationBank()
 	int i = 0;
 	int numberBank[9];
 
-	while(i <= 10)
+	while(i <= 9)
 	{
 		int tempNumber = (rand() % 9);
+		printf("R: %i\n", tempNumber)
 		if(numberChecker(tempNumber, numberBank))
 		{
 			printf("Number: %i \n", tempNumber);
