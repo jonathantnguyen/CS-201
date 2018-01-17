@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 int main()
 {
@@ -19,7 +21,7 @@ int main()
 
 	int *topArray[] = {&theFirst, &quick, &brown, &fox, &jumps, &over, &theSecond, &lazy, &dog}; 
 	
-	numberBank = rand() % 9 + 1;
+	numberBank = srand(time(0)) % 9 + 1;
 	for (i=1; i<= 9; i++)
 		{
 			printf("Random number: %i\n",numberBank);
