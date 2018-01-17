@@ -13,13 +13,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
+/*
 int permutationBank(int i, int tempNumber);
 
 int randNumberGen();
 
 int numberChecker(int tempNumber, int numberBank[]);
-
+*/
 int main()
 {
 
@@ -36,12 +36,12 @@ int main()
 	int *topArray[] = {&theFirst, &quick, &brown, &fox, &jumps, &over, &theSecond, &lazy, &dog}; 
 
 	printf("Before randNumberGen\n");
-	randNumberGen();
+	//randNumberGen();
 	printf("After randNumberGen\n");
 
 exit;
 }
-
+/*
 int randNumberGen()
 {
 	int i;
@@ -85,3 +85,4 @@ int numberChecker(int tempNumber, int numberBank[])
 		}
 	}
 }
+*/
