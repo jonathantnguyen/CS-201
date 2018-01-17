@@ -4,7 +4,7 @@ int main()
 {
 	
 	int r = 9;
-	char topArray[r] = {theFirst, quick, brown, fox, jumps, over, the, lazy, dog};
+	
 
 	char theFirst[] = {'T', 'h', 'e'};
 	char quick[] = {'q','u','i','c','k'};
@@ -16,7 +16,8 @@ int main()
 	char lazy[] = {'l','a','z', 'y'};
 	char dog[] = {'d','o','g'};
 
-
+	char topArray[r] = {theFirst, quick, brown, fox, jumps, over, the, lazy, dog};
+	
 	printf("%s\n",theFirst);
 
 
