@@ -66,7 +66,7 @@ int numberChecker(int tempNumber, int numberBank[])
 	{ 
 		if (tempNumber == numberBank[j])
 		{
-			printf("In j loop\n")
+			printf("In j loop\n");
 			return 0;
 		}
 	}
