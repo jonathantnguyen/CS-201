@@ -22,6 +22,7 @@ int numberChecker(int tempNumber, int numberBank[]);
 
 int main()
 {
+	srand(time(NULL));
 
 	char theFirst[] = {'T', 'h', 'e'};
 	char quick[] = {'q','u','i','c','k'};
@@ -35,34 +36,23 @@ int main()
 
 	int *topArray[] = {&theFirst, &quick, &brown, &fox, &jumps, &over, &theSecond, &lazy, &dog}; 
 
-	printf("Before randNumberGen\n");
-	randNumberGen();
-	printf("After randNumberGen\n");
+	permutationBank();
 
 exit;
 }
 
-int randNumberGen()
-{
-	int i;
-	srand(time(NULL));
-
-	for (i = 0; i <= 8; i++)
-	{
-		int tempNumber = (rand() % 9);
-		permutationBank(i, tempNumber);
-	}
-
-	return 0;
-}
- 
-void permutationBank(int i, int tempNumber)
+void permutationBank()
 { 
 	int numberBank[9];
-	if(numberChecker(tempNumber, numberBank))
+	while(numberBank[9] != NULL)
 	{
-		numberBank[i] = tempNumber;
-		printf("Number: %i\n",tempNumber);
+		int tempNumber = (rand() % 9);
+		
+		if(numberChecker(tempNumber, numberBank))
+		{
+			numberBank[i] = tempNumber;
+			printf("Number: %i\n",tempNumber);
+		}
 	}
 }
 
