@@ -3,8 +3,6 @@
 int main()
 {
 	
-	int r = 9;
-	
 
 	char theFirst[] = {'T', 'h', 'e'};
 	char quick[] = {'q','u','i','c','k'};
@@ -16,7 +14,7 @@ int main()
 	char lazy[] = {'l','a','z', 'y'};
 	char dog[] = {'d','o','g'};
 
-	int topArray[r] = {theFirst, quick, brown, fox, jumps, over, theSecond, lazy, dog}; 
+	int topArray[] = {theFirst, quick, brown, fox, jumps, over, theSecond, lazy, dog}; 
 	
 	printf("%s\n",theFirst);
 
