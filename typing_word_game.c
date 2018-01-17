@@ -18,7 +18,7 @@ int permutationBank(int i; int tempNumber);
 
 int randNumberGen();
 
-int numberChecker(int value, int numberBank[]);
+int numberChecker(int tempNumber, int numberBank[]);
 
 int main()
 {
