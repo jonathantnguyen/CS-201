@@ -63,9 +63,9 @@ int numberChecker(int tempNumber, int numberBank[])
 	{ 
 		if (tempNumber == numberBank[j])
 		{
-			printf("Number: %i \n", tempNumber);
 			return 0;
 		}
 	}
+	printf("Number: %i \n", tempNumber);
 	return 1;
 }
