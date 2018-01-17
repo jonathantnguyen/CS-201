@@ -3,6 +3,8 @@
 int main()
 {
 	
+	int wordBank[9];
+	int numberBank;
 
 	char theFirst[] = {'T', 'h', 'e'};
 	char quick[] = {'q','u','i','c','k'};
@@ -16,7 +18,12 @@ int main()
 
 	int *topArray[] = {&theFirst, &quick, &brown, &fox, &jumps, &over, &theSecond, &lazy, &dog}; 
 	
-	printf("%s\n",topArray[0]); 
+	numberBank = rand() % 9 + 1;
+	if (int i=0; i <= 9; i++)
+		{
+			printf("Random number: %i",numberBank);
+		}
+	printf("%s\n",topArray[i]); 
 
 
 
