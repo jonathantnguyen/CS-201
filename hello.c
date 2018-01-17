@@ -21,7 +21,7 @@ int main()
 
 	int *topArray[] = {&theFirst, &quick, &brown, &fox, &jumps, &over, &theSecond, &lazy, &dog}; 
 	
-	numberBank = srand(time()) % 9 + 1;
+	numberBank = srand(time(NULL)) % 9 + 1;
 	for (i=1; i<= 9; i++)
 		{
 			printf("Random number: %i\n",numberBank);
