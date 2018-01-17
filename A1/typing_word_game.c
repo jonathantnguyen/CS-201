@@ -14,9 +14,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-void permutationBank(int i, int tempNumber);
-
-int randNumberGen();
+void permutationBank();
 
 int numberChecker(int tempNumber, int numberBank[]);
 
@@ -47,7 +45,7 @@ void permutationBank()
 	while(numberBank[9] != NULL)
 	{
 		int tempNumber = (rand() % 9);
-		
+
 		if(numberChecker(tempNumber, numberBank))
 		{
 			numberBank[i] = tempNumber;
