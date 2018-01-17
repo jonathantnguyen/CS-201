@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-int permutationBank(int i, int tempNumber);
+void permutationBank(int i, int tempNumber);
 
 int randNumberGen();
 
