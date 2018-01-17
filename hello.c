@@ -4,7 +4,7 @@ int main()
 {
 	
 	int r = 9;
-	char topArray[r] = {theFirst[], quick[], brown[], fox[], jumps[], over[], the[], lazy[], dog[] };
+	char topArray[r] = {theFirst, quick, brown, fox, jumps, over, the, lazy, dog};
 
 	char theFirst[] = {'T', 'h', 'e'};
 	char quick[] = {'q','u','i','c','k'};
