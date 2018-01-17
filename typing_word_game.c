@@ -36,8 +36,6 @@ int main()
 	int *topArray[] = {&theFirst, &quick, &brown, &fox, &jumps, &over, &theSecond, &lazy, &dog}; 
 
 	randNumberGen();
-
-
 exit;
 }
 
@@ -64,13 +62,13 @@ int permutationBank(int i, int tempNumber)
 	return 0;
 }
 
-int numberChecker(int value, int numberBank[])
+int numberChecker(int tempNumber, int numberBank[])
 {
 	int j;
 	int numberBank[] = int * numberBank;
 	for(j = 0; j <= 8; j++ )
 	{
-		if (value != numberBank[j])
+		if (tempNumber != numberBank[j])
 		{
 			return 1;
 		}
