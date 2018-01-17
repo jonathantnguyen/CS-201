@@ -51,7 +51,6 @@ int randNumberGen()
 	{
 		int tempNumber = (rand() % 9);
 		permutationBank(i, tempNumber);
-		printf("Loop randNumberGen\n");
 	}
 
 	return 0;
@@ -60,7 +59,6 @@ int randNumberGen()
 int permutationBank(int i, int tempNumber)
 { 
 	int numberBank[9];
-	printf("function permutationBank\n");
 	if(numberChecker(tempNumber, numberBank))
 	{
 		numberBank[i] = tempNumber;
@@ -74,7 +72,6 @@ int numberChecker(int tempNumber, int numberBank[])
 	int j;
 	for(j = 0; j <= 8; j++ )
 	{ 
-		printf("Loop numberChecker\n");
 		if (tempNumber != numberBank[j])
 		{
 			return 1;
