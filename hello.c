@@ -24,7 +24,7 @@ int main()
 		{
 			printf("Random number: %i",numberBank);
 		}
-	printf("%s\n",topArray[i]); 
+	//printf("%s\n",topArray[i]); 
 
 
 
