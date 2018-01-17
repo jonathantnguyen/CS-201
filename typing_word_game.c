@@ -49,7 +49,7 @@ int randNumberGen()
 	for (i = 0; i <= 8; i++)
 	{
 		int tempNumber = (rand() % 9);
-		permutationBank(i, tempNumber)
+		permutationBank(i, tempNumber);
 	}
 	return 0;
 }
