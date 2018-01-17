@@ -5,9 +5,10 @@
 int main()
 {
 	
-	//int wordBank[9];
+	int wordBank[9];
 	int numberBank;
 	int i;
+	int j;
 
 	char theFirst[] = {'T', 'h', 'e'};
 	char quick[] = {'q','u','i','c','k'};
@@ -24,9 +25,14 @@ int main()
 	srand(time(NULL));
 
 	
-	for (i=1; i<= 9; i++)
+	for (i=0; i<= 8; i++)
 		{
 			numberBank = rand() % 9 + 1;
+
+			if (numberBank != wordBank[])
+				wordBank[j];
+				j++;
+
 			printf("Random number: %i\n",numberBank);
 		}
 	//printf("%s\n",topArray[i]); 
