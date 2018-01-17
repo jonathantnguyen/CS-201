@@ -46,23 +46,24 @@ int randNumberGen()
 	int i;
 	srand(time(NULL));
 
-	for (i = 0; i <= 1; i++)
+	for (i = 0; i <= 8; i++)
 	{
 		int tempNumber = (rand() % 9);
 		permutationBank(i, tempNumber)
 	}
- 	exit;
 }
  
 void permutationBank(int i, int tempNumber)
 { 
-	int numberBank[] == 9;
-	int value = numberChecker(tempNumber, numberBank);
-	numberBank[i] = value;
-	
+	int numberBank[] = 9;
+	if(numberChecker(tempNumber, numberBank))
+	{
+		numberBank[i] = tempNumber;
+	}
+
 }
 
-int numberChecker(int value, int numberBank[])
+int numberChecker(int value, numberBank[])
 {
 	int j;
 	int numberBank[] = int * numberBank;
@@ -70,11 +71,11 @@ int numberChecker(int value, int numberBank[])
 	{
 		if (value != numberBank[j])
 		{
-			return value;
+			return 1;
 		}
 		else
 		{
-			exit;
+			return 0;
 		}
 	}
 }
