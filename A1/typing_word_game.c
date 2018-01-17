@@ -50,6 +50,7 @@ void permutationBank()
 		int tempNumber = (rand() % 9);
 		if(numberChecker(tempNumber, numberBank))
 		{
+			printf("Number: %i \n", tempNumber);
 			numberBank[i] = tempNumber;
 			i++;
 		}
@@ -66,6 +67,5 @@ int numberChecker(int tempNumber, int numberBank[])
 			return 0;
 		}
 	}
-	printf("Number: %i \n", tempNumber);
 	return 1;
 }
