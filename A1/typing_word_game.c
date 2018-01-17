@@ -42,11 +42,12 @@ exit;
 
 void permutationBank()
 { 
-	int i;
+	int i = 0;
 	int numberBank[9];
 
 	while(i <= 9)
 	{
+		printf("In 9 While \n");
 		int tempNumber = (rand() % 9);
 
 		if(numberChecker(tempNumber, numberBank))
