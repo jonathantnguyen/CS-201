@@ -33,8 +33,9 @@ int main()
 	char dog[] = {'d','o','g'};
 
 	int *topArray[] = {&theFirst, &quick, &brown, &fox, &jumps, &over, &theSecond, &lazy, &dog}; 
-
+	printf("Before permutationBank\n");
 	permutationBank();
+	printf("After permutationBank\n");
 
 exit;
 }
