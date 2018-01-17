@@ -41,9 +41,10 @@ exit;
 
 void permutationBank()
 { 
-	int i = 0;
-	int numberBank[9] = NULL;
-	while(numberBank[9] == NULL)
+	int i;
+	int numberBank[9];
+
+	while(i <= 9)
 	{
 		int tempNumber = (rand() % 9);
 
