@@ -36,7 +36,7 @@ int main()
 	int *topArray[] = {&theFirst, &quick, &brown, &fox, &jumps, &over, &theSecond, &lazy, &dog}; 
 
 	printf("Before randNumberGen\n");
-	//randNumberGen();
+	randNumberGen();
 	printf("After randNumberGen\n");
 
 exit;
