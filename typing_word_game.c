@@ -35,9 +35,9 @@ int main()
 
 	int *topArray[] = {&theFirst, &quick, &brown, &fox, &jumps, &over, &theSecond, &lazy, &dog}; 
 
-	printf("Before randNumberGen\n")
+	printf("Before randNumberGen\n");
 	randNumberGen();
-	printf("After randNumberGen\n")
+	printf("After randNumberGen\n");
 
 exit;
 }
@@ -51,7 +51,7 @@ int randNumberGen()
 	{
 		int tempNumber = (rand() % 9);
 		permutationBank(i, tempNumber);
-		printf("Loop randNumberGen\n")
+		printf("Loop randNumberGen\n");
 	}
 
 	return 0;
