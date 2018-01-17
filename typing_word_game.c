@@ -22,7 +22,7 @@ int numberChecker(int tempNumber, int numberBank[]);
 */
 int main()
 {
-
+/*
 	char theFirst[] = {'T', 'h', 'e'};
 	char quick[] = {'q','u','i','c','k'};
 	char brown[] = {'b','r','o','w','n'};
@@ -34,7 +34,7 @@ int main()
 	char dog[] = {'d','o','g'};
 
 	int *topArray[] = {&theFirst, &quick, &brown, &fox, &jumps, &over, &theSecond, &lazy, &dog}; 
-
+*/
 	printf("Before randNumberGen\n");
 	//randNumberGen();
 	printf("After randNumberGen\n");
