@@ -54,7 +54,7 @@ int randNumberGen()
  
 int permutationBank(int i, int tempNumber)
 { 
-	int numberBank[] = 9;
+	int numberBank[9];
 	if(numberChecker(tempNumber, numberBank))
 	{
 		numberBank[i] = tempNumber;
