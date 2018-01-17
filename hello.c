@@ -22,7 +22,7 @@ int main()
 	numberBank = rand() % 9 + 1;
 	for (i=1; i<= 9; i++)
 		{
-			printf("Random number: %i",numberBank);
+			printf("Random number: %i\n",numberBank);
 		}
 	//printf("%s\n",topArray[i]); 
 
