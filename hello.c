@@ -17,7 +17,7 @@ int main()
 	char dog[] = {'d','o','g'};
 
 
-	printf("%s", topArray[0]);
+	printf("%s\n",theFirst);
 
 
 
