@@ -20,7 +20,7 @@ int main()
 	int *topArray[] = {&theFirst, &quick, &brown, &fox, &jumps, &over, &theSecond, &lazy, &dog}; 
 	
 	numberBank = rand() % 9 + 1;
-	for (i=1, i<= 9, i++)
+	for (i=1; i<= 9; i++)
 		{
 			printf("Random number: %i",numberBank);
 		}
