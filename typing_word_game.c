@@ -14,11 +14,11 @@
 #include <stdlib.h>
 #include <time.h>
 
-void permutationBank(int i; int tempNumber);
+int permutationBank(int i; int tempNumber);
 
 int randNumberGen();
 
-void numberChecker(int value, int numberBank[]);
+int numberChecker(int value, int numberBank[]);
 
 int main()
 {
@@ -51,16 +51,17 @@ int randNumberGen()
 		int tempNumber = (rand() % 9);
 		permutationBank(i, tempNumber)
 	}
+	return 0;
 }
  
-void permutationBank(int i, int tempNumber)
+int permutationBank(int i, int tempNumber)
 { 
 	int numberBank[] = 9;
 	if(numberChecker(tempNumber, numberBank))
 	{
 		numberBank[i] = tempNumber;
 	}
-
+	return 0;
 }
 
 int numberChecker(int value, int numberBank[])
