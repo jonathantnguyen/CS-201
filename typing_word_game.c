@@ -63,7 +63,7 @@ void permutationBank(int i, int tempNumber)
 
 }
 
-int numberChecker(int value, numberBank[])
+int numberChecker(int value, int numberBank[])
 {
 	int j;
 	int numberBank[] = int * numberBank;
