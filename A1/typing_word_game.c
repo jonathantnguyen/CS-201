@@ -72,13 +72,10 @@ int numberChecker(int tempNumber, int numberBank[])
 	int j;
 	for(j = 0; j <= 8; j++ )
 	{ 
-		if (tempNumber != numberBank[j])
-		{
-			return 1;
-		}
-		else
+		if (tempNumber == numberBank[j])
 		{
 			return 0;
 		}
 	}
+	return 1;
 }
