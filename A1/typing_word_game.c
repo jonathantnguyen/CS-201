@@ -45,7 +45,7 @@ void permutationBank()
 	int i = 0;
 	int numberBank[9];
 
-	while(i <= 9)
+	while(i <= 10)
 	{
 		int tempNumber = (rand() % 9);
 		if(numberChecker(tempNumber, numberBank))
