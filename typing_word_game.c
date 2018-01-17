@@ -57,7 +57,7 @@ int randNumberGen()
 void permutationBank(int i, int tempNumber)
 { 
 	int numberBank[] == 9;
-	int value = numbercheck(tempNumber, numberBank[]);
+	int value = numbercheck(tempNumber, numberBank);
 	numberBank[i] = value;
 	
 }
@@ -65,9 +65,10 @@ void permutationBank(int i, int tempNumber)
 int numberChecker(int value, int numberBank[])
 {
 	int j;
+	int numberBank[] = int * numberBank;
 	for(j = 0; j <= 8; j++ )
 	{
-		if (value != * numberBank[j])
+		if (value != numberBank[j])
 		{
 			return value;
 		}
