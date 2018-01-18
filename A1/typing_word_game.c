@@ -49,13 +49,11 @@ void permutationBank()
 	while(i <= 8)
 	{
 		int tempNumber = (rand() % 10+1);
-		tempNumber = (tempNumber - 1);
 		printf("R: %i\n", tempNumber);
 		if(numberChecker(tempNumber, numberBank))
 		{
 			numberBank[i] = tempNumber;
 			printf("Number: %i \n", tempNumber);
-			printf("While loop: %i\n", i);
 			i++;				
 		}
 
