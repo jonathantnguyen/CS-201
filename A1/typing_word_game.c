@@ -43,21 +43,27 @@ exit;
 
 void permutationBank()
 { 
+	int k;
 	int i = 0;
 	int numberBank[9];
 
 	while(i <= 8)
 	{
 		int tempNumber = (rand() % 10+1);
-		printf("R: %i\n", tempNumber);
+		//printf("R: %i\n", tempNumber);
 		if(numberChecker(tempNumber, numberBank))
 		{
 			numberBank[i] = tempNumber;
-			printf("Number: %i \n", tempNumber);
+			//printf("Number: %i \n", tempNumber);
 			i++;				
 		}
+		for(k = 0, k <= 8; k++)
+		{
+			printf("Position: %i, %s", i, numberBank[k]);
+		}
+	}	
 
-	}
+
 
 }
 
