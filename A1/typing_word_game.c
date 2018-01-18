@@ -52,8 +52,8 @@ void permutationBank()
 		printf("R: %i\n", tempNumber);
 		if(numberChecker(tempNumber, numberBank))
 		{
-			printf("Number: %i \n", tempNumber);
 			numberBank[i] = (tempNumber - 1);
+			printf("Number: %i \n", tempNumber);
 			i++;				
 		}
 
