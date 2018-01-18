@@ -43,19 +43,18 @@ exit;
 
 void permutationBank()
 { 
-	int i = 9;
+	int i = 0;
 	int numberBank[9];
 
-	while(i > 0)
+	while(i < 9)
 	{
 		int tempNumber = (rand() % 9);
 		printf("R: %i\n", tempNumber);
 		if(numberChecker(tempNumber, numberBank))
 		{
-			i--;
 			printf("Number: %i \n", tempNumber);
 			numberBank[i] = tempNumber;
-				
+			i++				
 		}
 
 	}
@@ -65,7 +64,7 @@ void permutationBank()
 int numberChecker(int tempNumber, int numberBank[])
 {
 	int j;
-	for(j = 9; j >= 0 ; j-- )
+	for(j = 0; j <= 8 ; j-- )
 	{ 
 		if (tempNumber == numberBank[j])
 		{
