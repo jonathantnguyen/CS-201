@@ -33,7 +33,7 @@ int main()
 	char dog[] = {'d','o','g'};
 
 	int *topArray[] = {&theFirst, &quick, &brown, &fox, &jumps, &over, &theSecond, &lazy, &dog}; 
-	print ("Printing: %s\n", *topArray[0]);
+	printf("Printing: %s\n", *topArray[0]);
 	printf("Before permutationBank\n");
 	permutationBank();
 	printf("After permutationBank\n");
