@@ -59,13 +59,10 @@ void permutationBank()
 		}
 
 	}
-		for(k = 0; k <= 8; k++)
-		{
-			printf("Position: %i, %s", k, numberBank[k]);
-		}	
-
-
-
+	for(k = 0; k <= 8; k++)
+	{
+		printf("Position: %i, %i", k, numberBank[k]);
+	}	
 }
 
 int numberChecker(int tempNumber, int numberBank[])
