@@ -54,7 +54,7 @@ void permutationBank()
 		{
 			printf("Number: %i \n", tempNumber);
 			numberBank[i] = tempNumber;
-			i++				
+			i++;				
 		}
 
 	}
