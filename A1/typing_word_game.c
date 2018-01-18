@@ -67,7 +67,7 @@ int numberChecker(int tempNumber, int numberBank[])
 	int j;
 	for(j = 0; j <= 8; j++ )
 	{ 
-		if ((tempNumber == numberBank[j]) || (tempNumber == 0))
+		if (tempNumber == numberBank[j])
 		{
 			return 0;
 		}
