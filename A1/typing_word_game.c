@@ -70,9 +70,14 @@ void permutationBank()
 int numberChecker(int tempNumber, int numberBank[])
 {
 	int j;
+	int k;
 	for(j = 0; j <= 8 ; j++)
 	{ 
-		printf("R: %i\n", tempNumber);
+		for(k = 0; k <= j; k++)
+		{
+			printf("Position %i:, %i\n", k, numberBank[k]);
+		}	
+		//printf("R: %i\n", tempNumber);
 		if (tempNumber == numberBank[j])
 		{
 			return 0;
