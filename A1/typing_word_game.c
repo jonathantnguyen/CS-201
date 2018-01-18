@@ -48,12 +48,12 @@ void permutationBank()
 
 	while(i <= 8)
 	{
-		int tempNumber = (rand() % 10+1);
+		int tempNumber = (rand() % 10);
+		tempNumber = (tempNumber -1);
 		printf("R: %i\n", tempNumber);
 		if(numberChecker(tempNumber, numberBank))
 		{
-			numberBank[i] = (tempNumber - 1);
-			tempNumber = (tempNumber -1);
+			numberBank[i] = (tempNumber);
 			printf("Number: %i \n", tempNumber);
 			i++;				
 		}
