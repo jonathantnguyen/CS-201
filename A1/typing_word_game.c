@@ -46,7 +46,7 @@ void permutationBank()
 	int i = 0;
 	int numberBank[9];
 
-	while(i < 9)
+	while(i <= 8)
 	{
 		int tempNumber = (rand() % 10+1);
 		printf("R: %i\n", tempNumber);
