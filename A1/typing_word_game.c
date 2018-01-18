@@ -53,6 +53,7 @@ void permutationBank()
 		if(numberChecker(tempNumber, numberBank))
 		{
 			numberBank[i] = (tempNumber - 1);
+			tempNumber = (tempNumber -1);
 			printf("Number: %i \n", tempNumber);
 			i++;				
 		}
@@ -64,7 +65,7 @@ void permutationBank()
 int numberChecker(int tempNumber, int numberBank[])
 {
 	int j;
-	for(j = 0; j < 8 ; j++ )
+	for(j = 0; j <= 8 ; j++ )
 	{ 
 		if (tempNumber == numberBank[j])
 		{
