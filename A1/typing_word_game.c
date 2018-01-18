@@ -43,7 +43,7 @@ exit;
 
 void permutationBank()
 { 
-	int i = 8;
+	int i = 9;
 	int numberBank[9];
 
 	while(i > 0)
