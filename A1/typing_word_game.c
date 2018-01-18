@@ -61,7 +61,7 @@ void permutationBank()
 	}
 	for(k = 0; k <= 8; k++)
 	{
-		printf("Position: %i, %i", k, numberBank[k]);
+		printf("Position %i:, %i\n", k, numberBank[k]);
 	}	
 }
 
