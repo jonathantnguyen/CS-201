@@ -53,7 +53,7 @@ void permutationBank()
 		if(numberChecker(tempNumber, numberBank))
 		{
 			printf("Number: %i \n", tempNumber);
-			numberBank[i-1] = tempNumber;
+			numberBank[i] = (tempNumber - 1);
 			i++;				
 		}
 
