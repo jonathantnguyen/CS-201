@@ -78,10 +78,10 @@ int numberChecker(int tempNumber, int numberBank[])
 			printf("Position %i:, %i\n", k, numberBank[k]);
 		}	
 		//printf("R: %i\n", tempNumber);
-		if (tempNumber == numberBank[j])
+		if (tempNumber != numberBank[j])
 		{
-			return 0;
+			return 1;
 		}
 	}
-	return 1;
+	return 0;
 }
