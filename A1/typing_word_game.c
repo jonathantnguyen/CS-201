@@ -73,15 +73,15 @@ int numberChecker(int tempNumber, int numberBank[])
 	int k;
 	for(j = 0; j <= 8 ; j++)
 	{ 
-		for(k = 0; k <= j; k++)
-		{
-			printf("Position %i:, %i\n", k, numberBank[k]);
-		}	
+		//for(k = 0; k <= j; k++)
+		//{
+		//	printf("Position %i:, %i\n", k, numberBank[k]);
+		//}	
 		//printf("R: %i\n", tempNumber);
-		if (tempNumber != numberBank[j])
+		if (tempNumber == numberBank[j])
 		{
-			return 1;
+			return 0;
 		}
 	}
-	return 0;
+	return 1;
 }
