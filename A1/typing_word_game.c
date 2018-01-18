@@ -33,7 +33,7 @@ int main()
 	char dog[] = {'d','o','g'};
 
 	int *topArray[] = {&theFirst, &quick, &brown, &fox, &jumps, &over, &theSecond, &lazy, &dog}; 
-	printf("Printing: %c \n", topArray[0]);
+	//printf("Printing: %s \n", topArray[0]);
 	printf("Before permutationBank\n");
 	permutationBank();
 	printf("After permutationBank\n");
@@ -67,10 +67,10 @@ int numberChecker(int tempNumber, int numberBank[])
 	int j;
 	for(j = 0; j <= 8; j++ )
 	{ 
-		if (tempNumber == numberBank[j])
+		if (tempNumber != numberBank[j])
 		{
-			return 0;
+			return 1;
 		}
 	}
-	return 1;
+	return 0;
 }
