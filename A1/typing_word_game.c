@@ -17,7 +17,7 @@
 
 int * permutationBank(int numberBank[]);
 int numberChecker(int tempNumber, int numberBank[]);
-int printWords(char *topArray[],int numberBank[]);
+void printWords(char *topArray[],int numberBank[]);
 
 int main()
 {
@@ -44,12 +44,13 @@ exit;
 }
 
 
-int printWords(char *topArray[], int numberBank[])
+void printWords(char *topArray[], int numberBank[])
 {	
 	int i;
 	int j;
 	int temp;
 	int size;
+	printf("Inside printWords\n");
 	for(i = 0; i <= 8; i++)
 	{
 		temp = numberBank[i];
@@ -68,7 +69,7 @@ int * permutationBank(int numberBank[])
 	int i = 0;
 	while(i <= 8)
 	{	
-		printf("Inside permutationBank\n");
+		//printf("Inside permutationBank\n");
 		int tempNumber = ((rand() % 9)+1);
 
 		if(numberChecker(tempNumber, numberBank))
@@ -78,7 +79,7 @@ int * permutationBank(int numberBank[])
 		}
 
 	}
-	printf("Coming out of permutationBank\n");
+	//printf("Coming out of permutationBank\n");
 	return numberBank;
 }
 
