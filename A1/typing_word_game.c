@@ -67,7 +67,8 @@ int * permutationBank(int numberBank[])
 	int k;
 	int i = 0;
 	while(i <= 8)
-	{
+	{	
+		printf("Inside permutationBank\n");
 		int tempNumber = ((rand() % 9)+1);
 
 		if(numberChecker(tempNumber, numberBank))
@@ -84,6 +85,7 @@ int numberChecker(int tempNumber, int numberBank[])
 {
 	int j;
 	int k;
+	printf("Inside numberChecker\n");
 	for(j = 0; j <= 8 ; j++)
 	{ 
 		if (tempNumber == numberBank[j])
