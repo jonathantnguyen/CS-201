@@ -50,17 +50,17 @@ void printWords(char *topArray[], int numberBank[])
 	int j;
 	int temp;
 	int size;
-	printf("Inside printWords\n");
 	for(i = 0; i <= 8; i++)
 	{
+		printf("Inside forloop i\n");
 		temp = numberBank[i];
 		size = strlen(topArray[temp]);
 		for(j = 0; j <= size; j++)
 		{
+			printf("Inside forloop j\n");
 			printf("%c", topArray[temp][j]);
 		}
 	}
-	printf("Done Printing\n");
 	printf("\n");
 }
 
