@@ -41,7 +41,7 @@ int fisherYatesShuffle(char * words[])
 		words[j] = tmp;
 
 	}
-	//return words;
+	return words;
 }
 
 /*
