@@ -35,7 +35,6 @@ int * fisherYatesShuffle(char * words[])
 	int j;
 	j = ((rand() % 9) - i);
 	char * tmp = words[];
-	char * tmp
 	for(i = 0; i <= 8; i++)
 	{
 		char * tmp = words[i];
@@ -48,8 +47,9 @@ int * fisherYatesShuffle(char * words[])
 void printing(char * words[])
 {
 	int n;
-	for(n = 0; n <= 8; n++){
-		printf("%s\n", words[n]);
+	for(n = 0; n <= 8; n++)
+	{
+		printf("%s \n", words[n]);
 	}
 }
 
