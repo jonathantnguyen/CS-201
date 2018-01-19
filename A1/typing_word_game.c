@@ -34,7 +34,6 @@ int fisherYatesShuffle(char * words[])
 	int i;
 	int j;
 	j = ((rand() % 9) - i);
-	char * tmp = words[];
 	for(i = 0; i <= 8; i++)
 	{
 		char * tmp = words[i];
