@@ -57,7 +57,7 @@ void printWords(char *topArray[], int numberBank[])
 		size = strlen(topArray[temp]);
 		for(j = 0; j <= size; j++)
 		{
-			printf("Inside forloop j\n");
+			printf("Inside forloop %d for len %d\n", j, 8);
 			printf("%c", topArray[temp][j]);
 		}
 	}
