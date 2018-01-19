@@ -18,29 +18,30 @@
 int * fisherYatesShuffle(char * words[]);
 void printing(char * words[]);
 
-int main(char * words[])
+int main(char * wordBank[])
 {
 	srand((unsigned)time(NULL));
 	char * words[] ={"The", "quick", "brown","fox", "jumps", "over", "the", "lazy", "dog"};
-	words[] = fisherYatesShuffle(words);
-	printing(words);
+	wordBank[] = fisherYatesShuffle(words);
+	printing(wordBank);
 
 exit;
 }
 
-int * fisherYatesShuffle(char * words[])
+int * fisherYatesShuffle(char * wordBank[])
 {
 	int i;
 	int j;
 	j = ((rand() % 9) - i);
-	char * tmp = words[];
+	char * tmp = wordBank[];
+	char * tmp
 	for(i = 0; i <= 8; i++)
 	{
-		char * tmp = words[i];
-		words[i] = words[j];
-		words[j] = tmp;
+		char * tmp = wordBank[i];
+		wordBank[i] = wordBank[j];
+		wordBank[j] = tmp;
 	}
-	return words;
+	return wordBank;
 }
 
 void printing(char * words[])
