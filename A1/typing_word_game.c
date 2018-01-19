@@ -18,7 +18,7 @@
 int * fisherYatesShuffle(char * words[]);
 //void printing(char * words[]);
 
-int main(char * bank[])
+int main()
 {
 	srand((unsigned)time(NULL));
 
