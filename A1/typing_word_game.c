@@ -46,11 +46,15 @@ exit;
 int printWords(int *topArray[], int numberBank[])
 {	
 	int i;
+	int j;
 	int temp;
+	int size;
 	for(i = 0; i <= 8; i++)
 	{
 		temp = numberBank[i];
-		printf("Printing: %s\n", *topArray[temp]);
+		size = strlen(*topArray[temp])
+		for(j = 0; j <= size; j++)
+			printf("Printing: %c\n", *topArray[temp]);
 	}
 
 }
