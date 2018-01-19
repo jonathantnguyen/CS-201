@@ -45,11 +45,11 @@ int permutationBank()
 { 
 	int k;
 	int i = 0;
-	int numberBank[9] = {11};
+	int numberBank[9];
 
 	while(i <= 8)
 	{
-		int tempNumber = (rand() % 9);
+		int tempNumber = (rand() % 8);
 		printf("R: %i\n", tempNumber);
 		//tempNumber = tempNumber - 1;
 		//printf("R: %i\n", tempNumber);
