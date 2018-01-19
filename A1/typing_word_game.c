@@ -78,6 +78,7 @@ int * permutationBank(int numberBank[])
 		}
 
 	}
+	printf("Coming out of permutationBank\n");
 	return numberBank;
 }
 
@@ -85,7 +86,7 @@ int numberChecker(int tempNumber, int numberBank[])
 {
 	int j;
 	int k;
-	printf("Inside numberChecker\n");
+	//printf("Inside numberChecker\n");
 	for(j = 0; j <= 8 ; j++)
 	{ 
 		if (tempNumber == numberBank[j])
