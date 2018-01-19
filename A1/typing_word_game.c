@@ -23,7 +23,7 @@ int main(char * bank[])
 	srand((unsigned)time(NULL));
 
 	char * words[] ={"The", "quick", "brown","fox", "jumps", "over", "the", "lazy", "dog"};
-	fisherYatesShuffle(words);
+	char * bank [] = fisherYatesShuffle(words);
 	//printing(bank);
 
 exit;
