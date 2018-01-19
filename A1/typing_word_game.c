@@ -60,6 +60,7 @@ void printWords(char *topArray[], int numberBank[])
 			printf("%c", topArray[temp][j]);
 		}
 	}
+	printf("Done Printing\n");
 	printf("\n");
 }
 
