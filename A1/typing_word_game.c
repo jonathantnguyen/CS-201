@@ -49,7 +49,7 @@ int permutationBank()
 
 	while(i <= 8)
 	{
-		int tempNumber = (rand() % 8+1);
+		int tempNumber = (rand() % 9+1);
 		//printf("R: %i\n", tempNumber);
 		//tempNumber = tempNumber - 1;
 		//printf("R: %i\n", tempNumber);
