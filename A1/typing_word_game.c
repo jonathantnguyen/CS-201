@@ -18,7 +18,7 @@
 int * fisherYatesShuffle(char * words[]);
 void printing(char * words[]);
 
-int main()
+int main(char * wordsp[])
 {
 	srand((unsigned)time(NULL));
 
@@ -41,7 +41,7 @@ int * fisherYatesShuffle(char * words[])
 		words[i] = words[j];
 		words[j] = tmp;
 	}
-	return * words;
+	return words;
 }
 
 void printing(char * words[])
