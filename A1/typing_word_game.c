@@ -36,7 +36,7 @@ int main()
 	char dog[] = {'d','o','g'};
 
 	char *topArray[] = {theFirst, quick, brown, fox, jumps, over, theSecond, lazy, dog}; 
-	
+	printf("Before Permutation Bank\n");i
 	//printf("Printing: %s \n", topArray[0]);
 	printWords(topArray, permutationBank(numberBank));
 
@@ -59,7 +59,7 @@ int printWords(char *topArray[], int numberBank[])
 			printf("%c", topArray[temp][j]);
 		}
 	}
-	//printf("\n");
+	printf("\n");
 }
 
 int * permutationBank(int numberBank[])
@@ -68,7 +68,7 @@ int * permutationBank(int numberBank[])
 	int i = 0;
 	while(i <= 8)
 	{
-		int tempNumber = (rand() % 9+1);
+		int tempNumber = ((rand() % 9)+1);
 
 		if(numberChecker(tempNumber, numberBank))
 		{
