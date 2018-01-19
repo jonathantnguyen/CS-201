@@ -62,21 +62,14 @@ int * permutationBank(int numberBank[])
 	while(i <= 8)
 	{
 		int tempNumber = (rand() % 9+1);
-		//printf("R: %i\n", tempNumber);
-		//tempNumber = tempNumber - 1;
-		//printf("R: %i\n", tempNumber);
+
 		if(numberChecker(tempNumber, numberBank))
 		{
 			numberBank[i] = tempNumber;
-			//printf("Number: %i \n", tempNumber);
 			i++;				
 		}
 
 	}
-	/*for(k = 0; k <= 8; k++)
-	{
-		printf("Position %i:, %i\n", k, numberBank[k]);
-	}	*/
 	return numberBank;
 }
 
@@ -86,11 +79,6 @@ int numberChecker(int tempNumber, int numberBank[])
 	int k;
 	for(j = 0; j <= 8 ; j++)
 	{ 
-		//for(k = 0; k <= j; k++)
-		//{
-		//	printf("Position %i:, %i\n", k, numberBank[k]);
-		//}	
-		//printf("R: %i\n", tempNumber);
 		if (tempNumber == numberBank[j])
 		{
 			return 0;
