@@ -16,7 +16,7 @@
 
 int permutationBank();
 int numberChecker(int tempNumber, int numberBank[]);
-int printWords(int topArray[],int numberBank[]);
+int printWords(int  * topArray[],int numberBank[]);
 
 int main()
 {
@@ -41,7 +41,7 @@ exit;
 }
 
 
-int printWords(int topArray[], int numberBank[])
+int printWords(int * topArray[], int numberBank[])
 {	
 	int i;
 	int temp;
@@ -67,7 +67,7 @@ int permutationBank()
 		if(numberChecker(tempNumber, numberBank))
 		{
 			numberBank[i] = tempNumber;
-			printf("Number: %i \n", tempNumber);
+			//printf("Number: %i \n", tempNumber);
 			i++;				
 		}
 
