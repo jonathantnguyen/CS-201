@@ -29,17 +29,16 @@ int main()
 exit;
 }
 
-void fisherYatesShuffle(char * words[])
+int * fisherYatesShuffle(char * words[])
 {
 	int i;
 	int j;
 	j = ((rand() % 9) - i);
 	for(i = 0; i <= 8; i++)
 	{
-		char * tmp = &words[i];
-		&words[i] = &words[j];
-		&words[j] = tmp;
-
+		char * tmp = words[i];
+		words[i] = words[j];
+		words[j] = tmp;
 	}
 }
 
