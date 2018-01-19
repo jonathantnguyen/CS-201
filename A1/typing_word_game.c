@@ -16,7 +16,7 @@
 
 int permutationBank();
 int numberChecker(int tempNumber, int numberBank[]);
-int printWords(int numberBank[]);
+int printWords(int topArray[],int numberBank[]);
 
 int main()
 {
