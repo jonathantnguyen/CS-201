@@ -47,7 +47,8 @@ int * fisherYatesShuffle(char * wordBank[])
 void printing(char * words[])
 {
 	int n;
-	for(n = 0; n <= 8; n++)
-		printf("%s\n", words[n]);
+	for(n = 0; n <= 8; n++){
+		printf("%s\n", wordBank[n]);
+	}
 }
 
