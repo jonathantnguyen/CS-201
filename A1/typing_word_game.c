@@ -19,8 +19,8 @@ int * fisherYatesShuffle(char * words[]);
 void fun(int array[])
 {
 	int temp = array[0];
-	array[0] = array[4];
-	array[4] = array[0];
+	array[0] = array[3];
+	array[3] = array[0];
 
 }
 
