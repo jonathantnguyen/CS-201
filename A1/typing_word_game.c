@@ -15,7 +15,7 @@
 #include <time.h>
 
 int permutationBank();
-int numberChecker(int tempNumber, int * numberBank[]);
+int numberChecker(int tempNumber, int numberBank[]);
 int printWords(int  * topArray[],int * numberBank[]);
 
 int main()
@@ -79,7 +79,7 @@ int permutationBank()
 	return numberBank;
 }
 
-int numberChecker(int tempNumber, int * numberBank[])
+int numberChecker(int tempNumber, int numberBank[])
 {
 	int j;
 	int k;
