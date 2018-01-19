@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-int permutationBank();
+int * permutationBank();
 int numberChecker(int tempNumber, int numberBank[]);
 int printWords(int topArray[],int numberBank[]);
 
