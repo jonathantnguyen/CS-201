@@ -52,10 +52,11 @@ int printWords(int *topArray[], int numberBank[])
 	for(i = 0; i <= 8; i++)
 	{
 		temp = numberBank[i];
-		size = sizeof(*topArray[temp]);
+		size = strlen(topArray[temp]);
 		for(j = 0; j <= size; j++)
 		{
-			printf("Printing: %c\n", *topArray[temp]);
+			printf("%c", topArray[temp][j]);
+			printf("\n");
 		}
 	}
 
