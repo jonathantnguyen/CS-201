@@ -15,7 +15,7 @@
 #include <time.h>
 #include <string.h>
 
-int  fisherYatesShuffle(char * words[]);
+void fisherYatesShuffle(char * words[]);
 
 void printing(char * words[]);
 
