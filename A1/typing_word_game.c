@@ -21,8 +21,9 @@ void printing(char * words[]);
 int main(char * wordBank[])
 {
 	srand((unsigned)time(NULL));
+
 	char * words[] ={"The", "quick", "brown","fox", "jumps", "over", "the", "lazy", "dog"};
-	wordBank[] = fisherYatesShuffle(words);
+	char * wordBank[] = fisherYatesShuffle(words);
 	printing(wordBank);
 
 exit;
