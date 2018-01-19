@@ -17,7 +17,7 @@
 
 int * permutationBank(int numberBank[]);
 int numberChecker(int tempNumber, int numberBank[]);
-int printWords(int *topArray[],int numberBank[]);
+int printWords(char *topArray[],int numberBank[]);
 
 int main()
 {
@@ -35,7 +35,7 @@ int main()
 	char lazy[] = {'l','a','z', 'y'};
 	char dog[] = {'d','o','g'};
 
-	int *topArray[] = {theFirst, quick, brown, fox, jumps, over, theSecond, lazy, dog}; 
+	char *topArray[] = {theFirst, quick, brown, fox, jumps, over, theSecond, lazy, dog}; 
 	
 	//printf("Printing: %s \n", topArray[0]);
 	printWords(topArray, permutationBank(numberBank));
@@ -44,7 +44,7 @@ exit;
 }
 
 
-int printWords(int *topArray[], int numberBank[])
+int printWords(char *topArray[], int numberBank[])
 {	
 	int i;
 	int j;
