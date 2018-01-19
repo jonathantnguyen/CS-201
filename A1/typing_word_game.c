@@ -15,21 +15,21 @@
 #include <time.h>
 #include <string.h>
 
-int * fisherYatesShuffle(char * words[]);
-void printing(char * words[]);
+int fisherYatesShuffle(char * words[]);
+//void printing(char * words[]);
 
 int main(char * bank[])
 {
 	srand((unsigned)time(NULL));
 
 	char * words[] ={"The", "quick", "brown","fox", "jumps", "over", "the", "lazy", "dog"};
-	char * bank[] = fisherYatesShuffle(words);
-	printing(bank);
+	fisherYatesShuffle(words);
+	//printing(bank);
 
 exit;
 }
 
-int * fisherYatesShuffle(char * words[])
+int fisherYatesShuffle(char * words[])
 {
 	int i;
 	int j;
@@ -42,9 +42,10 @@ int * fisherYatesShuffle(char * words[])
 		words[j] = tmp;
 
 	}
-	return words;
+	//return words;
 }
 
+/*
 void printing(char * words[])
 {
 	int n;
@@ -53,4 +54,5 @@ void printing(char * words[])
 		printf("%s \n", words[n]);
 	}
 }
+*/
 
