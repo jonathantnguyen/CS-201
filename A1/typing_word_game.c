@@ -50,7 +50,7 @@ int permutationBank()
 	while(i <= 8)
 	{
 		int tempNumber = (rand() % 8);
-		printf("R: %i\n", tempNumber);
+		//printf("R: %i\n", tempNumber);
 		//tempNumber = tempNumber - 1;
 		//printf("R: %i\n", tempNumber);
 		if(numberChecker(tempNumber, numberBank))
