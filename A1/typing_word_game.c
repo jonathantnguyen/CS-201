@@ -77,7 +77,7 @@ int permutationBank()
 	{
 		printf("Position %i:, %i\n", k, numberBank[k]);
 	}	*/
-	return numberBank;
+	return numberBank[];
 }
 
 int numberChecker(int tempNumber, int numberBank[])
