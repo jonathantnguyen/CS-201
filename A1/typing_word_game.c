@@ -43,6 +43,7 @@ void fisherYatesShuffle(char * words[])
 		words[i] = words[j];
 		words[j] = tmp;
 	}
+	printf("end of fisher\n");
 }
 
 
