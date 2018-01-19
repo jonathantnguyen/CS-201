@@ -18,7 +18,7 @@
 int * fisherYatesShuffle(char * words[]);
 void printing(char * words[]);
 
-int main(char * wordsp[])
+int main(char * words[])
 {
 	srand((unsigned)time(NULL));
 
