@@ -15,10 +15,9 @@
 #include <time.h>
 #include <string.h>
 
-int * fisherYatesShuffle(char * words[]);
+int  fisherYatesShuffle(char * words[]);
 
-
-//void printing(char * words[]);
+void printing(char * words[]);
 
 int main()
 {
@@ -32,7 +31,7 @@ exit;
 }
 
 
-int * fisherYatesShuffle(char * words[])
+void fisherYatesShuffle(char * words[])
 {
 	int i;
 	int j;
@@ -43,7 +42,6 @@ int * fisherYatesShuffle(char * words[])
 		words[i] = words[j];
 		words[j] = tmp;
 	}
-	return words;
 }
 
 
