@@ -47,7 +47,7 @@ int main()
 	}
 exit;
 }
-
+/*
 int * fisherYatesShuffle(char * words[])
 {
 	int i;
@@ -61,7 +61,7 @@ int * fisherYatesShuffle(char * words[])
 	}
 	return words;
 }
-
+*/
 
 
 /*
