@@ -22,6 +22,8 @@ int main()
 {
 	srand((unsigned)time(NULL));
 
+	int numberBank[9];
+
 	char theFirst[] = {'T', 'h', 'e'};
 	char quick[] = {'q','u','i','c','k'};
 	char brown[] = {'b','r','o','w','n'};
@@ -57,7 +59,6 @@ int ** permutationBank(int numberBank[])
 { 
 	int k;
 	int i = 0;
-	int numberBank[9];
 	while(i <= 8)
 	{
 		int tempNumber = (rand() % 9+1);
