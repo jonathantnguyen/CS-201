@@ -16,7 +16,7 @@
 
 int permutationBank();
 int numberChecker(int tempNumber, int numberBank[]);
-int printWords(int  **topArray[],int * numberBank[]);
+int printWords(int topArray[],int numberBank[]);
 
 int main()
 {
@@ -41,14 +41,14 @@ exit;
 }
 
 
-int printWords(int **topArray[], int *numberBank[])
+int printWords(int topArray[], int numberBank[])
 {	
 	int i;
 	int temp;
 	for(i = 0; i <= 8; i++)
 	{
 		temp = numberBank[i];
-		printf("Printing: %c\n", *topArray[temp]);
+		printf("Printing: %c\n", topArray[temp]);
 	}
 
 }
