@@ -16,38 +16,22 @@
 #include <string.h>
 
 int * fisherYatesShuffle(char * words[]);
-void fun(int array[])
-{
-	int temp = array[0];
-	array[0] = array[3];
-	array[3] = temp;
 
-}
 
 //void printing(char * words[]);
 
 int main()
 {
-	/*srand((unsigned)time(NULL));
+	srand((unsigned)time(NULL));
 
 	char * words[] ={"The", "quick", "brown","fox", "jumps", "over", "the", "lazy", "dog"};
 	fisherYatesShuffle(words);
-	//printing(bank);
-*/
+	printing(words);
 
-	int array[] = {1,2,3,4};
-	for(int i = 0; i < 4; i++)
-	{
-		printf("%d:%d\n", i, array[i]);
-	}
-	fun(array);
-	for(int i = 0; i < 4; i++)
-	{
-		printf("%d:%d\n", i, array[i]);
-	}
 exit;
 }
-/*
+
+
 int * fisherYatesShuffle(char * words[])
 {
 	int i;
@@ -61,10 +45,10 @@ int * fisherYatesShuffle(char * words[])
 	}
 	return words;
 }
-*/
 
 
-/*
+
+
 void printing(char * words[])
 {
 	int n;
@@ -73,5 +57,4 @@ void printing(char * words[])
 		printf("%s \n", words[n]);
 	}
 }
-*/
 
