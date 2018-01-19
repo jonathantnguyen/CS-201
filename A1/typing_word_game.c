@@ -52,7 +52,7 @@ int printWords(char *topArray[], int numberBank[])
 	int size;
 	for(i = 0; i <= 8; i++)
 	{
-		temp = numberBank[i];
+		temp = numberBank[i-1];
 		size = strlen(topArray[temp]);
 		for(j = 0; j <= size; j++)
 		{
@@ -72,7 +72,7 @@ int * permutationBank(int numberBank[])
 
 		if(numberChecker(tempNumber, numberBank))
 		{
-			numberBank[i] = tempNumber - 1;
+			numberBank[i] = tempNumber;
 			i++;				
 		}
 
