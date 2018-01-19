@@ -72,7 +72,7 @@ int * permutationBank(int numberBank[])
 
 		if(numberChecker(tempNumber, numberBank))
 		{
-			numberBank[i] = tempNumber;
+			numberBank[i] = tempNumber - 1;
 			i++;				
 		}
 
