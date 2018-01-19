@@ -20,7 +20,7 @@ int printWords(int topArray[],int numberBank[]);
 
 int main()
 {
-	srand(time(NULL));
+	srand((unsigned)time(NULL));
 
 	char theFirst[] = {'T', 'h', 'e'};
 	char quick[] = {'q','u','i','c','k'};
@@ -32,7 +32,7 @@ int main()
 	char lazy[] = {'l','a','z', 'y'};
 	char dog[] = {'d','o','g'};
 
-	int topArray[] = {&theFirst, &quick, &brown, &fox, &jumps, &over, &theSecond, &lazy, &dog}; 
+	int *topArray[] = {&theFirst, &quick, &brown, &fox, &jumps, &over, &theSecond, &lazy, &dog}; 
 	
 	//printf("Printing: %s \n", topArray[0]);
 	printWords(topArray, permutationBank());
@@ -48,12 +48,12 @@ int printWords(int topArray[], int numberBank[])
 	for(i = 0; i <= 8; i++)
 	{
 		temp = numberBank[i];
-		printf("Printing: %c\n", topArray[temp]);
+		printf("Printing: %c\n", *topArray[temp]);
 	}
 
 }
 
-int permutationBank()
+int * permutationBank()
 { 
 	int k;
 	int i = 0;
@@ -77,7 +77,7 @@ int permutationBank()
 	{
 		printf("Position %i:, %i\n", k, numberBank[k]);
 	}	*/
-	return numberBank[];
+	return numberBank;
 }
 
 int numberChecker(int tempNumber, int numberBank[])
