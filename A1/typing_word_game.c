@@ -36,7 +36,7 @@ int main()
 	char dog[] = {'d','o','g'};
 
 	char *topArray[] = {theFirst, quick, brown, fox, jumps, over, theSecond, lazy, dog}; 
-	printf("Before Permutation Bank\n");i
+	printf("Before Permutation Bank\n");
 	//printf("Printing: %s \n", topArray[0]);
 	printWords(topArray, permutationBank(numberBank));
 
