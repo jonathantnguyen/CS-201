@@ -59,7 +59,7 @@ int printWords(char *topArray[], int numberBank[])
 			printf("%c", topArray[temp][j]);
 		}
 	}
-	printf("\n");
+	//printf("\n");
 }
 
 int * permutationBank(int numberBank[])
