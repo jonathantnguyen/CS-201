@@ -53,7 +53,7 @@ int printWords(int *topArray[], int numberBank[])
 	for(i = 0; i <= 8; i++)
 	{
 		temp = numberBank[i];
-		size = strlen(topArray[temp][]);
+		size = strlen(topArray[temp]);
 		for(j = 0; j <= size; j++)
 		{
 			printf("%c", topArray[temp][j]);
