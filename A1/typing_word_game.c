@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-void permutationBank();
+int permutationBank();
 
 int numberChecker(int tempNumber, int numberBank[]);
 
@@ -34,18 +34,18 @@ int main()
 
 	int *topArray[] = {&theFirst, &quick, &brown, &fox, &jumps, &over, &theSecond, &lazy, &dog}; 
 	//printf("Printing: %s \n", topArray[0]);
-	printf("Before permutationBank\n");
 	permutationBank();
-	printf("After permutationBank\n");
+
+
 
 exit;
 }
 
-void permutationBank()
+int permutationBank()
 { 
 	int k;
 	int i = 0;
-	int numberBank[9];
+	int numberBank[9] = {11};
 
 	while(i <= 8)
 	{
