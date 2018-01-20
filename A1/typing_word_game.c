@@ -37,11 +37,6 @@ void fisherYatesShuffle(char * words[])
 	int i;
 	int j;
 	int n;
-	printf("inside fisher\n");
-	for(n = 0; n <= 8; n++)
-	{
-		printf("%s \n", words[n]);
-	}
 	for(i = 0; i <= 8; i++)
 	{
 		j = (rand() % 9);
@@ -49,17 +44,11 @@ void fisherYatesShuffle(char * words[])
 		words[i] = words[j];
 		words[j] = tmp;
 	}
-	for(n = 0; n <= 8; n++)
-	{
-		printf("%s \n", words[n]);
-	}
-	printf("end of fisher\n");
 }
 
 
 void printing(char * words[])
 {
-	printf("inside print\n");
 	int n;
 	for(n = 0; n <= 8; n++)
 	{
