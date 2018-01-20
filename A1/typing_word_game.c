@@ -34,7 +34,7 @@ int main()
 	game(words);
 	end = clock();
     cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
-    printf("You took : %i \n",cpu_time_used);
+    printf("You took: %f \n",cpu_time_used);
 
 exit;
 }
