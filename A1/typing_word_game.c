@@ -49,7 +49,7 @@ void game(char * words[])
 
 	time = timersub(&end, &start, &res);
 
-	printf("Seconds: %d uSeconds:%d\n", (time/1000000), time;	
+	printf("Seconds: %ld uSeconds: %ld\n", (time/1000000), time;	
 
 }
 
