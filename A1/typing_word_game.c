@@ -46,8 +46,8 @@ void game(char * words[])
 	}
 	gettimeofday(&end, NULL);
 
-	printf("Seconds: %d uSeconds:%d\n", (timersub(end.tv_usec, start.tv_usec, timeval.tv_usec)-1000000), 
-			timersub(end.tv_usec, start.tv_usec, timeval.tv_usec));	
+	printf("Seconds: %d uSeconds:%d\n", (timersub(end.tv_usec, start.tv_usec, timeval)-1000000), 
+			timersub(end.tv_usec, start.tv_usec, timeval));	
 
 }
 
