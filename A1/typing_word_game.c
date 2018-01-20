@@ -37,8 +37,8 @@ exit;
 
 void game(char * words[])
 {
-	double time;
-	struct timeval start, end;
+	//double time;
+	struct timeval start, end, res;
  	gettimeofday(&start, NULL);
 
 	for (int i = 0; i <= 8; i++)
