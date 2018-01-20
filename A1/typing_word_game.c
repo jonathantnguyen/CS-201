@@ -33,7 +33,7 @@ int main()
 
 	game(words);
 
-exit;
+exit(0);
 }
 
 void game(char * words[])
