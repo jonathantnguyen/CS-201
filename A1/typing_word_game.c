@@ -61,8 +61,6 @@ void fisherYatesShuffle(char * words[])
 
 void printing(int i, char * words[])
 {
-
-	int i;
 	char buffer[50];
 	printf("Type: %s \n", words[i]);
 	//scanf("%s", buffer);
