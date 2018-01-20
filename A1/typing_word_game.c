@@ -19,6 +19,8 @@ void fisherYatesShuffle(char * words[]);
 
 void printing(char * words[]);
 
+void game(char * words[]);
+
 int main()
 {
 	srand((unsigned)time(NULL));
@@ -26,18 +28,27 @@ int main()
 	char * words[] ={"The", "quick", "brown","fox", "jumps", "over", "the", "lazy", "dog"};
 	fisherYatesShuffle(words);
 		//words[] has now changed orders
-	printing(words);
+	game(words);
+
 
 exit;
+}
+
+void game(char * words[])
+{
+	for (int i = 0; i <= 8; i++)
+	{
+		printing(words);
+
+	}
+
 }
 
 
 void fisherYatesShuffle(char * words[])
 {
-	int i;
 	int j;
-	int n;
-	for(i = 0; i <= 8; i++)
+	for(int i = 0; i <= 8; i++)
 	{
 		j = (rand() % 9);
 		char * tmp = words[i];
@@ -50,9 +61,7 @@ void fisherYatesShuffle(char * words[])
 void printing(char * words[])
 {
 	int n;
-	for(n = 0; n <= 8; n++)
-	{
-		printf("%s \n", words[n]);
-	}
+	char buffer[50];
+	printf("Type: %s \n", words[n]);
+	scanf("%s", buffer[]);
 }
-
