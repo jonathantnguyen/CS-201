@@ -62,7 +62,7 @@ void printing(int i, char * words[])
 	char buffer[50];
 	printf("Type: %s \n", words[i]);
 	scanf("%s", buffer);
-	if(buffer != words)
+	if(buffer != words[i])
 	{
 		printf("Incorrect, retype:\n");
 		printing(i, words);
