@@ -49,7 +49,7 @@ void game(char * words[])
 
 	timersub(&start, &end, &res);
 
-	double elapsed = res.tv_sec + (res.tv_usec/1000000.0)        
+	double elapsed = res.tv_sec + (res.tv_usec/1000000.0);      
 
 	printf("uSeconds: %li; Seconds: %f\n ", res.tv_usec, elapsed);	
 
