@@ -48,7 +48,7 @@ void game(char * words[])
 
 	timersub(&start, &end, &res);
 
-	printf("uSeconds: %li Seconds: %li\n", ((res.tv_usec/1000000.0)/1000000.0), (res.tv_usec/1000000.0));	
+	printf("uSeconds: %f Seconds: %f\n", ((res.tv_usec/1000000.0)/1000000.0), (res.tv_usec/1000000.0));	
 
 }
 
