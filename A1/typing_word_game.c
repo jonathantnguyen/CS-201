@@ -15,6 +15,7 @@
 #include <time.h>
 #include <sys/time.h>
 #include <string.h>
+#define _BSD_SOURCE
 
 void fisherYatesShuffle(char * words[]);
 
@@ -48,7 +49,7 @@ void game(char * words[])
 
 	timersub(&start, &end, &res);
 
-	printf("uSeconds: Seconds: %f\n", res.tv_usec/100000.0);	
+	printf("uSeconds: %f Seconds: ", res.tv_usec, res.tv_sec;	
 
 }
 
