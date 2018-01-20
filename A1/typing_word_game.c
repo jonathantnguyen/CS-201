@@ -63,5 +63,5 @@ void printing(char * words[])
 	int n;
 	char buffer[50];
 	printf("Type: %s \n", words[n]);
-	scanf("%s", buffer[]);
+	scanf("%s", buffer);
 }
