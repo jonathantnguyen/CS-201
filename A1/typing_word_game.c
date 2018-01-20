@@ -51,7 +51,7 @@ void game(char * words[])
 
 	double elapsed = res.tv_sec + (res.tv_usec/1000000.0)        
 
-	printf("uSeconds: %li; Seconds: %f\n ", res.tv_usec, elapsed;	
+	printf("uSeconds: %li; Seconds: %f\n ", res.tv_usec, elapsed);	
 
 }
 
