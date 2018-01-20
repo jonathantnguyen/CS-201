@@ -12,7 +12,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
+#include <sys/time.h>
 #include <string.h>
 
 void fisherYatesShuffle(char * words[]);
@@ -36,16 +36,16 @@ exit;
 
 void game(char * words[])
 {
-	clock_t start, end;
-    double cpu_time_used;
-	start = clock();
+	struct timeval start, end;
+ 	gettimeofday(&start, NULL);
+
 	for (int i = 0; i <= 8; i++)
 	{
 		printing(i, words);
 	}
-	end = clock();
-	cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
-    printf("You took: %f \n",cpu_time_used);
+
+	gettimeofday(&end, NULL);
+	printf("%ld\n", ((end.tv_sec * 1000000 + end.tv_usec) - (start.tv_sec * 1000000 + start.tv_usec)));
 
 }
 
