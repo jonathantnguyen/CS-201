@@ -17,7 +17,7 @@
 
 void fisherYatesShuffle(char * words[]);
 
-void printing(char * words[]);
+void printing(int i, char * words[]);
 
 void game(char * words[]);
 
@@ -39,7 +39,7 @@ void game(char * words[])
 	for (int i = 0; i <= 8; i++)
 	{
 		//printf("inside game loop\n");
-		printing(words);
+		printing(i, words);
 
 	}
 
@@ -59,13 +59,11 @@ void fisherYatesShuffle(char * words[])
 }
 
 
-void printing(char * words[])
+void printing(int i, char * words[])
 {
-	printf("begin printing\n");
-	int n;
-	printf("before buffer line\n");
+
+	int i;
 	char buffer[50];
-	printf("after buffer\n");
-	printf("Type: %s \n", words[n]);
+	printf("Type: %s \n", words[i]);
 	//scanf("%s", buffer);
 }
