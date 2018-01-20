@@ -37,7 +37,6 @@ exit;
 
 void game(char * words[])
 {
-	double time;
 	struct timeval start, end, res;
  	gettimeofday(&start, NULL);
 
@@ -49,7 +48,7 @@ void game(char * words[])
 
 	timersub(&start, &end, &res);
 
-	printf("Seconds: %ld uSeconds: %ld\n", (res.tv_usec/1000000.0), res.tv_usec);	
+	printf("Seconds: %d uSeconds: %d\n", (res.tv_usec/1000000.0), res.tv_usec);	
 
 }
 
