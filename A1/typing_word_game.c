@@ -38,9 +38,7 @@ void game(char * words[])
 {
 	for (int i = 0; i <= 8; i++)
 	{
-		//printf("inside game loop\n");
 		printing(i, words);
-
 	}
 
 }
@@ -63,5 +61,5 @@ void printing(int i, char * words[])
 {
 	char buffer[50];
 	printf("Type: %s \n", words[i]);
-	//scanf("%s", buffer);
+	scanf("%s", buffer);
 }
