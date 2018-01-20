@@ -47,7 +47,7 @@ void game(char * words[])
 	}
 	gettimeofday(&end, NULL);
 
-	timersub(&start, &end, &res);
+	timersub(&end, &start, &res);
 
 	double elapsed = res.tv_sec + (res.tv_usec/1000000.0);      
 
