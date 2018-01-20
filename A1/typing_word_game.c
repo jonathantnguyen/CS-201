@@ -23,28 +23,29 @@ void game(char * words[]);
 
 int main()
 {
-	clock_t start, end;
-    double cpu_time_used;
 	srand((unsigned)time(NULL));
 
 	char * words[] ={"The", "quick", "brown","fox", "jumps", "over", "the", "lazy", "dog"};
 	fisherYatesShuffle(words);
 		//words[] has now changed orders
-	start = clock();
+
 	game(words);
-	end = clock();
-    cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
-    printf("You took: %f \n",cpu_time_used);
 
 exit;
 }
 
 void game(char * words[])
 {
+	clock_t start, end;
+    double cpu_time_used;
+	start = clock();
 	for (int i = 0; i <= 8; i++)
 	{
 		printing(i, words);
 	}
+	end = clock();
+	cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
+    printf("You took: %f \n",cpu_time_used);
 
 }
 
