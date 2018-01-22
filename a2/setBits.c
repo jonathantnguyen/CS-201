@@ -3,29 +3,14 @@
 #include <errno.h>
 
 
-int dToB(long num);
-
-void StoI(int argc, char ** argv);
+void dToB(long num);
+void sToI(int argc, char ** argv);
+int check(int argc, char ** argv);
 
 int main(int argc, char **argv)
 {
+	check(argc, *argv);
 
-	char *end;
-	int bin;
-
-	if(argc == 1)
-	{
-		printf("No arguments, execute with arguments.\n");
-		return 0;
-	}
-
-	for (int j = 1; j < argc; j++)
-	{	
-		*argv = end;
-		bin = dToB((long) strtol(argv[j], &end, 10));
-		
-		printf("%i\n", bin);
-	}
 	/*
 	for(long i = strtol(*argv, &end, 2); 
 		*argv != end; 
@@ -42,8 +27,32 @@ int main(int argc, char **argv)
 
 exit;
 }
+void sToI(int argc, char ** argv)
+{	
+	int bin;
+	for (int j = 1; j < argc; j++)
+	{	
+		*argv = end;
+		bin = (long)strtol(argv[j], &end, 10);
+		while ((0 <= bin) && (bin <= 15))
+		{
+			dToB(bin);
+		}
+	}
+}
 
-int dToB(long num)
+int check(int argc, int ** argv)
+{
+	char *end;
+
+	if(argc == 1)
+	{
+		printf("No arguments, execute with arguments.\n");
+		return 0;
+	}
+}
+
+void dToB(long num)
 {	
 	for (int i = 0; i <= 16; i++)
 	{
