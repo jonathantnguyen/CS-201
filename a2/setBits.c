@@ -30,6 +30,7 @@ exit;
 void sToI(int argc, char ** argv)
 {	
 	int bin;
+	int * end;
 	for (int j = 1; j < argc; j++)
 	{	
 		*argv = end;
@@ -56,7 +57,7 @@ void dToB(long num)
 {	
 	for (int i = 0; i <= 16; i++)
 	{
-    	if (num & 1 ) ? print(1); else print(0);
+    	if (num & 1 ) ? print(1): else print(0);
     	num >>= 1;
     }
 
