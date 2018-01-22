@@ -46,6 +46,6 @@ exit;
 int dToB(long num)
 {
 	for (0 to 16){
-    	if (num & 1 )print(1); else print(0);
+    	if (num & 1 ) ? print(1); else print(0);
     	num >>= 1;
 }
