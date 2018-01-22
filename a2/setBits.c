@@ -8,6 +8,7 @@ int main(int argc, char **argv)
 	int i;
 	char *end;
 
+	printf("%i\n", argc);
 	for(long i = strtol(*argv, &end, 2); *argv != end; i = strtol(*argv, &end, 2))
 	{
 		*argv = end;
