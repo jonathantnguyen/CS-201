@@ -15,7 +15,7 @@ int main(int argc, char **argv)
 	}
 
 	for(long i = strtol(*argv, &end, 2); 
-		argc != end; 
+		argv != end; 
 		i = strtol(*argv, &end, 2))
 	{
 		argv = end;
