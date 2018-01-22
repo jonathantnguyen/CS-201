@@ -10,12 +10,14 @@ int main(int argc, char **argv)
 
 	if(argc == 1)
 	{
-		printf("No arguments.\n");
+		printf("No arguments, execute with arguments.\n");
 		return 0;
 	}
-	for(long i = strtol(*argv, &end, 2); *argv != end; i = strtol(*argv, &end, 2))
+
+	for(long i = strtol(argc, **argv, 2); 
+		*argv != end; 
+		i = strtol(argc, **argv, 2))
 	{
-		*argv = end;
 		if(errno == ERANGE)
 		{
 		printf("Range Error.\n");
