@@ -1,0 +1,36 @@
+Script started on Mon 22 Jan 2018 03:15:53 AM PST
+jonguyen@quizor1:~/CS201/jonguyen$ make
+gcc -Wall -Og -g typing_word_game.c -o typing_word_game
+jonguyen@quizor1:~/CS201/jonguyen$ ./typing_word_game 
+Type: fox 
+fox
+Type: the 
+the
+Type: brown 
+brown
+Type: jumps 
+s jumps
+Type: quick 
+quick
+Type: dog 
+a
+Incorrect, retype:
+Type: dog 
+dog
+Type: lazy 
+
+lazy
+Type: over 
+over
+Type: The 
+The   the
+Incorrect, retype:
+Type: The 
+The
+uSeconds: 126726; Seconds: 21.126726
+ jonguyen@quizor1:~/CS201/jonguyen$ scipr[Kt -a
+bash: scipt: command not found
+jonguyen@quizor1:~/CS201/jonguyen$ exit
+exit
+
+Script done on Mon 22 Jan 2018 03:16:29 AM PST
