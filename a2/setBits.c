@@ -17,8 +17,8 @@ int main(int argc, char **argv)
 
 	for (int j = 1; j < argc; j++)
 	{	
-		* array = strtoul( * argv, &end, 10);
-		printf("%i\n", array[j]);
+		array[j] = strtoul(argv[j], &end, 10);
+		printf("%li\n", array[j]);
 		//printf("%li\n", (long) strtol(argv[j], &end, 10));
 	}
 	/*
