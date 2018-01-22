@@ -13,7 +13,7 @@ int main(int argc, char **argv)
 		printf("No arguments, execute with arguments.\n");
 		return 0;
 	}
-	 *argv = strtol(*argv, &end, 10);
+	 //*argv = strtol(*argv, &end, 10);
 	 //*argv = strtol(*argv, &end, 2);
 
 	for (int j = 0; j < argc; j++)
