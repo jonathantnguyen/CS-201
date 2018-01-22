@@ -3,12 +3,15 @@
 #include <errno.h>
 
 
-int dToB();
+int dToB(long num);
+
+void StoI(int argc, char ** argv);
+
 int main(int argc, char **argv)
 {
 
 	char *end;
-	int temp;
+	int bin;
 
 	if(argc == 1)
 	{
@@ -19,9 +22,9 @@ int main(int argc, char **argv)
 	for (int j = 1; j < argc; j++)
 	{	
 		*argv = end;
-		temp = dToB((long) strtol(argv[j], &end, 10));
+		bin = dToB((long) strtol(argv[j], &end, 10));
 		
-		printf("%i\n", temp);
+		printf("%i\n", bin);
 	}
 	/*
 	for(long i = strtol(*argv, &end, 2); 
@@ -39,10 +42,10 @@ int main(int argc, char **argv)
 
 exit;
 }
-int dToB(long dec)
+
+int dToB(long num)
 {
-	if(dec == 0)
-		return 0;
-	else
-		return (dec % 2 + 10 *dToB(dec/2));
+	for (0 to 16){
+    	if (num & 1 )print(1); else print(0);
+    	num >>= 1;
 }
