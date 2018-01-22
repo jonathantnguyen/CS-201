@@ -3,11 +3,12 @@
 #include <errno.h>
 
 
+int dToB();
 int main(int argc, char **argv)
 {
-	//int i;
+
 	char *end;
-	int  *array;
+	int temp;
 
 	if(argc == 1)
 	{
@@ -17,7 +18,10 @@ int main(int argc, char **argv)
 
 	for (int j = 1; j < argc; j++)
 	{	
-		printf("%li\n", (long) strtol(argv[j], &end, 10));
+		*argv = end;
+		temp = dToB((long) strtol(argv[j], &end, 10));
+		
+		printf("%li\n", temp);
 	}
 	/*
 	for(long i = strtol(*argv, &end, 2); 
@@ -34,4 +38,11 @@ int main(int argc, char **argv)
 	}*/
 
 exit;
+}
+int dToB(long dec)
+{
+	if(dec == 0)
+		return 0;
+	else
+		return (dec % 2 + 10 *dToB(dec/2));
 }
