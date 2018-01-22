@@ -3,7 +3,7 @@ CC=gcc
 CFLAGS=-Wall -Og
 # set up for use in gdb
 DFLAGS=-g
-PROGS=typing_word_game
+PROGS=typing_word_game.c
 
 all: $(PROGS)
 
