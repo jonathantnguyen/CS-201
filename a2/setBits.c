@@ -5,7 +5,7 @@
 
 int main(int argc, char **argv)
 {
-	int i;
+	//int i;
 	char *end;
 
 	if(argc == 1)
@@ -18,7 +18,7 @@ int main(int argc, char **argv)
 
 	for (int j = 0; j < argc; j++)
 	{
-		printf("%i\n", argv[i]);
+		printf("%i\n", argv[j]);
 	}
 	/*
 	for(long i = strtol(*argv, &end, 2); 
