@@ -14,10 +14,11 @@ int main(int argc, char **argv)
 		return 0;
 	}
 
-	for(long i = strtol(argc, **argv, 2); 
-		*argv != end; 
-		i = strtol(argc, **argv, 2))
+	for(long i = strtol(argc, &end, 2); 
+		argc != end; 
+		i = strtol(argc, &end, 2))
 	{
+		*argv = end;
 		if(errno == ERANGE)
 		{
 		printf("Range Error.\n");
