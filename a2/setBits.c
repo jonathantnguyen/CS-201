@@ -9,7 +9,10 @@ int main(int argc, char **argv)
 	char *end;
 
 	if(argc == 1)
+	{
+		printf("No arguments.\n");
 		return 0;
+	}
 	for(long i = strtol(*argv, &end, 2); *argv != end; i = strtol(*argv, &end, 2))
 	{
 		*argv = end;
