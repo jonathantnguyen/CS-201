@@ -78,6 +78,6 @@ void printing(int i, char * words[])
 	{
 		printf("Incorrect, retype:\n");
 		printing(i, words);
-	}
+	} 
 
 }
