@@ -21,7 +21,7 @@ int main(int argc, char **argv)
 		*argv = end;
 		temp = dToB((long) strtol(argv[j], &end, 10));
 		
-		printf("%li\n", temp);
+		printf("%i\n", temp);
 	}
 	/*
 	for(long i = strtol(*argv, &end, 2); 
