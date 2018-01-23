@@ -23,7 +23,7 @@ void sToI(int argc, char ** argv)
 	for (int j = 1; j < argc; j++)
 	{	
 		*argv = end;
-		bin = (long)strtol(argv[j], &end, 10);
+		bin = (long unsigned)strtol(argv[j], &end, 10);
 		if((0 <= bin) && (bin <= 15))
 			dToB(bin);
 		else
@@ -48,7 +48,7 @@ void dToB(long num)
 	for (int i = 0; i <= 16; i++)
 	{
     	(num & 1 ) ? printf("1") : printf("0");
-    	num <<= 1;
+    	num >>= 1;
     	if (num == 0)
     	break;
     }
