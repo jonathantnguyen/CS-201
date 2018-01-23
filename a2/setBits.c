@@ -47,7 +47,7 @@ void dToB(long num)
 {	
 	for (int i = 0; i <= 16; i++)
 	{
-    	(num & 1 ) ? printf("1") : printf("0");
+    	(num & 0x8) ? printf("1") : printf("0");
     	num >>= 1;
     	if (num == 0)
     	break;
