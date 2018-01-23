@@ -42,7 +42,7 @@ void sToI(int argc, char ** argv)
 	}
 }
 
-int check(int argc, int ** argv)
+int check(int argc, char ** argv)
 {
 	if(argc == 1)
 	{
