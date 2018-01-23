@@ -60,6 +60,6 @@ void dToB(long num)
     	num >>= 1;
     	if (num == 0)
     	break;
-    	printf("\n");
     }
+    printf("\n");
 }
