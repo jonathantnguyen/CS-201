@@ -27,7 +27,6 @@ void sToI(int argc, char ** argv)
 		if(!(0 <= bin) && (bin <= 15))
 		{
 			printf("Must be between 0-15\n");
-			return 0;
 		}
 		dToB(bin);
 	}
