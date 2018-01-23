@@ -54,7 +54,7 @@ void dToB(long num)
     		(num & 0x8) ? printf("1") : printf("0");
     		num <<= 1;
     		if(num == 1)
-    			flag= 0;
+    			flag= 1;
     	}
 	}
     printf("\n");
