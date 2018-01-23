@@ -49,7 +49,7 @@ void dToB(long num)
 	{
     	(num & 0x8) ? printf("1") : printf("0");
     	num <<= 1;
-    	if (num == 0)
+    	if (num == 1)
     	break;
     }
     printf("\n");
