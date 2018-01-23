@@ -24,11 +24,11 @@ void sToI(int argc, char ** argv)
 	{	
 		*argv = end;
 		bin = (long)strtol(argv[j], &end, 10);
-		if(!(0 <= bin) && (bin <= 15))
+		if((0 <= bin) && (bin <= 15))
 		{
-			printf("Must be between 0-15\n");
+			dToB(bin);
 		}
-		dToB(bin);
+		printf("Must be between 0-15\n");
 	}
 }
 
