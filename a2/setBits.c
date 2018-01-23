@@ -51,6 +51,7 @@ int check(int argc, int ** argv)
 		printf("No arguments, execute with arguments.\n");
 		return 0;
 	}
+	sToI(argc, argv);
 }
 
 void dToB(long num)
