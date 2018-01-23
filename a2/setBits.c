@@ -45,7 +45,7 @@ int check(int argc, char ** argv)
 
 void dToB(long num)
 {	
-	bool flag = true;
+	int flag = 1;
 
 	while(flag)
 	{
