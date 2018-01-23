@@ -35,7 +35,7 @@ void sToI(int argc, char ** argv)
 	{	
 		*argv = end;
 		bin = (long)strtol(argv[j], &end, 10);
-		while ((0 <= bin) && (bin <= 15))
+		if((0 <= bin) && (bin <= 15))
 		{
 			dToB(bin);
 		}
