@@ -56,7 +56,7 @@ void dToB(long num)
 {	
 	for (int i = 0; i <= 16; i++)
 	{
-    	if(num & 1 )? printf("1"): else printf("0");
+    	(num & 1 ) ? printf("1"): else printf("0");
     	num >>= 1;
     }
 }
