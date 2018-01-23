@@ -45,6 +45,8 @@ int check(int argc, char ** argv)
 
 void dToB(long num)
 {	
+	bool flag = 1;
+
 	while(flag)
 	{
 		for (int i = 0; i <= 16; i++)
