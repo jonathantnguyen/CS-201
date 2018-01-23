@@ -9,7 +9,7 @@ int check(int argc, char ** argv);
 
 int main(int argc, char **argv)
 {
-	check(argc, *argv);
+	check(argc, argv);
 
 	/*
 	for(long i = strtol(*argv, &end, 2); 
