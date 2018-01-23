@@ -30,7 +30,7 @@ exit;
 void sToI(int argc, char ** argv)
 {	
 	int bin;
-	int * end;
+	char * end;
 	for (int j = 1; j < argc; j++)
 	{	
 		*argv = end;
@@ -44,8 +44,6 @@ void sToI(int argc, char ** argv)
 
 int check(int argc, int ** argv)
 {
-	char *end;
-
 	if(argc == 1)
 	{
 		printf("No arguments, execute with arguments.\n");
