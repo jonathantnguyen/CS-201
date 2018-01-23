@@ -45,18 +45,11 @@ int check(int argc, char ** argv)
 
 void dToB(long num)
 {	
-	int flag = 1;
 
-	while(flag)
-	{
-		for (int i = 0; i <= 16; i++)
+		for (int i = 0; i <= 3; i++)
 		{
     		(num & 0x8) ? printf("1") : printf("0");
-    		num <<= 1;
-    		if(num == 1)
-    			flag= 0;
+    		num <<= 1;    		
     	}
-    flag = 0;
-	}
     printf("\n");
 }
