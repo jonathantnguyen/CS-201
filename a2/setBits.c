@@ -1,7 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <errno.h>
-
 
 void dToB(long num);
 void sToI(int argc, char ** argv);
@@ -52,4 +50,5 @@ void dToB(long num)
     		num <<= 1;    		
     	}
     printf("\n");
-}
+} 
+
