@@ -3,18 +3,11 @@
 
 int main()
 {
-	int i = 2147483647;
-
-	if (i == (int)(float) i)
-		printf("true %d\n", i);
-	else 
-		printf("false %d\n", i);
-
-
-	if (i == (int)(double) i)
-		printf("true %d\n", i);
-	else 
-		printf("false %d\n", i);
-
+	int i = 6;
+	int j = -35;
+	printf("%d %d\n",i++,++j);
+	i = i << 3;
+	j = j >> 4;
+	printf("%d %d\n",i,j);
 	exit;
 }
