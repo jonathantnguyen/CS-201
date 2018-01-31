@@ -5,11 +5,13 @@ int main()
 {
 	int i = 10;
 
-	if (i == (int)(float) i);
+	if (i == (int)(float) i)
 		printf("true");
 	else 
 		printf("false");
-	if (i == (int)(double) i);
+
+
+	if (i == (int)(double) i)
 		printf("true");
 	else 
 		printf("false");
