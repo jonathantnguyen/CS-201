@@ -6,9 +6,9 @@ int main()
 	i = 10;
 
 	if (i == (int)(float) i);
-		cout << "true" << endl;
+		printf("true");
 	if (i == (int)(double) i);
-		cout << "true"<< endl;
+		printf("true");
 
 	exit;
 }
