@@ -3,7 +3,7 @@
 
 int main()
 {
-	int i = 2,147,483,647;
+	int i = 2147483647;
 
 	if (i == (int)(float) i)
 		printf("true %d\n", i);
