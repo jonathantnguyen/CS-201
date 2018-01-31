@@ -3,7 +3,7 @@
 
 int main()
 {
-	int i = 0;
+	float i = -10;
 
 	if (i == (int)(float) i)
 		printf("true %d\n", i);
