@@ -11,6 +11,7 @@ int main(int argc, char ** argv)
 {
 	check(argc, argv);
 	hToD(argc, argv);
+	printf("end here\n");
 	exit; 
 }
 
