@@ -44,7 +44,7 @@ void hToD(int argc, char ** argv)
 void compare(int num_one,int num_two)
 {
 	printf("Bits: ");
-	for(int i = 0; i < 31; i++)
+	for(int i = 0; i < 32; i++)
 	{
 		if((num_one & 1) && (num_two & 1))
 		{
