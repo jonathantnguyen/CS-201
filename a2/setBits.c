@@ -9,7 +9,7 @@ int main(int argc, char **argv)
 {
 	check(argc, argv);
 
-exit;
+exit(0);
 }
 
 
@@ -34,7 +34,7 @@ int check(int argc, char ** argv)
 	if(argc == 1)
 	{
 		printf("No arguments, execute with arguments.\n");
-		exit;
+		exit(0);
 	}
 
 	sToI(argc, argv);
