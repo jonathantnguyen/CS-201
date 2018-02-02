@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <errno.h>
-#include <cmath.h>
+#include <math.h>
 
 void check(int argc, char ** argv);
 int hToD(int argc, char ** argv);
