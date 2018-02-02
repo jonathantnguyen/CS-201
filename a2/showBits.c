@@ -60,7 +60,7 @@ int compare(int num_one,int num_two)
 	}
 	return spec_num;
 }
-int translate_num(spec_num)
+int translate_num(int spec_num)
 {
 	printf("Unsigned: %u \n", (unsigned)spec_num );
 	printf("Signed: %i \n", spec_num);
