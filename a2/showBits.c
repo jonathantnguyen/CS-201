@@ -33,8 +33,7 @@ void hToD(int argc, char ** argv)
 			exit;
 
 		bin = (long unsigned)strtoul(argv[j], &end, 16);
-			hToD(bin);
-
+		printf("Value: %lu \n", bin);
 	}
 
 }
