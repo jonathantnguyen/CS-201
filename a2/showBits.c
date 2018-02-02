@@ -37,8 +37,8 @@ int hToD(int argc, char ** argv)
 	if(errno != 0)
 		exit(0);
 
-	int num_one = (long unsigned)strtoul(argv[1], &end, 16);
-	int num_two = (long unsigned)strtoul(argv[2], &end, 16);
+	int num_one = strtoul(argv[1], &end, 16);
+	int num_two = strtoul(argv[2], &end, 16);
 	//printf("Number 1: %i, Number 2: %i\n", num_one, num_two );
 	return compare(num_one, num_two);
 	
@@ -63,6 +63,5 @@ int compare(int num_one,int num_two)
 }
 void translate_num(int spec_num)
 {
-	printf("Unsigned: %u \n", (unsigned)spec_num );
 	printf("Signed: %i \n", (signed)spec_num);
 }
