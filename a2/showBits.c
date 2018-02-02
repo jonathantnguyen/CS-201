@@ -17,7 +17,7 @@ int main(int argc, char ** argv)
 
 void check(int argc, char ** argv)
 {
-	if(argc == 3)
+	if(argc != 3)
 	{
 		printf("Must enter two arguments.\n");
 		exit(0);
