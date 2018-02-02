@@ -17,9 +17,9 @@ int main(int argc, char ** argv)
 
 void check(int argc, char ** argv)
 {
-	if((argc == 1)  || (argc > 4))
+	if(argc == 3)
 	{
-		printf("No arguments, execute with arguments.\n");
+		printf("Must enter two arguments.\n");
 		exit(0);
 	}
 }
