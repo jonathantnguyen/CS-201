@@ -7,7 +7,7 @@
 void check(int argc, char ** argv);
 int hToD(int argc, char ** argv);
 int compare(int num_one, int num_two);
-void translate_num(int spec_num)
+void translate_num(int spec_num);
 
 
 
