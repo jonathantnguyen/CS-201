@@ -2,10 +2,12 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <errno.h>
+#include <cmath.h>
 
 void check(int argc, char ** argv);
-void hToD(int argc, char ** argv);
-void compare(int num_one, int num_two);
+int hToD(int argc, char ** argv);
+int compare(int num_one, int num_two);
+void translate_num(int spec_num)
 
 
 
@@ -13,6 +15,7 @@ int main(int argc, char ** argv)
 {
 	check(argc, argv);
 	hToD(argc, argv);
+
 	
 	exit(0); 
 }
@@ -26,7 +29,7 @@ void check(int argc, char ** argv)
 	}
 }
 
-void hToD(int argc, char ** argv)
+int hToD(int argc, char ** argv)
 {
 	char * end;
 	*argv = end;
@@ -37,22 +40,28 @@ void hToD(int argc, char ** argv)
 	int num_one = (long unsigned)strtoul(argv[1], &end, 16);
 	int num_two = (long unsigned)strtoul(argv[2], &end, 16);
 	//printf("Number 1: %i, Number 2: %i\n", num_one, num_two );
-	compare(num_one, num_two);
+	return compare(num_one, num_two);
 	
 }
 
-void compare(int num_one,int num_two)
+int compare(int num_one,int num_two)
 {
-	printf("Bits: ");
+
 	for(int i = 0; i < 32; i++)
 	{
 		if((num_one & 1) && (num_two & 1))
 		{
-			printf("%i, ",i);
+			printf("Bits: %i, ",i);
+			int spec_num += pow(2,i);
 		}
 		
 		num_one >>= 1;
 		num_two >>= 1;
 	}
-
+	return spec_num;
+}
+int translate_num(spec_num)
+{
+	printf("Unsigned: %u \n", (unsigned)spec_num );
+	printf("Signed: %i \n", spec_num);
 }
