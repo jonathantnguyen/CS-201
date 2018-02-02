@@ -29,7 +29,7 @@ void hToD(int argc, char ** argv)
 	char * end;
 	*argv = end;
 
-	for(int j = 1; j <= argc; j++)
+	for(int j = 2; j <= argc; j++)
 	{
 		if(errno != 0)
 			exit;
