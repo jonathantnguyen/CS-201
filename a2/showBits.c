@@ -22,7 +22,6 @@ void check(int argc, char ** argv)
 		printf("Must enter two arguments.\n");
 		exit(0);
 	}
-	printf("# of ARG: %d\n", argc );
 }
 
 void hToD(int argc, char ** argv)
@@ -36,7 +35,7 @@ void hToD(int argc, char ** argv)
 			exit(0);
 
 		unsigned int bin = (long unsigned)strtoul(argv[j], &end, 16);
-		printf("Value: %u \n", bin);
+		printf("Argument: %d Value: %u \n",argc, bin);
 	}
 
 }
