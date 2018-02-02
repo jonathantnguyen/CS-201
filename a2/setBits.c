@@ -26,7 +26,6 @@ void sToI(int argc, char ** argv)
 			dToB(bin);
 		else
 			printf("Must be between 0-15, restart executable.\n");
-		exit;
 	}
 }
 
@@ -35,7 +34,7 @@ int check(int argc, char ** argv)
 	if(argc == 1)
 	{
 		printf("No arguments, execute with arguments.\n");
-		return 0;
+		exit;
 	}
 
 	sToI(argc, argv);
