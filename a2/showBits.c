@@ -22,6 +22,7 @@ void check(int argc, char ** argv)
 		printf("Must enter two arguments.\n");
 		exit(0);
 	}
+	printf("# of ARG: %d\n", argc );
 }
 
 void hToD(int argc, char ** argv)
