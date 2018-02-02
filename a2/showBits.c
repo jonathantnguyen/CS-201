@@ -46,13 +46,14 @@ int hToD(int argc, char ** argv)
 
 int compare(int num_one,int num_two)
 {
+	int spec_num = 0;
 
 	for(int i = 0; i < 32; i++)
 	{
 		if((num_one & 1) && (num_two & 1))
 		{
 			printf("Bits: %i, ",i);
-			int spec_num += pow(2,i);
+			spec_num += pow(2,i);
 		}
 		
 		num_one >>= 1;
@@ -60,7 +61,7 @@ int compare(int num_one,int num_two)
 	}
 	return spec_num;
 }
-int translate_num(int spec_num)
+void translate_num(int spec_num)
 {
 	printf("Unsigned: %u \n", (unsigned)spec_num );
 	printf("Signed: %i \n", spec_num);
