@@ -5,7 +5,7 @@
 
 void check(int argc, char ** argv);
 void hToD(int argc, char ** argv);
-void compare(int argc, char ** argv);
+void compare(int argc, int * num_array);
 
 
 
@@ -42,7 +42,7 @@ void hToD(int argc, char ** argv)
 	}
 }
 
-void compare(int argc, char ** argv)
+void compare(int argc, int * num_array)
 {
 	int num_one = num_array[0];
 	int num_two = num_array[1];
