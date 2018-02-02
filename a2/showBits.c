@@ -5,13 +5,14 @@
 
 void check(int argc, char ** argv);
 void hToD(int argc, char ** argv);
+void compare(int argc, char ** argv);
+
 
 
 int main(int argc, char ** argv)
 {
 	check(argc, argv);
 	hToD(argc, argv);
-	printf("end here\n");
 	
 	exit(0); 
 }
@@ -35,9 +36,16 @@ void hToD(int argc, char ** argv)
 		if(errno != 0)
 			exit(0);
 
-		unsigned int bin = (long unsigned)strtoul(argv[j], &end, 16);
-		printf("Argument: %d Value: %u \n",j, bin);
+		int k = sizeof(argv[j])
+		argv[j] = (long unsigned)strtoul(argv[j], &end, 16);
+		compare(argc, argv);
 	}
-	printf("Outside For Loops \n");
+}
 
+void compare(int argc, char ** argv)
+{
+	num_one = argv[0];
+	num_two = argv[1];
+
+	printf("Number 1: %i, Number 2: %i \n", num_one, num_two );
 }
