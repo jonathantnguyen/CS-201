@@ -38,7 +38,7 @@ void hToD(int argc, char ** argv)
 
 		int k = sizeof(argv[j]);
 		int num_array[j-1] = (long unsigned)strtoul(argv[j], &end, 16);
-		compare(argc, argv);
+		compare(argc, num_array);
 	}
 }
 
