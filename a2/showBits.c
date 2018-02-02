@@ -44,5 +44,5 @@ void hToD(int argc, char ** argv)
 
 void compare(int argc, int * num_array)
 {
-	printf("Number 1: %i, Number 2: %i \n", num_array[0], num_array[1]);
+	printf("Number 1: %u, Number 2: %u \n", num_array[0], num_array[1]);
 }
