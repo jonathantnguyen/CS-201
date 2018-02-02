@@ -36,12 +36,23 @@ void hToD(int argc, char ** argv)
 
 	int num_one = (long unsigned)strtoul(argv[1], &end, 16);
 	int num_two = (long unsigned)strtoul(argv[2], &end, 16);
-	printf("Number 1: %i, Number 2: %i\n", num_one, num_two );
+	//printf("Number 1: %i, Number 2: %i\n", num_one, num_two );
 	compare(num_one, num_two);
 	
 }
 
 void compare(int num_one,int num_two)
 {
+	printf("Bits: ");
+	for(int i = 0; i < 31; i++)
+	{
+		if((num_one & 1) && (num_two & 1))
+		{
+			printf("%i,\n",i);
+		}
+		
+		num_one >> 1;
+		num_two >> 1;
+	}
 
 }
