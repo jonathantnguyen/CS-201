@@ -37,15 +37,12 @@ void hToD(int argc, char ** argv)
 			exit(0);
 
 		int k = sizeof(argv[j]);
-		int num_array[j-1] = (long unsigned)strtoul(argv[j], &end, 16);
+		unsigned int num_array[j-1] = (long unsigned)strtoul(argv[j], &end, 16);
 		compare(argc, num_array);
 	}
 }
 
 void compare(int argc, int * num_array)
 {
-	int num_one = num_array[0];
-	int num_two = num_array[1];
-
-	printf("Number 1: %i, Number 2: %i \n", num_one, num_two );
+	printf("Number 1: %i, Number 2: %i \n", num_array[0], num_array[1]);
 }
