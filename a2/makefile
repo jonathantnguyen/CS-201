@@ -6,7 +6,7 @@ PROGS= setBits showBits
 all: $(PROGS)
 
 %: %.c
-	$(CC) $(CFLAGS) $(DFLAGS) $< -o $@
+	$(CC) $(CFLAGS) $(DFLAGS) $< -o -lm $@
 
 clean:
 	rm -f $(PROGS) *.o ~* 
