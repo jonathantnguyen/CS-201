@@ -51,8 +51,8 @@ void compare(int num_one,int num_two)
 			printf("%i,\n",i);
 		}
 		
-		num_one >> 1;
-		num_two >> 1;
+		num_one >>= 1;
+		num_two >>= 1;
 	}
 
 }
