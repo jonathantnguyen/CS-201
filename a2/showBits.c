@@ -25,6 +25,7 @@ void check(int argc, char ** argv)
 
 void hToD(int argc, char ** argv)
 {
+	char * end;
 	*argv = end;
 
 	for(int j = 0; j <= argc; j++)
@@ -32,7 +33,7 @@ void hToD(int argc, char ** argv)
 		if(errno != 0)
 			exit;
 
-		bin = (long unsigned)strtoul(argv[j], &end, 16);
+		int bin = (long unsigned)strtoul(argv[j], &end, 16);
 		printf("Value: %lu \n", bin);
 	}
 
