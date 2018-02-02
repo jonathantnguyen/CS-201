@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <errno.h>
 
 void check(int argc, char ** argv);
 void hToD(int argc, char ** argv);
@@ -25,11 +26,15 @@ void check(int argc, char ** argv)
 void hToD(int argc, char ** argv)
 {
 	*argv = end;
-	while(int j = 0; j <= argc)
+
+	for(int j = 0; j <= argc; j++)
 	{
-		errno = 0;
+		if(errno != 0)
+			exit;
+
 		bin = (long unsigned)strtoul(argv[j], &end, 16);
-		hToD(bin);
+			hToD(bin);
+
 	}
 
 }
