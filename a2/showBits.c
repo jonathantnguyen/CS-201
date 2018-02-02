@@ -20,7 +20,7 @@ void check(int argc, char ** argv)
 	if((argc == 1)  || (argc >=4))
 	{
 		printf("No arguments, execute with arguments.\n");
-		exit;
+		exit(0);
 	}
 }
 
@@ -29,10 +29,10 @@ void hToD(int argc, char ** argv)
 	char * end;
 	*argv = end;
 
-	for(int j = 2; j <= argc; j++)
+	for(int j = 1; j <= argc; j++)
 	{
 		if(errno != 0)
-			exit;
+			exit(0);
 
 		unsigned int bin = (long unsigned)strtoul(argv[j], &end, 16);
 		printf("Value: %u \n", bin);
