@@ -38,5 +38,6 @@ void hToD(int argc, char ** argv)
 		unsigned int bin = (long unsigned)strtoul(argv[j], &end, 16);
 		printf("Argument: %d Value: %u \n",j, bin);
 	}
+	printf("Outside For Loops \n");
 
 }
