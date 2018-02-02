@@ -14,7 +14,7 @@ void translate_num(int spec_num);
 int main(int argc, char ** argv)
 {
 	check(argc, argv);
-	hToD(argc, argv);
+	translate_num(hToD(argc, argv));
 
 	
 	exit(0); 
