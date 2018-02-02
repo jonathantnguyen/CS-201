@@ -48,7 +48,7 @@ void compare(int num_one,int num_two)
 	{
 		if((num_one & 1) && (num_two & 1))
 		{
-			printf("%i,\n",i);
+			printf("%i, ",i);
 		}
 		
 		num_one >>= 1;
