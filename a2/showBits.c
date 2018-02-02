@@ -36,7 +36,7 @@ void hToD(int argc, char ** argv)
 		if(errno != 0)
 			exit(0);
 
-		int k = sizeof(argv[j])
+		int k = sizeof(argv[j]);
 		argv[j] = (long unsigned)strtoul(argv[j], &end, 16);
 		compare(argc, argv);
 	}
@@ -44,8 +44,8 @@ void hToD(int argc, char ** argv)
 
 void compare(int argc, char ** argv)
 {
-	num_one = argv[0];
-	num_two = argv[1];
+	int num_one = argv[0];
+	int num_two = argv[1];
 
 	printf("Number 1: %i, Number 2: %i \n", num_one, num_two );
 }
