@@ -5,7 +5,7 @@
 
 void check(int argc, char ** argv);
 void hToD(int argc, char ** argv);
-void compare(int argc, int num_array);
+void compare(int num_one, int num_two);
 
 
 
@@ -31,18 +31,17 @@ void hToD(int argc, char ** argv)
 	char * end;
 	*argv = end;
 
-	for(int j = 1; j < argc; j++)
-	{
-		if(errno != 0)
-			exit(0);
+	if(errno != 0)
+		exit(0);
 
-		int k = sizeof(argv[j]);
-		num_array = (long unsigned)strtoul(argv[j], &end, 16);
-		compare(argc, num_array);
-	}
+	int num_one = (long unsigned)strtoul(argv[1], &end, 16);
+	int num_two = (long unsigned)strtoul(argv[2], &end, 16);
+	printf("Number 1: %i, Number 2: %i\n", num_one, num_two );
+	compare(num_one, num_two);
+	
 }
 
-void compare(int argc, int num_array)
+void compare(int num_one,int num_two)
 {
-	printf("Number 1: %u, Number 2: %u \n", num_array[0], num_array[1]);
+
 }
