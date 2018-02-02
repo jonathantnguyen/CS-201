@@ -22,7 +22,7 @@ void check(int argc, char ** argv)
 	}
 }
 
-void hToD(long bin)
+void hToD(int argc, char ** argv)
 {
 	*argv = end;
 	while(int j = 0; j <= argc)
