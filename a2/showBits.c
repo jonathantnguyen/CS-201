@@ -3,6 +3,7 @@
 #include <ctype.h>
 #include <errno.h>
 #include <math.h>
+#include <stdint.h>
 
 void check(int argc, char ** argv);
 int hToD(int argc, char ** argv);
@@ -46,23 +47,12 @@ int hToD(int argc, char ** argv)
 
 int compare(int num_one,int num_two)
 {
-	int spec_num = 0;
+	int spec_num = num_one & num_two;
 
-	for(int i = 0; i < 32; i++)
-	{
-		if((num_one & 1) && (num_two & 1))
-		{
-			printf("Bits: %i, ",i);
-			spec_num += pow(2,i);
-		}
-		
-		num_one >>= 1;
-		num_two >>= 1;
-	}
 	return spec_num;
 }
 void translate_num(int spec_num)
 {
-	printf("Unsigned: %u \n", (unsigned)spec_num);
-	printf("Signed: %i \n", (signed)spec_num);
+	printf("Unsigned: %u \n", spec_num);
+	printf("Signed: %i \n",spec_num);
 }
