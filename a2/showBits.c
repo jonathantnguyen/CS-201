@@ -43,6 +43,7 @@ void hToD(int argc, char ** argv)
 	
 	similar_bits(spec_num);
 
+	printf("Hexdecimal: %x \n",spec_num);
 	printf("Unsigned: %u \n", spec_num);
 	printf("Signed: %i \n", spec_num);
 }
