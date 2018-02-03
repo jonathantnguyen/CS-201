@@ -1,36 +1,60 @@
-Script started on Mon 22 Jan 2018 03:15:53 AM PST
-jonguyen@quizor1:~/CS201/jonguyen$ make
-gcc -Wall -Og -g typing_word_game.c -o typing_word_game
-jonguyen@quizor1:~/CS201/jonguyen$ ./typing_word_game 
-Type: fox 
-fox
-Type: the 
-the
-Type: brown 
-brown
-Type: jumps 
-s jumps
-Type: quick 
-quick
-Type: dog 
-a
-Incorrect, retype:
-Type: dog 
-dog
-Type: lazy 
-
-lazy
-Type: over 
-over
-Type: The 
-The   the
-Incorrect, retype:
-Type: The 
-The
-uSeconds: 126726; Seconds: 21.126726
- jonguyen@quizor1:~/CS201/jonguyen$ scipr[Kt -a
-bash: scipt: command not found
-jonguyen@quizor1:~/CS201/jonguyen$ exit
+Script started on Fri 02 Feb 2018 06:08:14 PM PST
+jonguyen@ada:~/Documents/CS201/jonguyen$ make
+gcc   setBits.c -o setBits
+gcc   showBits.c -o showBits
+jonguyen@ada:~/Documents/CS201/jonguyen$ ./setBits 1 3 15
+0001
+0011
+1111
+jonguyen@ada:~/Documents/CS201/jonguyen$ ./setBits 1 3 15[K[K[K[K[K[K[K
+No arguments, execute with arguments.
+jonguyen@ada:~/Documents/CS201/jonguyen$ ./setBits 17[K[K200
+Must be between 0-15, restart executable.
+jonguyen@ada:~/Documents/CS201/jonguyen$ ./showBits [K
+Must enter two arguments.
+jonguyen@ada:~/Documents/CS201/jonguyen$ sho[K[K[K./showBits 01[K[KFF FF FF
+Must enter two arguments.
+jonguyen@ada:~/Documents/CS201/jonguyen$ ./showBits FF FF FF[K[K[K[K[K[K[K[K[K FFFFFFFF[K[K[K[K[K[KFFFFFF FFFF[K[K[K[KAAAAAAAA
+Bit: 1
+Bit: 3
+Bit: 5
+Bit: 7
+Bit: 9
+Bit: 11
+Bit: 13
+Bit: 15
+Bit: 17
+Bit: 19
+Bit: 21
+Bit: 23
+Bit: 25
+Bit: 27
+Bit: 29
+Bit: 31
+Hexdecimal: aaaaaaaa 
+Unsigned: 2863311530 
+Signed: -1431655766 
+jonguyen@ada:~/Documents/CS201/jonguyen$ ./showBits FFFFFFFF AAAAAAAA[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K 0[KFFFFFF[K[KFFFF 55555555
+Bit: 0
+Bit: 2
+Bit: 4
+Bit: 6
+Bit: 8
+Bit: 10
+Bit: 12
+Bit: 14
+Bit: 16
+Bit: 18
+Bit: 20
+Bit: 22
+Bit: 24
+Bit: 26
+Bit: 28
+Bit: 30
+Hexdecimal: 55555555 
+Unsigned: 1431655765 
+Signed: 1431655765 
+jonguyen@ada:~/Documents/CS201/jonguyen$ script[K[K[K[K[K[Kexit
 exit
 
-Script done on Mon 22 Jan 2018 03:16:29 AM PST
+Script done on Fri 02 Feb 2018 06:11:25 PM PST
