@@ -5,16 +5,15 @@
 #include <math.h>
 
 void check(int argc, char ** argv);
-int hToD(int argc, char ** argv);
-//int compare(int num_one, int num_two);
-//void translate_num(int spec_num);
+void hToD(int argc, char ** argv);
+void similar_bits(int spec_num);
 
 
 
 int main(int argc, char ** argv)
 {
 	check(argc, argv);
-	/*translate_num*/(hToD(argc, argv));
+	hToD(argc, argv);
 
 	
 	exit(0); 
@@ -29,7 +28,7 @@ void check(int argc, char ** argv)
 	}
 }
 
-int hToD(int argc, char ** argv)
+void hToD(int argc, char ** argv)
 {
 	char * end;
 	*argv = end;
@@ -41,23 +40,16 @@ int hToD(int argc, char ** argv)
 	int num_two = strtoul(argv[2], &end, 16);
 
 	int spec_num = num_one & num_two;
+	similar_bits(spec_num);
 
 	printf("Unsigned: %u \n", (unsigned) spec_num);
 	printf("Signed: %i \n", spec_num);
-	//printf("Number 1: %i, Number 2: %i\n", num_one, num_two );
-	//return compare(num_one, num_two);
-	
 }
 
-/*int compare(int num_one,int num_two)
+void similar_bits(int spec_num)
 {
-	int spec_num = num_one & num_two;
-
-	return spec_num;
+	for(int i = 0; i > 32; i++)
+	{
+		(spec_num & 1) ? printf("Bit %i\n", i);
+	}
 }
-void translate_num(int spec_num)
-{
-	printf("Unsigned: %u \n", (unsigned) spec_num);
-	printf("Signed: %i \n", spec_num);
-}
-*/
