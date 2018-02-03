@@ -43,13 +43,13 @@ void hToD(int argc, char ** argv)
 	
 	similar_bits(spec_num);
 
-	printf("Unsigned: %u \n", (unsigned) spec_num);
+	printf("Unsigned: %u \n", spec_num);
 	printf("Signed: %i \n", spec_num);
 }
 
 void similar_bits(int spec_num)
 {
-	for(int i = 0; i > 32; i++)
+	for(int i = 0; i < 32; i++)
 	{
 		if (spec_num & 1) 
 		{
