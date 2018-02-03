@@ -55,6 +55,6 @@ void similar_bits(int spec_num)
 		{
 			printf("Bit: %i\n", i);
 		}
-		spec_num <<= 1;
+		spec_num >>= 1;
 	}
 }
