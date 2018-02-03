@@ -50,6 +50,7 @@ void similar_bits(int spec_num)
 {
 	for(int i = 0; i > 32; i++)
 	{
-		(spec_num & 1) ? printf("Bit %i\n", i);
+		(spec_num & 1) ? printf("Bit %i\n", i) :;
+		spec_num <<= 1;
 	}
 }
