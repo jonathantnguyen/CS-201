@@ -40,6 +40,7 @@ void hToD(int argc, char ** argv)
 	int num_two = strtoul(argv[2], &end, 16);
 
 	int spec_num = num_one & num_two;
+	
 	similar_bits(spec_num);
 
 	printf("Unsigned: %u \n", (unsigned) spec_num);
