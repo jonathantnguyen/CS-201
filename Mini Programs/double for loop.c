@@ -9,11 +9,11 @@ int main(){
 
 	for(i = 0; i < n; i++)
 	{
-		printf("%i\n", i );
+		printf("i: %i\n", i );
 	
 		for(j = i+1; j<=n; j++)
 		{
-			printf("%i\n", j);
+			printf("j: %i\n", j);
 			//l += 1;
 		//	printf("%i\n", l );
 		}
