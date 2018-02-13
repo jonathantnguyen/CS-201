@@ -14,8 +14,8 @@ int main(){
 		for(j = i+1; j<=n; j++)
 		{
 			printf("%i\n", j);
-			l += 1;
-			printf("%i\n", l );
+			//l += 1;
+		//	printf("%i\n", l );
 		}
 	}
 exit;
