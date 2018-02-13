@@ -7,13 +7,16 @@ int main(){
 	int i;
 	int j;
 
-	for(i = 0; i < n; i++){
+	for(i = 0; i < n; i++)
+	{
 		printf("%i\n", i );
-	}
-		for(j = i+1; j<=n; j++){
+	
+		for(j = i+1; j<=n; j++)
+		{
 			printf("%i\n", j);
 			l += 1;
-		printf("%i\n", l );
+			printf("%i\n", l );
 		}
+	}
 exit;
 }
