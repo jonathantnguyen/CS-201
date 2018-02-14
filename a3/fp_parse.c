@@ -13,9 +13,10 @@ int main(int argc, char ** argv)
 void strtol_func(int argc, char ** argv)
 {
 	char * end;
-	*argv = end;
+
 	for (int i = 1; i <= 4; i++)
 	{
+		*argv = end;
 		*argv[i] = strtol(argv[i], &end, 10);
 	}
 
