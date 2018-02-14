@@ -19,6 +19,7 @@ int main(int argc, char ** argv)
 void check(int argc, char ** argv)
 {
 	int flag_error = 0;
+	true = 1;
 
 	if(argc != 4)
 	{
