@@ -60,7 +60,7 @@ void strtol_func(int argc, char ** argv)
 	}
 		*argv[3] = strtol(argv[3], &end, 16);
 		printf("signed: %d\n",*argv[3] );
-		printf("unsigned: %d\n", (unsigned)*argv[3] );
+		printf("unsigned: %u\n", (unsigned) *argv[3] );
 }
 
 /**
