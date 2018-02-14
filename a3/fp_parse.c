@@ -2,20 +2,24 @@
 #include <stdio.h>
 
 void check(int argc, char ** argv);
+void strtol_func(int argc, char ** argv);
 
 int main(int argc, char ** argv)
 {
-
-	for (int i = 1; i <= 4; i++)
-	{
-		argv[i] = (long unsigned)strtol(argv[i], &end, 10);
-	}
-	
-
-
+	strtol_func(argc, argv);
 	check(argc, argv);
 }
 
+void strtol_func(int argc, char ** argv)
+{
+	char * end;
+	*argv = end;
+	for (int i = 1; i <= 4; i++)
+	{
+		*argv[i] = strtol(argv[i], &end, 10);
+	}
+
+}
 void check(int argc, char ** argv)
 {
 	int flag_error = 0;
