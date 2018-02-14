@@ -4,7 +4,7 @@
 
 void check(int argc, char ** argv);
 void strtol_func(int argc, char ** argv);
-void bit_manip(char ** argv)
+void bit_manip(char ** argv);
 
 int flag_error = 0;
 
