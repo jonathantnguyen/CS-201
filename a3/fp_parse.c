@@ -2,11 +2,27 @@
 #include <stdio.h>
 
 void check(int argc, char ** argv);
+void strtol_func(int argc, char ** argv);
 
 int main(int argc, char ** argv)
 {
 	check(argc, argv);
+	strtol_func(argc, argv);
 	exit(0);
+}
+
+void strtol_func(int argc, char ** argv)
+{
+	char * end;
+
+	for(int i = 1; i <=2; i++)
+	{
+		*argv = end;
+		*argv[i] = strtol(argv[i], &end, 10);
+	}
+
+	*argv[3] = strtol(argv[3], &end, 16);
+
 }
 
 void check(int argc, char ** argv)
@@ -14,9 +30,6 @@ void check(int argc, char ** argv)
 	int flag_error = 0;
 
 	int hex, arr1, arr2;
-
-	sscanf(argv,"%i %i %i", &arr1, &arr2, hex);
-	printf("Frac: %i, Exp: %i, Hex: %i \n", arr1, arr2, hex);
 
 	if(argc != 4)
 	{
