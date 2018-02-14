@@ -36,13 +36,14 @@ void bit_manip(char ** argv)
 	int sign = 0;
 	int size = *argv[1] + *argv[2];
 
-	if (*argv[3] & 0x100)
+	sign = *argv[3] & 0x100
+	if (sign == 0)
 	{
-		int sign = 1;
-		printf("true\n");
+		printf("Sign is positive \n");
 	}
 	else
-		printf("false\n");
+		printf("Sign is negative\n");
+
 
 	
 
