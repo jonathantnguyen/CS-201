@@ -36,19 +36,8 @@ void bit_manip(char ** argv)
 
 	int size = *argv[1] + *argv[2];
 	int bit_sign = 1;
-
-	bit_sign = bit_sign << size;
-
-	if ((*argv[3] & bit_sign) == 0)
-		printf("Sign is positive\n");
-	else
-		printf("Sign is negative\n");
-
-	//int sign = (*argv[3] & bit_sign) ? printf("%s\n", );:;
-
-
-	
-
+	int bit_sign_spc = 0xF;
+	int temp_hex = *argv[3]
 
 
 }
@@ -69,7 +58,7 @@ void strtol_func(int argc, char ** argv)
 		*argv = end;
 		*argv[i] = strtol(argv[i], &end, 10);
 	}
-		*argv[3] = strtol(argv[3], &end, 16);
+		*argv[3] = (unsigned long strtol(argv[3], &end, 16));
 }
 
 /**
