@@ -20,7 +20,7 @@ void strtol_func(int argc, char ** argv)
 	{
 		*argv = end;
 		printf("segfault 1\n");
-		**argv = (unsigned long) strtol(argv[i], &end, 10);
+		*argv[i] = (unsigned long) strtol(argv[i], &end, 10);
 		printf("segfault 2\n");
 		printf("Value: %i \n", *argv[i]);
 
