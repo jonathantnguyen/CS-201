@@ -35,8 +35,15 @@ void bit_manip(char ** argv)
 {
 	int sign = 0;
 	int size = *argv[1] + *argv[2];
+
+	if (*argv[3] & 0x100)
+	{
+		int sign = 1;
+		printf("true\n");
+	}
+	printf("false\n");
+
 	
-	printf("%d\n",size );
 
 
 
@@ -59,8 +66,6 @@ void strtol_func(int argc, char ** argv)
 		*argv[i] = strtol(argv[i], &end, 10);
 	}
 		*argv[3] = strtol(argv[3], &end, 16);
-		printf("signed: %d\n",*argv[3] );
-		printf("unsigned: %u\n", (unsigned) *argv[3] );
 }
 
 /**
