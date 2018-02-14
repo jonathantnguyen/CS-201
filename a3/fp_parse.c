@@ -9,6 +9,10 @@ int main(int argc, char ** argv)
 	
 	strtol_func(argc, argv);
 	check(argc, argv);
+	printf("Value 3: %d \n", *argv[1]);
+	printf("Value 3: %d \n", *argv[2]);
+	printf("Value 3: %d \n", *argv[3]);
+
 	exit(0);
 }
 
@@ -20,11 +24,11 @@ void strtol_func(int argc, char ** argv)
 	{
 		*argv = end;
 		*argv[i] = strtol(argv[i], &end, 10);
-		printf("Value %d:  %d \n", i, *argv[i]);
+		//printf("Value %d:  %d \n", i, *argv[i]);
 	}
 
 	*argv[3] = strtol(argv[3], &end, 16);
-	printf("Value 3: %d \n", *argv[3]);
+	//printf("Value 3: %d \n", *argv[3]);
 
 
 }
