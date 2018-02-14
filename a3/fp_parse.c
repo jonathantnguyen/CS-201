@@ -4,14 +4,15 @@
 
 void check(int argc, char ** argv);
 void strtol_func(int argc, char ** argv);
+void bit_manip(char ** argv)
 
 int flag_error = 0;
 
 /**
  * @brief      main funct to call functions
  *
- * @param[in]  argc  The argc
- * @param      argv  The argv
+ * @param[in]  argc  command-line argument count
+ * @param      argv  command-line argument values
  *
  * @return     { description_of_the_return_value }
  */
@@ -23,10 +24,21 @@ int main(int argc, char ** argv)
 		exit(0);
 	}
 	
-	strtol_func(argc, argv);
+	strtol_func(argc, argv); 
 	check(argc, argv);
+	bit_manip(argv);
 
 	exit(0);
+}
+
+void bit_manip(char ** argv)
+{
+	int sign = 0;
+	int size = *argv[1] + *argv[2];
+	printf("%d\n",size );
+
+
+
 }
 
 /**
@@ -44,13 +56,8 @@ void strtol_func(int argc, char ** argv)
 	{
 		*argv = end;
 		*argv[i] = strtol(argv[i], &end, 10);
-		//printf("Value %d:  %d \n", i, *argv[i]);
 	}
-
-	*argv[3] = strtol(argv[3], &end, 16);
-	//printf("Value 3: %d \n", *argv[3]);
-
-
+		*argv[3] = strtol(argv[3], &end, 16);
 }
 
 /**
