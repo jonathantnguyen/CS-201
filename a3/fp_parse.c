@@ -21,10 +21,8 @@ void strtol_func(int argc, char ** argv)
 
 		*argv[i] = (unsigned long) strtol(argv[i], &end, 10);
 		printf("Value: %i \n", *argv[i]);
-		printf("Hexdecimal: %x \n",*argv[3]);
-
 	}
-
+		printf("Hexdecimal: %x \n",*argv[3]);
 
 }/*
 void check(int argc, char ** argv)
