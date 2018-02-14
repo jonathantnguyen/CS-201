@@ -1,14 +1,22 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-void check(int argc, int ** argv);
+void check(int argc, char ** argv);
 
-int main(int argc, int ** argv)
+int main(int argc, char ** argv)
 {
+
+	for (i = 1; i <= 4; i++)
+	{
+		argv[i] = (long unsigned)strtol(argv[i], &end, 10);
+	}
+	
+
+
 	check(argc, argv);
 }
 
-void check(int argc, int ** argv)
+void check(int argc, char ** argv)
 {
 	int flag_error = 0;
 
