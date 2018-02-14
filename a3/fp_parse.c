@@ -18,12 +18,12 @@ void strtol_func(int argc, char ** argv)
 	for(int i = 1; i <=2; i++)
 	{
 		*argv = end;
-		*argv[i] = strtol(argv[i], &end, 10);
-		printf("Value %d:  %d \n", i, argv[i]);
+		*argv[i] = strtol(*argv[i], &end, 10);
+		//printf("Value %d:  %d \n", i, argv[i]);
 	}
 
-	*argv[3] = strtol(argv[3], &end, 16);
-	printf("Value 3: %d \n", argv[3]);
+	*argv[3] = strtol(*argv[3], &end, 16);
+	//printf("Value 3: %d \n", argv[3]);
 
 
 }
