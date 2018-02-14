@@ -7,6 +7,14 @@ void strtol_func(int argc, char ** argv);
 
 int flag_error = 0;
 
+/**
+ * @brief      main funct to call functions
+ *
+ * @param[in]  argc  The argc
+ * @param      argv  The argv
+ *
+ * @return     { description_of_the_return_value }
+ */
 int main(int argc, char ** argv)
 {
 	if(argc != 4)
@@ -17,13 +25,17 @@ int main(int argc, char ** argv)
 	
 	strtol_func(argc, argv);
 	check(argc, argv);
-	printf("Value 3: %d \n", *argv[1]);
-	printf("Value 3: %d \n", *argv[2]);
-	printf("Value 3: %d \n", *argv[3]);
 
 	exit(0);
 }
 
+/**
+ * @brief      parsing command-line argument using strtol base 10 for decimal arguement
+ * 			   and base 16 for the hexdecimal argument
+ *
+ * @param[in]  argc  argument count
+ * @param      argv  argument values
+ */
 void strtol_func(int argc, char ** argv)
 {
 	char * end;
@@ -41,6 +53,12 @@ void strtol_func(int argc, char ** argv)
 
 }
 
+/**
+ * @brief      Command-line argument error handling
+ *
+ * @param[in]  argc  argument count
+ * @param      argv  argument values
+ */
 void check(int argc, char ** argv)
 {
 
