@@ -35,6 +35,8 @@ void bit_manip(char ** argv)
 {
 
 	int size = *argv[1] + *argv[2];
+	int bit_sign = 0;
+ 
 	bit_sign = bit_sign << size;
 
 	if ((*argv & bit_sign) == 0)
