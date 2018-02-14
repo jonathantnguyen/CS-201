@@ -33,17 +33,16 @@ int main(int argc, char ** argv)
 
 void bit_manip(char ** argv)
 {
-	int sign = 0;
-	int size = *argv[1] + *argv[2];
 
-	sign = *argv[3] & 0x100;
-	printf("Value of sign: %i\n", sign );
-	if (sign == 0)
-	{
-		printf("Sign is positive \n");
-	}
+	int size = *argv[1] + *argv[2];
+	bit_sign = bit_sign << size;
+
+	if ((*argv & bit_sign) == 0)
+		printf("Sign is positive\n");
 	else
-		printf("Sign is negative\n");
+		printf("Sign is negative\n");}
+
+	//int sign = (*argv[3] & bit_sign) ? printf("%s\n", );:;
 
 
 	
