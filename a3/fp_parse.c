@@ -15,12 +15,13 @@ void strtol_func(int argc, char ** argv)
 {
 	char * end;
 
-	for (int i = 1; i < 4; i++)
+	for (int i = 1; i < 2; i++)
 	{
 		*argv = end;
 
 		*argv[i] = (unsigned long) strtol(argv[i], &end, 10);
 		printf("Value: %i \n", *argv[i]);
+		printf("Hexdecimal: %x \n",*argv[3]);
 
 	}
 
