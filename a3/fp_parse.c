@@ -8,6 +8,7 @@ int main(int argc, char ** argv)
 {
 	printf("segfault 0\n");
 	strtol_func(argc, argv);
+	printf("segfault end\n");
 	//check(argc, argv);
 exit(0);
 }
