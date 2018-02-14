@@ -11,7 +11,7 @@ int main(int argc, char ** argv)
 	exit(0);
 }
 
-void strtol_func(int argc, char ** argv)
+ strtol_func(int argc, char ** argv)
 {
 	char * end;
 
@@ -19,11 +19,12 @@ void strtol_func(int argc, char ** argv)
 	{
 		*argv = end;
 		*argv[i] = strtol(argv[i], &end, 10);
-		cout << "Value " << i << ": " <<argv[i] << endl;
+		printf("Value %d:  %d \n", i, argv[i]);
 	}
 
 	*argv[3] = strtol(argv[3], &end, 16);
-	cout << "1: " << argv[3] <<endl;
+	printf("Value 3: %d \n", argv[3]);
+
 
 }
 
