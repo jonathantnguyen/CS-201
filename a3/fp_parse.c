@@ -37,6 +37,7 @@ void bit_manip(char ** argv)
 	int size = *argv[1] + *argv[2];
 
 	sign = *argv[3] & 0x100;
+	printf("Value of sign: %i\n", sign );
 	if (sign == 0)
 	{
 		printf("Sign is positive \n");
