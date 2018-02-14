@@ -19,7 +19,9 @@ void strtol_func(int argc, char ** argv)
 	{
 		*argv = end;
 		**argv = (unsigned long) strtol(argv[i], &end, 10);
+		printf("Value: \n", argv[i]);
 	}
+
 
 }/*
 void check(int argc, char ** argv)
