@@ -17,7 +17,7 @@ void strtol_func(int argc, char ** argv)
 {
 	char * end;
 
-	for (int i = 1; i <= 4; i++)
+	for (int i = 1; i < 4; i++)
 	{
 		*argv = end;
 		printf("segfault 1\n");
