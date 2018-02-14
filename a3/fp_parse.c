@@ -41,7 +41,8 @@ void bit_manip(char ** argv)
 		int sign = 1;
 		printf("true\n");
 	}
-	printf("false\n");
+	else
+		printf("false\n");
 
 	
 
