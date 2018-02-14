@@ -6,7 +6,7 @@ void check(int argc, char ** argv);
 int main(int argc, char ** argv)
 {
 
-	for (i = 1; i <= 4; i++)
+	for (int i = 1; i <= 4; i++)
 	{
 		argv[i] = (long unsigned)strtol(argv[i], &end, 10);
 	}
@@ -38,6 +38,6 @@ void check(int argc, char ** argv)
 		printf("Number of exponent bits (k) between 3 and 5\n");
 	}
 
-	if(flag_error == true)
+	if(flag_error != 0)
 		exit(0);
 }
