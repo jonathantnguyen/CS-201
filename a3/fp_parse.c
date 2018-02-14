@@ -40,7 +40,7 @@ void bit_manip(char ** argv)
 	if ((*argv & bit_sign) == 0)
 		printf("Sign is positive\n");
 	else
-		printf("Sign is negative\n");}
+		printf("Sign is negative\n");
 
 	//int sign = (*argv[3] & bit_sign) ? printf("%s\n", );:;
 
