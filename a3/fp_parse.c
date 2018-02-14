@@ -33,12 +33,10 @@ int main(int argc, char ** argv)
 
 void bit_manip(char ** argv)
 {
+	int sign = 0;
+	unsigned long temp_hex = *argv[3];
 
-	int size = *argv[1] + *argv[2];
-	int bit_sign = 1;
-	int bit_sign_spc = 0xF;
-	int temp_hex = *argv[3]
-
+	sign = (temp_hex &(1 << *argv[1] + *argv[2] + 1)) ? 1 : 0;
 
 }
 
@@ -58,7 +56,7 @@ void strtol_func(int argc, char ** argv)
 		*argv = end;
 		*argv[i] = strtol(argv[i], &end, 10);
 	}
-		*argv[3] = (unsigned long strtol(argv[3], &end, 16));
+		*argv[3] = strtol(argv[3], &end, 16);
 }
 
 /**
