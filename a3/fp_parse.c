@@ -11,7 +11,7 @@ int main(int argc, char ** argv)
 	exit(0);
 }
 
- strtol_func(int argc, char ** argv)
+void strtol_func(int argc, char ** argv)
 {
 	char * end;
 
