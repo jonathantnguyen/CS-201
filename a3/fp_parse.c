@@ -1,8 +1,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+
 void check(int argc, char ** argv);
 void strtol_func(int argc, char ** argv);
+
+int flag_error = 0;
 
 int main(int argc, char ** argv)
 {
@@ -40,7 +43,6 @@ void strtol_func(int argc, char ** argv)
 
 void check(int argc, char ** argv)
 {
-	int flag_error = 0;
 
 	if(( *argv[1] < 2) || ( *argv[1] > 10))
 	{
