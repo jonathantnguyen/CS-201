@@ -7,7 +7,7 @@ void strtol_func(int argc, char ** argv);
 int main(int argc, char ** argv)
 {
 	strtol_func(argc, argv);
-	check(argc, argv);
+	//check(argc, argv);
 }
 
 void strtol_func(int argc, char ** argv)
@@ -20,7 +20,7 @@ void strtol_func(int argc, char ** argv)
 		*argv[i] = (unsigned long) strtol(argv[i], &end, 10);
 	}
 
-}
+}/*
 void check(int argc, char ** argv)
 {
 	int flag_error = 0;
@@ -46,3 +46,4 @@ void check(int argc, char ** argv)
 	if(flag_error != 0)
 		exit(0);
 }
+*/
