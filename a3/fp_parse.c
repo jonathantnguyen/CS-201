@@ -1,11 +1,13 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-void check(int argc, int ** argv)
+void check(int argc, int ** argv);
+
 int main(int argc, int ** argv)
 {
 	check(argc, argv);
 }
+
 void check(int argc, int ** argv)
 {
 	int flag_error = 0;
