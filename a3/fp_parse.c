@@ -11,8 +11,8 @@ int main(int argc, char ** argv)
 {
 	if(argc != 4)
 	{
-		flag_error = 1;
 		printf("<# of frac_bits> <# of exp_bits> <hex_to_convert>\n");
+		exit(0);
 	}
 	
 	strtol_func(argc, argv);
