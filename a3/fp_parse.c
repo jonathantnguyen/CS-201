@@ -6,8 +6,9 @@ void strtol_func(int argc, char ** argv);
 
 int main(int argc, char ** argv)
 {
-	check(argc, argv);
+	
 	strtol_func(argc, argv);
+	check(argc, argv);
 	exit(0);
 }
 
