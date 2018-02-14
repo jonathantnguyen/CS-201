@@ -38,7 +38,7 @@ void bit_manip(char ** argv)
 
 	sign = (temp_hex &(1 << (*argv[1] + *argv[2] + 1))) ? 1 : 0;
 
-	if (sign == true)
+	if (sign == 1)
 		printf("negative\n");
 	else
 		printf("positive\n");
