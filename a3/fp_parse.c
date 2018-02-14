@@ -6,6 +6,11 @@ void strtol_func(int argc, char ** argv);
 
 int main(int argc, char ** argv)
 {
+	if(argc != 4)
+	{
+		flag_error = 1;
+		printf("<# of frac_bits> <# of exp_bits> <hex_to_convert>\n");
+	}
 	
 	strtol_func(argc, argv);
 	check(argc, argv);
@@ -36,13 +41,6 @@ void strtol_func(int argc, char ** argv)
 void check(int argc, char ** argv)
 {
 	int flag_error = 0;
-
-
-	if(argc != 4)
-	{
-		flag_error = 1;
-		printf("<# of frac_bits> <# of exp_bits> <hex_to_convert>\n");
-	}
 
 	if(( *argv[1] < 2) || ( *argv[1] > 10))
 	{
