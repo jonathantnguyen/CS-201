@@ -15,7 +15,7 @@ void check(int argc, char ** argv)
 
 	int hex, arr1, arr2;
 
-	sscanf(argv,"%i %i %s", &arr1, &arr2, hex)
+	sscanf(argv,"%i %i %x", &arr1, &arr2, hex);
 	printf("Frac: %i, Exp: %i, Hex: %x \n", arr1, arr2, hex);
 
 	if(argc != 4)
