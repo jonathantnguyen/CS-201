@@ -15,7 +15,7 @@ void strtol_func(int argc, char ** argv)
 {
 	char * end;
 
-	for (int i = 1; i < 2; i++)
+	for (int i = 1; i <= 2; i++)
 	{
 		*argv = end;
 
