@@ -13,6 +13,8 @@ void check(int argc, char ** argv)
 {
 	int flag_error = 0;
 
+	int hex, arr1, arr2;
+
 	sscanf(argv,"%i %i %s", &arr1, &arr2, hex)
 	printf("Frac: %i, Exp: %i, Hex: %x \n", arr1, arr2, hex);
 
