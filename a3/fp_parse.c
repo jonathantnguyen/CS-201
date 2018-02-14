@@ -6,9 +6,10 @@ void strtol_func(int argc, char ** argv);
 
 int main(int argc, char ** argv)
 {
-
+	printf("segfault 0\n");
 	strtol_func(argc, argv);
 	//check(argc, argv);
+exit(0);
 }
 
 void strtol_func(int argc, char ** argv)
@@ -18,8 +19,11 @@ void strtol_func(int argc, char ** argv)
 	for (int i = 1; i <= 4; i++)
 	{
 		*argv = end;
+		printf("segfault 1\n");
 		**argv = (unsigned long) strtol(argv[i], &end, 10);
+		printf("segfault 2\n");
 		printf("Value: %i \n", *argv[i]);
+
 	}
 
 
