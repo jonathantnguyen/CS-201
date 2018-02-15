@@ -34,8 +34,9 @@ int main(int argc, char ** argv)
 void bit_manip(char ** argv)
 {
 	int sign = 0;
-	unsigned long temp_hex = *argv[3];
+	temp_hex = *argv[3];
 
+	temp_hex = ~temp_hex +0x1;
 	sign = (temp_hex &(1 << (*argv[1] + *argv[2] + 1))) ? 1 : 0;
 
 	if (sign == 1)
