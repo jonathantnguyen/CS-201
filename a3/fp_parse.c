@@ -40,22 +40,16 @@ int main(int argc, char const *argv[])
 void bit_manip(int frac, int exp, char const*argv[])
 {
 	int sign;
+	int mask = 1;
 
-	printf("frac: %i\n", frac);
-	printf("exp: %i\n", exp);
-
-
-/*
-
+	mask = mask << (frac + exp + 1) ;
 
 	sign = (temp_hex & mask) ? 1 : 0;
-	printf("%u\n",temp_hex);
 
 	if (sign == 1)
 		printf("negative\n");
 	else
 		printf("positive\n");
-*/
 
 }
 
@@ -72,7 +66,7 @@ void strtol_func(int frac, int exp, char const *argv[])
 
 	frac = strtol(argv[1], &end, 10);
 	exp = strtol(argv[2], &end, 16);
-	
+
 
 	check(frac, exp);
 	bit_manip(frac, exp, argv);
