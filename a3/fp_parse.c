@@ -4,7 +4,7 @@
 
 
 void check(int frac, int exp);
-int strtol_func(int frac, int exp, char const *argv[]);
+void strtol_func(int frac, int exp, char const *argv[]);
 void bit_manip(int frac, int exp, char const * argv[]);
 
 int flag_error = 0;
@@ -21,8 +21,8 @@ int flag_error = 0;
 
 int main(int argc, char const *argv[])
 {
-	int frac = 0;
-	int exp = 0;
+	int frac;
+	int exp;
 	printf("top of int main\n");
 	if(argc != 4)
 	{
@@ -31,11 +31,7 @@ int main(int argc, char const *argv[])
 	}
 	
 	strtol_func(frac, exp, argv); 
-	printf("after strtol_func\n");
-	check(frac, exp);
-	printf("after check\n");
-	bit_manip(frac, exp, argv);
-	printf("after bit_manip\n");
+
 
 	exit(0);
 }
@@ -52,6 +48,7 @@ void bit_manip(int frac, int exp, char const*argv[])
 	else
 		printf("positive\n");
 
+
 }
 
 /**
@@ -61,7 +58,7 @@ void bit_manip(int frac, int exp, char const*argv[])
  * @param[in]  argc  argument count
  * @param      argv  argument values
  */
-int strtol_func(int frac, int exp, char const *argv[])
+void strtol_func(int frac, int exp, char const *argv[])
 {
 	char * end;
 
@@ -72,7 +69,10 @@ int strtol_func(int frac, int exp, char const *argv[])
 	}
 		exp = strtol(argv[3], &end, 16);
 
-	return frac, exp;
+	check(frac, exp);
+	bit_manip(frac, exp, argv);
+
+
 }
 
 /**
