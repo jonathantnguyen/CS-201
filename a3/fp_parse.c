@@ -38,15 +38,15 @@ int main(int argc, char const *argv[])
 
 void bit_manip(int frac, int exp, char const*argv[])
 {
-	int sign = 0;
-	int mask = 1;
-	uint32_t temp_hex = *argv[3];
-	printf("%u %i\n",temp_hex, temp_hex);
-	printf("%i\n", mask );
-	printf("%i\n",frac + exp);
-	mask = mask << (frac + exp);
-	printf("%i\n", mask );
-;
+	int sign;
+
+	printf("frac: %i\n", frac);
+	printf("exp: %i\n", exp);
+
+
+/*
+
+
 	sign = (temp_hex & mask) ? 1 : 0;
 	printf("%u\n",temp_hex);
 
@@ -54,7 +54,7 @@ void bit_manip(int frac, int exp, char const*argv[])
 		printf("negative\n");
 	else
 		printf("positive\n");
-
+*/
 
 }
 
