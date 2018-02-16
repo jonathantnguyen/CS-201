@@ -3,7 +3,7 @@
 #include <stdint.h>
 
 
-void check(int argc, char const *argv[]);
+void check(int frac, int exp);
 int strtol_func(int frac, int exp, char const *argv[]);
 void bit_manip(int frac, int exp, char const * argv[]);
 
@@ -81,16 +81,16 @@ int strtol_func(int frac, int exp, char const *argv[])
  * @param[in]  argc  argument count
  * @param      argv  argument values
  */
-void check(int argc, char const *argv[])
+void check(int frac, int exp)
 {
 
-	if(( *argv[1] < 2) || ( *argv[1] > 10))
+	if(( frac < 2) || ( frac > 10))
 	{
 		flag_error = 1;
 		printf("Number of fraction bits between 2 and 10\n");
 
 	}
-	if(( *argv[2] < 3) || ( *argv[2] > 5))
+	if(( frac < 3) || ( frac > 5))
 	{
 		flag_error = 1;
 		printf("Number of exponent bits (k) between 3 and 5\n");
