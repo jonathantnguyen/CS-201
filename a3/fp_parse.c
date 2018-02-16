@@ -28,7 +28,7 @@ int main(int argc, char const *argv[])
 		exit(0);
 	}
 	
-	strtol_func(argc, argv); 
+	strtol_func(array, argv); 
 	check(argc, argv);
 	bit_manip(array);
 
