@@ -34,12 +34,14 @@ int main(int argc, char const *argv[])
 	exit(0);
 }
 
-void bit_manip(char const *argv[])
+void bit_manip(char const *array[])
 {
 	int sign = 0;
-	uint32_t temp_hex = *argv[3];
+	int frac = *array[1];
+	int exp = *array[2];
+	uint32_t temp_hex = *array[3];
 
-	sign = (temp_hex & (1 << (*argv[1] + *argv[2] + 1))) ? 1 : 0;
+	sign = (temp_hex & (1 << (frac + exp + 1))) ? 1 : 0;
 
 	if (sign == 1)
 		printf("negative\n");
@@ -57,14 +59,15 @@ void bit_manip(char const *argv[])
  */
 void strtol_func(int argc, char const *argv[])
 {
+	int ** array;
 	char * end;
 
 	for(int i = 1; i <=2; i++)
 	{
 		*argv = end;
-		*argv[i] = strtol(argv[i], &end, 10);
+		*array[i] = strtol(argv[i], &end, 10);
 	}
-		*argv[3] = strtol(argv[3], &end, 16);
+		*array[3] = strtol(argv[3], &end, 16);
 }
 
 /**
