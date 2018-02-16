@@ -22,7 +22,7 @@ int flag_error = 0;
 int main(int argc, char const *argv[])
 {
 	printf("top of int main\n");
-	int *array[3];
+	int ** array;
 	if(argc != 4)
 	{
 		printf("<# of frac_bits> <# of exp_bits> <hex_to_convert>\n");
