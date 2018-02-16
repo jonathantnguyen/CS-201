@@ -2,8 +2,8 @@
 #include <stdio.h>
 
 
-void check(int argc, char ** argv);
-void strtol_func(int argc, char ** argv);
+void check(int argc, char const *argv[]);
+void strtol_func(int argc, char const *argv[]);
 void bit_manip(char ** argv);
 
 int flag_error = 0;
@@ -16,7 +16,9 @@ int flag_error = 0;
  *
  * @return     { description_of_the_return_value }
  */
-int main(int argc, char ** argv)
+
+
+int main(int argc, char const *argv[])
 {
 	if(argc != 4)
 	{
@@ -31,13 +33,12 @@ int main(int argc, char ** argv)
 	exit(0);
 }
 
-void bit_manip(char ** argv)
+void bit_manip(char const *argv[])
 {
 	int sign = 0;
-	temp_hex = *argv[3];
+	uint32_t temp_hex = *argv[3];
 
-	temp_hex = ~temp_hex +0x1;
-	sign = (temp_hex &(1 << (*argv[1] + *argv[2] + 1))) ? 1 : 0;
+	sign = (temp_hex & (1 << (*argv[1] + *argv[2] + 1))) ? 1 : 0;
 
 	if (sign == 1)
 		printf("negative\n");
@@ -53,7 +54,7 @@ void bit_manip(char ** argv)
  * @param[in]  argc  argument count
  * @param      argv  argument values
  */
-void strtol_func(int argc, char ** argv)
+void strtol_func(int argc, char const *argv[])
 {
 	char * end;
 
