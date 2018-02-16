@@ -4,7 +4,7 @@
 
 
 void check(int argc, char const *argv[]);
-void strtol_func(int ** array, char const *argv[]);
+int strtol_func(int frac, int exp, char const *argv[]);
 void bit_manip(int ** array);
 
 int flag_error = 0;
@@ -21,29 +21,28 @@ int flag_error = 0;
 
 int main(int argc, char const *argv[])
 {
+	int frac = 0;
+	int exp = 0;
 	printf("top of int main\n");
-	int ** array = {};
 	if(argc != 4)
 	{
 		printf("<# of frac_bits> <# of exp_bits> <hex_to_convert>\n");
 		exit(0);
 	}
 	
-	strtol_func(array, argv); 
+	strtol_func(frac, exp, argv); 
 	printf("after strtol_func\n");
 	check(argc, argv);
 	printf("after check\n");
-	bit_manip(array);
+	bit_manip(frac, exp);
 	printf("after bit_manip\n");
 
 	exit(0);
 }
 
-void bit_manip(int **array)
+void bit_manip(int frac, int exp)
 {
 	int sign = 0;
-	int frac = *array[1];
-	int exp = *array[2];
 	uint32_t temp_hex = *array[3];
 
 	sign = (temp_hex & (1 << (frac + exp + 1))) ? 1 : 0;
@@ -62,16 +61,18 @@ void bit_manip(int **array)
  * @param[in]  argc  argument count
  * @param      argv  argument values
  */
-void strtol_func(int ** array, char const *argv[])
+int strtol_func(int frac, int exp, char const *argv[])
 {
 	char * end;
 
 	for(int i = 1; i <=2; i++)
 	{
 		*argv = end;
-		*array[i] = strtol(argv[i], &end, 10);
+		frac = strtol(argv[i], &end, 10);
 	}
-		*array[3] = strtol(argv[3], &end, 16);
+		exp = strtol(argv[3], &end, 16);
+
+	return frac, exp;
 }
 
 /**
