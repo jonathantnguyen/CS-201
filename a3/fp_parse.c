@@ -40,7 +40,7 @@ void bit_manip(int frac, int exp, char const*argv[])
 {
 	int sign = 0;
 	uint32_t mask_size = frac + exp + 1;
-	printf("%i\n",mask_size );
+	printf("%u\n",mask_size );
 	uint32_t mask = 1;
 	uint32_t temp_hex = *argv[3];
 	printf("%u\n",temp_hex);
