@@ -21,6 +21,7 @@ int flag_error = 0;
 
 int main(int argc, char const *argv[])
 {
+	int *array[3];
 	if(argc != 4)
 	{
 		printf("<# of frac_bits> <# of exp_bits> <hex_to_convert>\n");
@@ -57,9 +58,8 @@ void bit_manip(char const *array[])
  * @param[in]  argc  argument count
  * @param      argv  argument values
  */
-void strtol_func(int argc, char const *argv[])
+void strtol_func(int ** array, char const *argv[])
 {
-	int *array[3];
 	char * end;
 
 	for(int i = 1; i <=2; i++)
