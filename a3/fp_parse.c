@@ -32,7 +32,7 @@ int main(int argc, char const *argv[])
 	
 	strtol_func(frac, exp, argv); 
 	printf("after strtol_func\n");
-	check(argc, argv);
+	check(frac, exp);
 	printf("after check\n");
 	bit_manip(frac, exp, argv);
 	printf("after bit_manip\n");
