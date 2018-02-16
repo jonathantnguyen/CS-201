@@ -21,6 +21,7 @@ int flag_error = 0;
 
 int main(int argc, char const *argv[])
 {
+	printf("top of int main\n");
 	int *array[3];
 	if(argc != 4)
 	{
