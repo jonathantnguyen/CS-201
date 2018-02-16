@@ -23,6 +23,7 @@ int main(int argc, char const *argv[])
 {
 	int frac;
 	int exp;
+
 	printf("top of int main\n");
 	if(argc != 4)
 	{
@@ -69,12 +70,9 @@ void strtol_func(int frac, int exp, char const *argv[])
 {
 	char * end;
 
-	for(int i = 1; i <=2; i++)
-	{
-		*argv = end;
-		frac = strtol(argv[i], &end, 10);
-	}
-		exp = strtol(argv[3], &end, 16);
+	frac = strtol(argv[1], &end, 10);
+	exp = strtol(argv[2], &end, 16);
+	
 
 	check(frac, exp);
 	bit_manip(frac, exp, argv);
