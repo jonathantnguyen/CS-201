@@ -42,10 +42,12 @@ void bit_manip(int frac, int exp, char const*argv[])
 	int sign;
 	int mask = 1;
 	uint32_t temp_hex = *argv[3];
-
-	mask = mask << (frac + exp + 1) ;
-
+	printf("%u\n",mask);
+	mask = mask << (frac + exp + 1);
+	printf("%u\n",mask);
+	printf("%u\n",temp_hex );
 	sign = (temp_hex & mask) ? 1 : 0;
+	printf("%u\n",temp_hex );
 
 	if (sign == 1)
 		printf("negative\n");
