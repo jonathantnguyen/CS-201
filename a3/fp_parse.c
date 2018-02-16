@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <stdin.h>
 
 
 void check(int argc, char const *argv[]);
