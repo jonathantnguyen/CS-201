@@ -73,7 +73,7 @@ void strtol_func(int argc, char const *argv[])
  * @param[in]  argc  argument count
  * @param      argv  argument values
  */
-void check(int argc, char ** argv)
+void check(int argc, char const *argv[])
 {
 
 	if(( *argv[1] < 2) || ( *argv[1] > 10))
