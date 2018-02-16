@@ -29,7 +29,7 @@ int main(int argc, char const *argv[])
 	
 	strtol_func(argc, argv); 
 	check(argc, argv);
-	bit_manip(argv);
+	bit_manip(array);
 
 	exit(0);
 }
@@ -59,7 +59,7 @@ void bit_manip(char const *array[])
  */
 void strtol_func(int argc, char const *argv[])
 {
-	int ** array;
+	int *array[3];
 	char * end;
 
 	for(int i = 1; i <=2; i++)
