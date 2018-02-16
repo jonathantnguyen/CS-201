@@ -40,10 +40,10 @@ int main(int argc, char const *argv[])
 	exit(0);
 }
 
-void bit_manip(int frac, int exp)
+void bit_manip(int frac, int exp, char const*argv[])
 {
 	int sign = 0;
-	uint32_t temp_hex = *array[3];
+	uint32_t temp_hex = *argv[3];
 
 	sign = (temp_hex & (1 << (frac + exp + 1))) ? 1 : 0;
 
