@@ -39,11 +39,12 @@ int main(int argc, char const *argv[])
 void bit_manip(uint32_t frac, uint32_t exp, char const*argv[])
 {
 	int sign = 0;
-
+	int mask = 1;
 	uint32_t temp_hex = *argv[3];
 	printf("%u %i\n",temp_hex, temp_hex);
-	
-	uint32_t mask = mask << 9;
+	printf("%i\n", mask );
+	mask = mask << 9;
+	printf("%i\n", mask );
 ;
 	sign = (temp_hex & mask) ? 1 : 0;
 	printf("%u\n",temp_hex);
