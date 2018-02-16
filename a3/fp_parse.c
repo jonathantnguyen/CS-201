@@ -5,7 +5,7 @@
 
 void check(int argc, char const *argv[]);
 int strtol_func(int frac, int exp, char const *argv[]);
-void bit_manip(int ** array);
+void bit_manip(int frac, int exp);
 
 int flag_error = 0;
 
