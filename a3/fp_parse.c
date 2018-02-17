@@ -57,8 +57,6 @@ void bit_manip(int frac, int exp, char const*argv[])
 	mask = mask << (frac + exp + 1);
 	printf("%u\n",mask);
 	printf("%u\n",temp_hex);
-	temp_hex << (16 - (frac + exp));
-
 	sign = (temp_hex & mask) ? 1 : 0; 
 	printf("%u\n",temp_hex);
 
