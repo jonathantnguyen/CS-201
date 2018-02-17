@@ -47,8 +47,11 @@ int main(int argc, char const *argv[])
 void bit_manip(int frac, int exp, char const*argv[])
 {
 	int sign;
+	char * end;
 	int mask = 1;
-	uint16_t temp_hex = *argv[3];
+
+
+	uint32_t temp_hex = strtol(argv[3], &end, 16);
 	printf("%u\n",temp_hex);
 	printf("%u\n",mask);
 	mask = mask << (frac + exp + 1);
@@ -78,7 +81,7 @@ void strtol_func(int frac, int exp, char const *argv[])
 	char * end;
 
 	frac = strtol(argv[1], &end, 10);
-	exp = strtol(argv[2], &end, 16);
+	exp = strtol(argv[2], &end, 10);
 
 
 	check(frac, exp);
