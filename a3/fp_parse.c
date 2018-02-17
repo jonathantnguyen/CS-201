@@ -36,6 +36,13 @@ int main(int argc, char const *argv[])
 	exit(0);
 }
 
+/**
+ * @brief      finds the sign bit for floating point
+ *
+ * @param[in]  frac  Size bit of fraction
+ * @param[in]  exp   Size bit of Exponent
+ * @param      argv  The argv
+ */
 void bit_manip(int frac, int exp, char const*argv[])
 {
 	int sign = 0;
