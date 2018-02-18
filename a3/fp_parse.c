@@ -35,7 +35,7 @@ int main(int argc, char const *argv[])
 	printf("COMMAND-LINE VALUES\n");
 	printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i\n",*argv[1],*argv[2],*argv[3]);
 
-	HEXDECIMAL = uint32_t(*argv[3] & ((1 << (FRAC_BIT + EXP_BIT)) - 1));
+	HEXDECIMAL = *argv[3] & ((1 << (FRAC_BIT + EXP_BIT)) - 1);
 	printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i\n",FRAC_BIT,EXP_BIT, HEXDECIMAL);
 
 	SIGN = (HEXDECIMAL & (1 << (FRAC_BIT + EXP_BIT))) ? 1 : 0;
