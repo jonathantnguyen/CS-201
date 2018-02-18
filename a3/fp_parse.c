@@ -69,8 +69,7 @@ void fp_funct()
 		e_value = 1 - BIAS;
 		
 		//fp_value = (pow(2, (-1)*e_value)); 
-		printf("e_value: %i\n",e_value);
-		printf("fp_value: %f\n", fp_value);
+
 	}
 	else // NORMALIZED
 	{	
@@ -81,20 +80,20 @@ void fp_funct()
 		{	
 			if (temp_frac_value & 1)
 			{	
-				printf("i: %i\n",i);
 				m_value += pow(2,-i);
 			}
 			temp_frac_value >>= 1;
 		}
 		m_value += 1;
-
-		printf("fp_value: %f\n",m_value);
-		printf("e_value: %i\n",e_value);
+		fp_value = m_value * e_value;
 	}
 	printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i\n",FRAC_BIT,EXP_BIT, HEXDECIMAL);
 	//printf("Pow_value: %i\n",pow_value);
 	printf("Bias: %i\n", BIAS);
 	printf("Sign: %i\n", SIGN);
+	printf("fp_value: %f\n", fp_value);
+	printf("m_value: %f\n",m_value);
+	printf("e_value: %i\n",e_value);
 }
 
 
