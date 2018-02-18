@@ -62,7 +62,7 @@ void fp_funct()
 	
 	for (int i = 0; i < EXP_BIT; i++)
 	{
-		if (temp_hexdecimal & 0)
+		if (!(temp_hexdecimal & 1))
 		{
 			j++;
 			printf("J: %i\n", j);
