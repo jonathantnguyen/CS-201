@@ -44,6 +44,8 @@ void fp_funct(int sign, char const * argv[])
 {
 	char * end;
 	int bias;
+	int frac;
+	int exp;
 	uint32_t temp_hex = strtol(argv[3], &end, 16);
 	frac = strtol(argv[1], &end, 10);
 	exp = strtol(argv[2], &end, 10);
