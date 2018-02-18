@@ -71,7 +71,7 @@ void fp_funct()
 		
 		//fp_value = (pow(2, (-1)*e_value)); 
 		printf("e_value: %i\n",e_value);
-		printf("fp_value: %i\n", fp_value);
+		printf("fp_value: %f\n", fp_value);
 	}
 
 	else // NORMALIZED
@@ -84,7 +84,7 @@ void fp_funct()
 				fp_value += pow(2,-i)
 			}
 		}
-		printf("fp_value: %i\n",fp_value);
+		printf("fp_value: %f\n",fp_value);
 		printf("e_value: %i\n",e_value);
 	}
 
