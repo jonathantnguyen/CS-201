@@ -63,7 +63,7 @@ void fp_funct()
 
 	temp_exp_value <<= (32 - (FRAC_BIT + EXP_BIT));
 	temp_exp_value >>= (32 - FRAC_BIT);
-
+	printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i\n",FRAC_BIT,EXP_BIT, HEXDECIMAL);
 	if (temp_exp_value == 0) // DENORMALIZED
 	{
 		printf("DENORMALIZED\n");
@@ -90,7 +90,7 @@ void fp_funct()
 		printf("fp_value: %f\n",fp_value);
 		printf("e_value: %i\n",e_value);
 	}
-
+	printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i\n",FRAC_BIT,EXP_BIT, HEXDECIMAL);
 	//printf("Pow_value: %i\n",pow_value);
 	printf("Bias: %i\n", BIAS);
 	printf("Sign: %i\n", SIGN);
