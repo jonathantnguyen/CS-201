@@ -47,7 +47,8 @@ void fp_funct(int sign, char const * argv[])
 	uint32_t temp_hex = strtol(argv[3], &end, 16);
 	frac = strtol(argv[1], &end, 10);
 	exp = strtol(argv[2], &end, 10);
-	bias = (pow(2, (exp - 1)) - 1);
+
+	bias = pow(2, (exp - 1)) - 1;
 	printf("Bias: %i\n", bias);
 
 
