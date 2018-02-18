@@ -53,7 +53,20 @@ int main(int argc, char const *argv[])
 void fp_funct()
 {
 	BIAS = pow(2, (EXP_BIT - 1)) - 1; // Solving for the bias
-	
+	uint32_t temp_hexdecimal = HEXDECIMAL;
+	int pow_value = 0;
+
+	int temp_hexdecimal = temp_hexdecimal >> FRAC;
+	for (int i = 0; i < EXP_BIT; ++i)
+	{
+		if (temp_hexdecimal & 1)
+		{
+			pow_value = pow_value + pow(2, i);
+		}
+		
+		temp_hexdecimal >> 1;
+	}
+	printf("Pow_value: %i\n",pow_value);
 	printf("Bias: %i\n", BIAS);
 	printf("Sign: %i\n", SIGN);
 }
