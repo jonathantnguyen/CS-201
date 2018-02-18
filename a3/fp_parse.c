@@ -55,6 +55,7 @@ void fp_funct()
 	BIAS = pow(2, (EXP_BIT - 1)) - 1; // Solving for the bias
 	uint32_t e_value = 0;
 	uint32_t temp_hexdecimal = HEXDECIMAL;
+	uint32_t 
 	int j = 0;
 	int fp_value = 0;
 
@@ -63,9 +64,9 @@ void fp_funct()
 	
 	for (int i = 0; i < EXP_BIT; i++)
 	{
-		if (!(temp_hexdecimal & 1))
+		if (temp_hexdecimal & 1)
 		{
-			j++;
+			pow_value = pow_value + pow(2, i);
 			printf("J: %i\n", j);
 		}
 		temp_hexdecimal >> 1;
@@ -79,6 +80,11 @@ void fp_funct()
 		printf("e_value: %i\n",e_value);
 		printf("fp_value: %i\n", fp_value);
 
+	}
+	else
+	{
+		e_value = pow_value;
+		printf("e_value: %i\n",e_value);
 	}
 
 	//printf("Pow_value: %i\n",pow_value);
