@@ -85,7 +85,7 @@ void fp_funct()
 			temp_frac_value >>= 1;
 		}
 		m_value += 1;
-		fp_value = m_value * e_value;
+		fp_value = m_value * pow(2,e_value);
 	}
 	printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i\n",FRAC_BIT,EXP_BIT, HEXDECIMAL);
 	//printf("Pow_value: %i\n",pow_value);
