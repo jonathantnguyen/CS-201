@@ -59,6 +59,7 @@ void fp_funct()
 	uint32_t pow_value = 0;
 	float fp_value = 0;
 	int m_value = 0;
+	float m_value = 0;
 
 	temp_exp_value <<= (32 - (FRAC_BIT + EXP_BIT));
 	temp_exp_value >>= (32 - FRAC_BIT);
@@ -82,11 +83,13 @@ void fp_funct()
 			if (temp_frac_value & 1)
 			{	
 				printf("i: %i\n",i);
-				fp_value += pow(2,-i);
+				m_value += pow(2,-i);
 			}
 			temp_frac_value >>= 1;
 		}
-		printf("fp_value: %f\n",fp_value);
+		m_value += 1;
+
+		printf("fp_value: %f\n",m_value);
 		printf("e_value: %i\n",e_value);
 	}
 	printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i\n",FRAC_BIT,EXP_BIT, HEXDECIMAL);
