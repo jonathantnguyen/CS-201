@@ -55,7 +55,7 @@ void fp_funct()
 	uint32_t temp_hexdecimal = HEXDECIMAL;
 	int pow_value = 0;
 
-	int temp_hexdecimal = temp_hexdecimal >> FRAC;
+	temp_hexdecimal = temp_hexdecimal >> FRAC_BIT;
 	for (int i = 0; i < EXP_BIT; ++i)
 	{
 		if (temp_hexdecimal & 1)
