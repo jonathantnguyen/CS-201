@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdint.h>
+#include <math.h>
 
 
 void check(int frac, int exp);
@@ -41,6 +42,16 @@ int main(int argc, char const *argv[])
 
 void fp_funct(int sign, char const * argv[])
 {
+	char * end;
+	int bias;
+	uint32_t temp_hex = strtol(argv[3], &end, 16);
+	frac = strtol(argv[1], &end, 10);
+	exp = strtol(argv[2], &end, 10);
+	bias = (pow(2, (exp - 1)) - 1);
+	printf("Bias: %i\n", bias);
+
+
+
 	printf("sign: %i\n", sign);
 }
 
