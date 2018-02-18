@@ -54,38 +54,37 @@ void fp_funct()
 {
 	BIAS = pow(2, (EXP_BIT - 1)) - 1; // Solving for the bias
 	uint32_t e_value = 0;
-	uint32_t temp_hexdecimal = HEXDECIMAL;
+	uint32_t temp_exp_value = HEXDECIMAL;
+	uint32_t temp_frac_value = HEXDECIMAL;
 	uint32_t pow_value = 0;
 	int j = 0;
-	int fp_value = 0;
+	float fp_value = 0;
+	int m_value = 0;
 
-	temp_hexdecimal = temp_hexdecimal << (16 - (FRAC_BIT + EXP_BIT));
-	temp_hexdecimal = temp_hexdecimal >> (16 - (FRAC_BIT + EXP_BIT));
-	printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i\n",FRAC_BIT,EXP_BIT, temp_hexdecimal);
+	temp_exp_value = temp_exp_value << (16 - (FRAC_BIT + EXP_BIT));
+	temp_exp_value = temp_exp_value >> (16 - (FRAC_BIT + EXP_BIT));
+	printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i\n",FRAC_BIT,EXP_BIT, temp_exp_value);
 
-	for (int i = 0; i < EXP_BIT; i++)
-	{
-		if (!(temp_hexdecimal & 1))
-		{
-			pow_value = pow_value + pow(2, i);
-			j++;
-			printf("J: %i\n", j);
-		}
-		temp_hexdecimal = temp_hexdecimal >> 1;
-	}
-
-	printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i\n",FRAC_BIT,EXP_BIT, temp_hexdecimal);
-	if (j == EXP_BIT) //DENORMALIZED
+	if (temp_exp_value == 0); // DENORMALIZED
 	{
 		e_value = 1 - BIAS;
+		
 		//fp_value = (pow(2, (-1)*e_value)); 
 		printf("e_value: %i\n",e_value);
 		printf("fp_value: %i\n", fp_value);
-
 	}
+
 	else // NORMALIZED
 	{
-		e_value = pow_value;
+		e_value = temp_exp_value - BIAS;
+		for (int i = FRAC_BIT; i > 0; i--)	
+		{		
+			if (temp_frac_value & 1)
+			{
+				fp_value += pow(2,-i)
+			}
+		}
+		printf("fp_value: %i\n",fp_value);
 		printf("e_value: %i\n",e_value);
 	}
 
