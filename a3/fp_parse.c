@@ -59,8 +59,8 @@ void fp_funct()
 	int j = 0;
 	int fp_value = 0;
 
-	temp_hexdecimal = temp_hexdecimal << FRAC_BIT + EXP_BIT;
-	temp_hexdecimal = temp_hexdecimal >> FRAC_BIT + EXP_BIT;
+	temp_hexdecimal = temp_hexdecimal << (16 - (FRAC_BIT + EXP_BIT));
+	temp_hexdecimal = temp_hexdecimal >> (16 - (FRAC_BIT + EXP_BIT));
 	printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i\n",FRAC_BIT,EXP_BIT, temp_hexdecimal);
 
 	for (int i = 0; i < EXP_BIT; i++)
