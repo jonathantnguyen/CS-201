@@ -61,11 +61,8 @@ void fp_funct()
 	float fp_value = 0;
 	int m_value = 0;
 
-	temp_exp_value = temp_exp_value << (32 - (FRAC_BIT + EXP_BIT));
-	printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i\n",FRAC_BIT,EXP_BIT, temp_exp_value);
-	temp_exp_value = temp_exp_value >> (32 - FRAC_BIT);
-
-	printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i\n",FRAC_BIT,EXP_BIT, temp_exp_value);
+	temp_exp_value <<= (32 - (FRAC_BIT + EXP_BIT));
+	temp_exp_value >>= (32 - FRAC_BIT);
 
 	if (temp_exp_value == 0) // DENORMALIZED
 	{
@@ -84,6 +81,7 @@ void fp_funct()
 			{
 				fp_value += pow(2,-i);
 			}
+			temp_frac_value <<= 1;
 		}
 		printf("fp_value: %f\n",fp_value);
 		printf("e_value: %i\n",e_value);
