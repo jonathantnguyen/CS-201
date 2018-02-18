@@ -67,6 +67,7 @@ void fp_funct()
 		if (temp_hexdecimal & 1)
 		{
 			pow_value = pow_value + pow(2, i);
+			j++;
 			printf("J: %i\n", j);
 		}
 		temp_hexdecimal >> 1;
