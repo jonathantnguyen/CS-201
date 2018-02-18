@@ -66,6 +66,7 @@ void fp_funct()
 
 	if (temp_exp_value == 0) // DENORMALIZED
 	{
+		printf("DENORMALIZED\n");
 		e_value = 1 - BIAS;
 		
 		//fp_value = (pow(2, (-1)*e_value)); 
@@ -73,8 +74,10 @@ void fp_funct()
 		printf("fp_value: %f\n", fp_value);
 	}
 	else // NORMALIZED
-	{
+	{	
+		printf("NORMALIZED\n");
 		e_value = temp_exp_value - BIAS;
+
 		for (int i = FRAC_BIT; i > 0; i--)	
 		{		
 			if (temp_frac_value & 1)
