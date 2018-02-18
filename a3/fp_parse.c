@@ -82,7 +82,7 @@ void fp_funct()
 			if (temp_frac_value & 1)
 			{	
 				printf("i: %i\n",i);
-				fp_value += pow(2,i);
+				fp_value += pow(2,-i);
 			}
 			temp_frac_value >>= 1;
 		}
