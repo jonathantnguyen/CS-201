@@ -31,7 +31,7 @@ int main(int argc, char const *argv[])
 	}
 	
 	sign = strtol_func(argv);
-	fp_funct(sign, frac, exp, argv);
+	fp_funct(sign, argv);
 
 
 
