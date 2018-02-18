@@ -4,8 +4,9 @@
 
 
 void check(int frac, int exp);
-void strtol_func(int frac, int exp, char const *argv[]);
-void bit_manip(int frac, int exp, char const * argv[]);
+int strtol_func(int frac, int exp, char const *argv[]);
+int sign_bit(int frac, int exp, char const * argv[]);
+void fp_funct(int sign,int frac, int exp, char const * argv[]);
 
 int flag_error = 0;
 
@@ -23,6 +24,7 @@ int main(int argc, char const *argv[])
 {
 	int frac;
 	int exp;
+	int sign;
 
 	printf("top of int main\n");
 	if(argc != 4)
@@ -31,10 +33,18 @@ int main(int argc, char const *argv[])
 		exit(0);
 	}
 	
-	strtol_func(frac, exp, argv); 
+	sign = strtol_func(frac, exp, argv);
+	fp_funct(sign, frac, exp, argv);
+
+
 
 
 	exit(0);
+}
+
+void fp_funct(int sign, int frac, int exp, char const * argv[])
+{
+
 }
 
 /**
@@ -44,24 +54,18 @@ int main(int argc, char const *argv[])
  * @param[in]  exp   Size bit of Exponent
  * @param      argv  The argv
  */
-void bit_manip(int frac, int exp, char const*argv[])
+int sign_bit(int frac, int exp, char const*argv[])
 {
 	int sign;
 	char * end;
 	int mask = 1;
 
-
 	uint32_t temp_hex = strtol(argv[3], &end, 16);
-	printf("%u\n",temp_hex);
-	printf("%u\n",mask);
-
 	mask = mask << (frac + exp);
-	printf("%u\n",mask);
-	printf("%u\n",temp_hex);
+	sign = (temp_hex & mask) ? 1 : 0;
 
-	sign = (temp_hex & mask) ? 1 : 0; 
+	return sign; 
 
-	printf("%u\n",temp_hex);
 /*
 	if (sign == 1)
 		printf("negative\n");
@@ -77,18 +81,17 @@ void bit_manip(int frac, int exp, char const*argv[])
  * @param[in]  argc  argument count
  * @param      argv  argument values
  */
-void strtol_func(int frac, int exp, char const *argv[])
+int strtol_func(int frac, int exp, char const *argv[])
 {
 	char * end;
+	
 
 	frac = strtol(argv[1], &end, 10);
 	exp = strtol(argv[2], &end, 10);
 
 
 	check(frac, exp);
-	bit_manip(frac, exp, argv);
-
-
+	return sign_bit(frac, exp, argv);
 }
 
 /**
