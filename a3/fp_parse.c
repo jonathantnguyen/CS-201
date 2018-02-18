@@ -54,9 +54,10 @@ void fp_funct()
 	BIAS = pow(2, (EXP_BIT - 1)) - 1; // Solving for the bias
 	uint32_t temp_hexdecimal = HEXDECIMAL;
 	int pow_value = 0;
-
+	printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i\n",FRAC_BIT,EXP_BIT, HEXDECIMAL);
 	temp_hexdecimal = temp_hexdecimal >> FRAC_BIT;
-	for (int i = 0; i < EXP_BIT; ++i)
+	printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i\n",FRAC_BIT,EXP_BIT, temp_hexdecimal);
+	for (int i = 0; i < EXP_BIT; i++)
 	{
 		if (temp_hexdecimal & 1)
 		{
