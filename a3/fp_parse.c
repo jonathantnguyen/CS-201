@@ -73,7 +73,6 @@ void fp_funct()
 		printf("e_value: %i\n",e_value);
 		printf("fp_value: %f\n", fp_value);
 	}
-
 	else // NORMALIZED
 	{
 		e_value = temp_exp_value - BIAS;
