@@ -59,7 +59,6 @@ void fp_funct()
 	uint32_t pow_value = 0;
 	float fp_value = 0;
 	float m_value = 0;
-	float m_value = 0;
 
 	temp_exp_value <<= (32 - (FRAC_BIT + EXP_BIT));
 	temp_exp_value >>= (32 - FRAC_BIT);
