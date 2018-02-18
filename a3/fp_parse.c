@@ -33,7 +33,7 @@ int main(int argc, char const *argv[])
 	FRAC_BIT = strtol(argv[1], &end, 10);
 	EXP_BIT = strtol(argv[2], &end, 10);
 
-	HEXDECIMAL = argv[3] & (( 1 << (FRAC_BIT + EXP_BIT)) - 1);
+	HEXDECIMAL = *argv[3] & (( 1 << (FRAC_BIT + EXP_BIT)) - 1);
 
 	SIGN = (HEXDECIMAL & (1 << (FRAC_BIT + EXP_BIT))) ? 1 : 0;
 
