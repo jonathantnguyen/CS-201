@@ -34,6 +34,7 @@ int main(int argc, char const *argv[])
 	EXP_BIT = strtol(argv[2], &end, 10);
 
 	HEXDECIMAL = *argv[3] & ((1 << (FRAC_BIT + EXP_BIT)) - 1);
+	printf("%i\n", HEXDECIMAL);
 
 	SIGN = (HEXDECIMAL & (1 << (FRAC_BIT + EXP_BIT))) ? 1 : 0;
 
