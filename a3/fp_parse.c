@@ -57,7 +57,6 @@ void fp_funct()
 	uint32_t temp_exp_value = HEXDECIMAL;
 	uint32_t temp_frac_value = HEXDECIMAL;
 	uint32_t pow_value = 0;
-	int j = 0;
 	float fp_value = 0;
 	int m_value = 0;
 
@@ -79,10 +78,10 @@ void fp_funct()
 		e_value = temp_exp_value - BIAS;
 
 		for (int i = FRAC_BIT; i > 0; i--)	
-		{		
+		{	printf("i: %i\n",i);
 			if (temp_frac_value & 1)
 			{
-				fp_value += pow(2,-i);
+				fp_value += pow(2,(-1)*i);
 				printf("fp_value: %f\n",fp_value);
 			}
 			temp_frac_value <<= 1;
