@@ -5,7 +5,6 @@
 
 
 void check(int argc);
-void sign_bit(int frac, int exp, char const * argv[]);
 void fp_funct();
 
 int FLAG_ERROR = 0;
