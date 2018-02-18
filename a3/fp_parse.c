@@ -59,6 +59,7 @@ void fp_funct()
 	uint32_t pow_value = 0;
 	float fp_value = 0;
 	float m_value = 0;
+	float frac_value = 0;
 
 	temp_exp_value <<= (32 - (FRAC_BIT + EXP_BIT));
 	temp_exp_value >>= (32 - FRAC_BIT);
@@ -66,9 +67,16 @@ void fp_funct()
 	if (temp_exp_value == 0) // DENORMALIZED
 	{
 		printf("DENORMALIZED\n");
-		e_value = 1 - BIAS;
-		
-		//fp_value = (pow(2, (-1)*e_value)); 
+		e_value = pow(2,1 - BIAS);
+		for (int i = FRAC_BIT; i > 0; i--)	
+		{	
+			if (temp_frac_value & 1)
+			{	
+				frac_value += pow(2,-i);
+			}
+			temp_frac_value >>= 1;
+		}
+		fp_value = e_value * frac_value
 
 	}
 	else // NORMALIZED
@@ -80,12 +88,12 @@ void fp_funct()
 		{	
 			if (temp_frac_value & 1)
 			{	
-				m_value += pow(2,-i);
+				frac_value += pow(2,-i);
 			}
 			temp_frac_value >>= 1;
 		}
 		m_value += 1;
-		fp_value = m_value * pow(2,e_value);
+		fp_value = frac_value * pow(2,e_value);
 	}
 	if (SIGN == 1)
 	{
