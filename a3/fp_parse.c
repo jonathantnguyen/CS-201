@@ -56,7 +56,7 @@ void fp_funct()
 	uint32_t e_value = 0;
 	uint32_t temp_hexdecimal = HEXDECIMAL;
 	int j = 0;
- 	int e_value
+ 	int e_value;
 
 	temp_hexdecimal = temp_hexdecimal >> FRAC_BIT;
 	printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i\n",FRAC_BIT,EXP_BIT, temp_hexdecimal);
@@ -78,7 +78,7 @@ void fp_funct()
 
 	}
 
-	printf("Pow_value: %i\n",pow_value);
+	//printf("Pow_value: %i\n",pow_value);
 	printf("Bias: %i\n", BIAS);
 	printf("Sign: %i\n", SIGN);
 }
