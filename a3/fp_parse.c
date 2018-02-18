@@ -4,7 +4,7 @@
 
 
 void check(int frac, int exp);
-int strtol_func(int frac, int exp, char const *argv[]);
+int strtol_func(char const *argv[]);
 int sign_bit(int frac, int exp, char const * argv[]);
 void fp_funct(int sign,int frac, int exp, char const * argv[]);
 
@@ -22,18 +22,15 @@ int flag_error = 0;
 
 int main(int argc, char const *argv[])
 {
-	int frac;
-	int exp;
 	int sign;
 
-	printf("top of int main\n");
 	if(argc != 4)
 	{
 		printf("<# of frac_bits> <# of exp_bits> <hex_to_convert>\n");
 		exit(0);
 	}
 	
-	sign = strtol_func(frac, exp, argv);
+	sign = strtol_func(argv);
 	fp_funct(sign, frac, exp, argv);
 
 
@@ -44,7 +41,7 @@ int main(int argc, char const *argv[])
 
 void fp_funct(int sign, int frac, int exp, char const * argv[])
 {
-
+	printf("sign: %i\n", sign);
 }
 
 /**
@@ -81,10 +78,12 @@ int sign_bit(int frac, int exp, char const*argv[])
  * @param[in]  argc  argument count
  * @param      argv  argument values
  */
-int strtol_func(int frac, int exp, char const *argv[])
+int strtol_func(char const *argv[])
 {
+	int frac;
+	int exp;
+
 	char * end;
-	
 
 	frac = strtol(argv[1], &end, 10);
 	exp = strtol(argv[2], &end, 10);
