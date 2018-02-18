@@ -18,8 +18,8 @@ uint32_t HEXDECIMAL;
 
 
 /**
- * @brief      define FRAC, BIT, SIGN Provides error handling, and function calls to
- *             perform floating point calculation
+ * @brief      define FRAC, BIT, SIGN Provides error handling, and function
+ *             calls to perform floating point calculation
  *
  * @param[in]  argc  Command-line argument array size offset by +1;
  * @param      argv  Command-line argument values
@@ -32,7 +32,9 @@ int main(int argc, char const *argv[])
 
 	FRAC_BIT = strtol(argv[1], &end, 10);
 	EXP_BIT = strtol(argv[2], &end, 10);
-	HEXDECIMAL = strtol(argv[3], &end, 16);
+
+	HEXDECIMAL = argv[3] & (( 1 << (FRAC_BIT + EXP_BIT)) - 1);
+
 	SIGN = (HEXDECIMAL & (1 << (FRAC_BIT + EXP_BIT))) ? 1 : 0;
 
 	check(argc);
