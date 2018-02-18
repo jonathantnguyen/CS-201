@@ -59,11 +59,7 @@ void fp_funct()
 	printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i\n",FRAC_BIT,EXP_BIT, temp_hexdecimal);
 	for (int i = 0; i < EXP_BIT; i++)
 	{
-		if ((temp_hexdecimal & 1) == 1)
-		{
-			pow_value = pow_value + pow(2, i);
-		}
-		
+		pow_value = pow_value + pow(2, i);
 		temp_hexdecimal >> 1;
 	}
 	printf("Pow_value: %i\n",pow_value);
