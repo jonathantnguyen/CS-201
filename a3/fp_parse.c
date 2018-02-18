@@ -60,10 +60,10 @@ void fp_funct()
 	int j = 0;
 	float fp_value = 0;
 	int m_value = 0;
-	printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i\n",FRAC_BIT,EXP_BIT, temp_exp_value);
-	temp_exp_value = temp_exp_value << (16 - (FRAC_BIT + EXP_BIT));
-	printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i\n",FRAC_BIT,EXP_BIT, temp_exp_value);
+
+	temp_exp_value = temp_exp_value << (15 - (FRAC_BIT + EXP_BIT));
 	temp_exp_value = temp_exp_value >> (16 - EXP_BIT);
+
 	printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i\n",FRAC_BIT,EXP_BIT, temp_exp_value);
 
 	if (temp_exp_value == 0) // DENORMALIZED
