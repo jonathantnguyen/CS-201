@@ -4,58 +4,57 @@
 #include <math.h>
 
 
-void check(int frac, int exp);
-int strtol_func(char const *argv[]);
-int sign_bit(int frac, int exp, char const * argv[]);
+void check(int argc);
+void sign_bit(int frac, int exp, char const * argv[]);
 void fp_funct(int sign, char const * argv[]);
 
-int flag_error = 0;
+int FLAG_ERROR = 0;
+int FRAC_BIT;
+int EXP_BIT;
+int SIGN;
+int BIAS;
+uint32_t HEXDECIMAL;
+
+
 
 /**
- * @brief      main funct to call functions
+ * @brief      define FRAC, BIT. Provides error handling, and function calls to
+ *             perform floating point calculation
  *
- * @param[in]  argc  command-line argument count
- * @param      argv  command-line argument values
+ * @param[in]  argc  Command-line argument array size offset by +1;
+ * @param      argv  Command-line argument values
  *
- * @return     { description_of_the_return_value }
- */
-
-
+ * @return     {No return value}
+ */			
 int main(int argc, char const *argv[])
 {
-	int sign;
+	char * end;
 
-	if(argc != 4)
-	{
-		printf("<# of frac_bits> <# of exp_bits> <hex_to_convert>\n");
-		exit(0);
-	}
-	
-	sign = strtol_func(argv);
-	fp_funct(sign, argv);
+	FRAC_BIT = strtol(argv[1], &end, 10);
+	EXP_BIT = strtol(argv[2], &end, 10);
+	HEXDECIMAL = strtol(argv[3], &end, 16);
 
+
+	check();
+	fp_funct(argv);
 
 
 
 	exit(0);
 }
 
-void fp_funct(int sign, char const * argv[])
+/**
+ * @brief      Solves for floating point based on the hexdecimal given.
+ *
+ * @param[in]  sign  The sign
+ * @param      argv  The argv
+ */
+void fp_funct()
 {
-	char * end;
-	int bias;
-	int frac;
-	int exp;
-	uint32_t temp_hex = strtol(argv[3], &end, 16);
-	frac = strtol(argv[1], &end, 10);
-	exp = strtol(argv[2], &end, 10);
-
-	bias = pow(2, (exp - 1)) - 1;
-	printf("Bias: %i\n", bias);
-
-
-
-	printf("sign: %i\n", sign);
+	BIAS = pow(2, (EXP_BIT - 1)) - 1; // Solving for the bias
+	
+	printf("Bias: %i\n", BIAS);
+	printf("Sign: %i\n", SIGN);
 }
 
 /**
@@ -65,69 +64,41 @@ void fp_funct(int sign, char const * argv[])
  * @param[in]  exp   Size bit of Exponent
  * @param      argv  The argv
  */
-int sign_bit(int frac, int exp, char const*argv[])
+void sign_bit(char const*argv[])
 {
-	int sign;
-	char * end;
-	int mask = 1;
 
-	uint32_t temp_hex = strtol(argv[3], &end, 16);
-	mask = mask << (frac + exp);
-	sign = (temp_hex & mask) ? 1 : 0;
+	int mask;
 
-	return sign; 
-
-/*
-	if (sign == 1)
-		printf("negative\n");
-	else
-		printf("positive\n");
-*/
+	mask = 1 << (FRAC_BIT + EXP_BIT);
+	SIGN = (HEXDECIMAL & mask) ? 1 : 0;
 }
 
-/**
- * @brief      parsing command-line argument using strtol base 10 for decimal arguement
- * 			   and base 16 for the hexdecimal argument
- *
- * @param[in]  argc  argument count
- * @param      argv  argument values
- */
-int strtol_func(char const *argv[])
-{
-	int frac;
-	int exp;
-
-	char * end;
-
-	frac = strtol(argv[1], &end, 10);
-	exp = strtol(argv[2], &end, 10);
-
-
-	check(frac, exp);
-	return sign_bit(frac, exp, argv);
-}
 
 /**
- * @brief      Command-line argument error handling
+ * @brief      Command-line error handling
  *
- * @param[in]  argc  argument count
- * @param      argv  argument values
+ * @param      argc  Command-line argument array size
  */
-void check(int frac, int exp)
+void check(int argc)
 {
-
-	if(( frac < 2) || ( frac > 10))
+		if(argc != 4)
 	{
-		flag_error = 1;
+		printf("<# of frac_bits> <# of exp_bits> <hex_to_convert>\n");
+		exit(0);
+	}
+
+	if(( FRAC_BIT < 2) || ( FRAC_BIT > 10))
+	{
+		FLAG_ERROR = 1;
 		printf("Number of fraction bits between 2 and 10\n");
 
 	}
-	if(( exp < 3) || ( exp > 5))
+	if(( EXP_BIT < 3) || ( EXP_BIT > 5))
 	{
-		flag_error = 1;
+		FLAG_ERROR = 1;
 		printf("Number of exponent bits (k) between 3 and 5\n");
 	}
 
-	if(flag_error != 0)
+	if(FLAG_ERROR != 0)
 		exit(0);
 }
