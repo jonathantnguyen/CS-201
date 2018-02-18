@@ -39,7 +39,7 @@ int main(int argc, char const *argv[])
 	exit(0);
 }
 
-void fp_funct(int sign, int frac, int exp, char const * argv[])
+void fp_funct(int sign, char const * argv[])
 {
 	printf("sign: %i\n", sign);
 }
