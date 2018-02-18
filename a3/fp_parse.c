@@ -6,7 +6,7 @@
 void check(int frac, int exp);
 int strtol_func(char const *argv[]);
 int sign_bit(int frac, int exp, char const * argv[]);
-void fp_funct(int sign,int frac, int exp, char const * argv[]);
+void fp_funct(int sign, char const * argv[]);
 
 int flag_error = 0;
 
