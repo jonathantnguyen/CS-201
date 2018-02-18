@@ -8,6 +8,7 @@ void check(int argc);
 void fp_funct();
 
 int FLAG_ERROR = 0;
+int FP_FLAG;
 int FRAC_BIT;
 int EXP_BIT;
 int SIGN;
@@ -52,16 +53,31 @@ int main(int argc, char const *argv[])
 void fp_funct()
 {
 	BIAS = pow(2, (EXP_BIT - 1)) - 1; // Solving for the bias
+	uint32_t e_value = 0;
 	uint32_t temp_hexdecimal = HEXDECIMAL;
-	int pow_value = 0;
-	printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i\n",FRAC_BIT,EXP_BIT, temp_hexdecimal);
+	int j = 0;
+ 	int e_value
+
 	temp_hexdecimal = temp_hexdecimal >> FRAC_BIT;
 	printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i\n",FRAC_BIT,EXP_BIT, temp_hexdecimal);
+	
 	for (int i = 0; i < EXP_BIT; i++)
 	{
-		pow_value = pow_value + pow(2, i);
+		if (temp_hexdecimal & 0)
+		{
+			j++;
+		}
 		temp_hexdecimal >> 1;
 	}
+
+	printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i\n",FRAC_BIT,EXP_BIT, temp_hexdecimal);
+	if (j == EXP_BIT)
+	{
+		e_value = 1 - BIAS;
+		printf("e_value: %i\n",e_value);
+
+	}
+
 	printf("Pow_value: %i\n",pow_value);
 	printf("Bias: %i\n", BIAS);
 	printf("Sign: %i\n", SIGN);
