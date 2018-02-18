@@ -70,7 +70,7 @@ void fp_funct()
 			j++;
 			printf("J: %i\n", j);
 		}
-		temp_hexdecimal => 1;
+		temp_hexdecimal = temp_hexdecimal >> 1;
 	}
 	printf("J: %i\n", j);
 	printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i\n",FRAC_BIT,EXP_BIT, temp_hexdecimal);
