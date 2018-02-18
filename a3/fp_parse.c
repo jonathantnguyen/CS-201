@@ -6,7 +6,7 @@
 
 void check(int argc);
 void sign_bit(int frac, int exp, char const * argv[]);
-void fp_funct(int sign, char const * argv[]);
+void fp_funct();
 
 int FLAG_ERROR = 0;
 int FRAC_BIT;
@@ -18,7 +18,7 @@ uint32_t HEXDECIMAL;
 
 
 /**
- * @brief      define FRAC, BIT. Provides error handling, and function calls to
+ * @brief      define FRAC, BIT, SIGN Provides error handling, and function calls to
  *             perform floating point calculation
  *
  * @param[in]  argc  Command-line argument array size offset by +1;
@@ -33,12 +33,10 @@ int main(int argc, char const *argv[])
 	FRAC_BIT = strtol(argv[1], &end, 10);
 	EXP_BIT = strtol(argv[2], &end, 10);
 	HEXDECIMAL = strtol(argv[3], &end, 16);
+	SIGN = (HEXDECIMAL & (1 << (FRAC_BIT + EXP_BIT))) ? 1 : 0;
 
-
-	check();
-	fp_funct(argv);
-
-
+	check(argc);
+	fp_funct();
 
 	exit(0);
 }
@@ -55,22 +53,6 @@ void fp_funct()
 	
 	printf("Bias: %i\n", BIAS);
 	printf("Sign: %i\n", SIGN);
-}
-
-/**
- * @brief      finds the sign bit for floating point
- *
- * @param[in]  frac  Size bit of fraction
- * @param[in]  exp   Size bit of Exponent
- * @param      argv  The argv
- */
-void sign_bit(char const*argv[])
-{
-
-	int mask;
-
-	mask = 1 << (FRAC_BIT + EXP_BIT);
-	SIGN = (HEXDECIMAL & mask) ? 1 : 0;
 }
 
 
