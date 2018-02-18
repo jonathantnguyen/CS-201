@@ -65,6 +65,7 @@ void fp_funct()
 		if (temp_hexdecimal & 0)
 		{
 			j++;
+			printf("J: %i\n", j);
 		}
 		temp_hexdecimal >> 1;
 	}
