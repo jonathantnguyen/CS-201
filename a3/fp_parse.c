@@ -86,9 +86,12 @@ void fp_funct()
 		}
 		m_value += 1;
 		fp_value = m_value * pow(2,e_value);
+		if (SIGN == 1)
+		{
+			fp_value *= (-1);
+		}
 	}
 	printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i\n",FRAC_BIT,EXP_BIT, HEXDECIMAL);
-	//printf("Pow_value: %i\n",pow_value);
 	printf("Bias: %i\n", BIAS);
 	printf("Sign: %i\n", SIGN);
 	printf("fp_value: %f\n", fp_value);
