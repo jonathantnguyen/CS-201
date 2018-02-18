@@ -75,7 +75,7 @@ void fp_funct()
 	if (j == EXP_BIT)
 	{
 		e_value = 1 - BIAS;
-		fp_value = 1/(pow(2, (-1)*e_value));
+		fp_value = (pow(2, (-1)*e_value));
 		printf("e_value: %i\n",e_value);
 		printf("fp_value: %i\n", fp_value);
 
