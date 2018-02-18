@@ -84,7 +84,7 @@ void fp_funct()
 				printf("i: %i\n",i);
 				fp_value += pow(2,i);
 			}
-			temp_frac_value <<= 1;
+			temp_frac_value >>= 1;
 		}
 		printf("fp_value: %f\n",fp_value);
 		printf("e_value: %i\n",e_value);
