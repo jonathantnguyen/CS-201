@@ -32,8 +32,10 @@ int main(int argc, char const *argv[])
 
 	FRAC_BIT = strtol(argv[1], &end, 10);
 	EXP_BIT = strtol(argv[2], &end, 10);
+	printf("COMMAND-LINE VALUES\n");
 	printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i\n",*argv[1],*argv[2],*argv[3]);
-	printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i\n",FRAC_BIT,EXP_BIT, HEXDECIMAL);
+	
+
 
 	HEXDECIMAL = *argv[3] & ((1 << (FRAC_BIT + EXP_BIT)) - 1);
 	printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i\n",FRAC_BIT,EXP_BIT, HEXDECIMAL);
