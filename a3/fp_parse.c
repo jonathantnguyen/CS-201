@@ -59,7 +59,8 @@ void fp_funct()
 	int j = 0;
 	int fp_value = 0;
 
-	temp_hexdecimal = temp_hexdecimal >> FRAC_BIT;
+	temp_hexdecimal = temp_hexdecimal << FRAC_BIT + EXP_BIT;
+	temp_hexdecimal = temp_hexdecimal >> FRAC_BIT + EXP_BIT;
 	printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i\n",FRAC_BIT,EXP_BIT, temp_hexdecimal);
 
 	for (int i = 0; i < EXP_BIT; i++)
@@ -74,15 +75,15 @@ void fp_funct()
 	}
 
 	printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i\n",FRAC_BIT,EXP_BIT, temp_hexdecimal);
-	if (j == EXP_BIT)
+	if (j == EXP_BIT) //DENORMALIZED
 	{
 		e_value = 1 - BIAS;
-		//fp_value = (pow(2, (-1)*e_value));
+		//fp_value = (pow(2, (-1)*e_value)); 
 		printf("e_value: %i\n",e_value);
 		printf("fp_value: %i\n", fp_value);
 
 	}
-	else
+	else // NORMALIZED
 	{
 		e_value = pow_value;
 		printf("e_value: %i\n",e_value);
