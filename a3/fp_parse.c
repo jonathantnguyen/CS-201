@@ -111,6 +111,7 @@ void fp_funct()
 			if (frac_value != 0) //checking for NaNs
 			{
 				printf("NaN\n");
+				exit(0);
 			}
 			else
 			{
