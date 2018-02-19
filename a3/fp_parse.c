@@ -61,7 +61,7 @@ void fp_funct()
 	BIAS = pow(2, (EXP_BIT - 1)) - 1; // Solving for the bias
 	uint32_t temp_exp_value = HEXDECIMAL;
 	uint32_t temp_frac_value = HEXDECIMAL;
-	double e_value = 0;
+	int e_value = 0;
 	double fp_value = 0;
 	double m_value = 0;
 	double frac_value = 0;
@@ -74,7 +74,7 @@ void fp_funct()
 	{
 		printf("\nDENORMALIZED\n\n");
 		e_value = pow(2,1 - BIAS);
-		printf("e_value:  %f\n",e_value);
+		printf("e_value:  %i\n",e_value);
 		for (int i = 0; i < FRAC_BIT; i++)	
 		{	
 			if (temp_frac_value & 1)
@@ -85,7 +85,7 @@ void fp_funct()
 
 		}
 		printf("frac_value: %f\n",frac_value );
-		printf("(pow(2,EXP_BIT)): %f\n",(pow(2,EXP_BIT-1)));
+		printf("(pow(2,EXP_BIT)): %i\n",(pow(2,EXP_BIT-1)));
 		m_value = frac_value/(pow(2,EXP_BIT-1));
 		fp_value = m_value * e_value;
 
@@ -118,7 +118,7 @@ void fp_funct()
 	printf("Sign: %i\n", SIGN);
 	printf("fp_value: %f\n", fp_value);
 	printf("m_value: %f\n",m_value);
-	printf("e_value: %f\n",e_value);
+	printf("e_value: %i\n",e_value);
 }
 
 
