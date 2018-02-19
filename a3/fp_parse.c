@@ -74,53 +74,59 @@ void fp_funct()
 	if (temp_exp_value == 0) // DENORMALIZED
 	{
 		printf("\nDENORMALIZED\n\n");
+
+		e_value = pow(2,1 - BIAS);
+
+		for (int i = 0; i < FRAC_BIT; i++)	
+		{	
+			if (temp_frac_value & 1)
+			{	
+				frac_value += pow(2,i);
+			}
+				temp_frac_value >>= 1;
+		}
+		printf("frac_value: %f\n",frac_value );
+		printf("(pow(2,EXP_BIT)): %f\n",(pow(2,EXP_BIT-1)));
+		m_value = frac_value/(pow(2,EXP_BIT-1));
+		fp_value = m_value * e_value;
+		
+	}
+	else // NORMALIZED
+	{	
+		printf("\nNORMALIZED\n\n");
+
+		printf("temp_exp_value: %i\n",temp_exp_value);
+		printf("temp_exp_value - BIAS: %i\n", temp_exp_value - BIAS );
+		e_value = temp_exp_value - BIAS;
+		printf("e_value: %i\n",e_value );
+
+
 		if (temp_inf == temp_exp_value)
 		{
 			if (SIGN == 1)
 			{
 				printf("-inf\n");
+				exit(0);
 			}
 			else
 			{
 				printf("inf\n");
+				exit(0);
 			}
 		}
 		else
 		{
-			e_value = pow(2,1 - BIAS);
-			printf("e_value:  %i\n",e_value);
-			for (int i = 0; i < FRAC_BIT; i++)	
+			for (int i = FRAC_BIT; i > 0; i--)	
 			{	
 				if (temp_frac_value & 1)
 				{	
-					frac_value += pow(2,i);
+					frac_value += pow(2,-i);
 				}
 				temp_frac_value >>= 1;
-
 			}
-			printf("frac_value: %f\n",frac_value );
-			printf("(pow(2,EXP_BIT)): %f\n",(pow(2,EXP_BIT-1)));
-			m_value = frac_value/(pow(2,EXP_BIT-1));
-			fp_value = m_value * e_value;
+			m_value = frac_value + 1;
+			fp_value = m_value * pow(2,e_value);
 		}
-	}
-	else // NORMALIZED
-	{	
-		printf("\nNORMALIZED\n\n");
-		printf("temp_exp_value: %i\n",temp_exp_value);
-		printf("temp_exp_value - BIAS: %i\n", temp_exp_value - BIAS );
-		e_value = temp_exp_value - BIAS;
-		printf("e_value: %i\n",e_value );
-		for (int i = FRAC_BIT; i > 0; i--)	
-		{	
-			if (temp_frac_value & 1)
-			{	
-				frac_value += pow(2,-i);
-			}
-			temp_frac_value >>= 1;
-		}
-		m_value = frac_value + 1;
-		fp_value = m_value * pow(2,e_value);
 	}
 	if (SIGN == 1)
 	{
