@@ -92,7 +92,7 @@ void fp_funct()
 	else // NORMALIZED
 	{	
 		printf("NORMALIZED\n\n");
-		printf("temp_exp_value: %i\n",temp_exp_value)
+		printf("temp_exp_value: %i\n",temp_exp_value);
 		e_value = temp_exp_value - BIAS;
 		for (int i = FRAC_BIT; i > 0; i--)	
 		{	
