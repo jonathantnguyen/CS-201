@@ -77,7 +77,7 @@ void fp_funct()
 			temp_frac_value >>= 1;
 		}
 		m_value = frac_value;
-		fp_value = m_value * pow(2,e_value);
+		fp_value = m_value * e_value;
 
 	}
 	else // NORMALIZED
