@@ -1,60 +1,37 @@
-Script started on Fri 02 Feb 2018 06:08:14 PM PST
+Script started on Sun 18 Feb 2018 10:15:28 PM PST
 jonguyen@ada:~/Documents/CS201/jonguyen$ make
-gcc   setBits.c -o setBits
-gcc   showBits.c -o showBits
-jonguyen@ada:~/Documents/CS201/jonguyen$ ./setBits 1 3 15
-0001
-0011
-1111
-jonguyen@ada:~/Documents/CS201/jonguyen$ ./setBits 1 3 15[K[K[K[K[K[K[K
-No arguments, execute with arguments.
-jonguyen@ada:~/Documents/CS201/jonguyen$ ./setBits 17[K[K200
-Must be between 0-15, restart executable.
-jonguyen@ada:~/Documents/CS201/jonguyen$ ./showBits [K
-Must enter two arguments.
-jonguyen@ada:~/Documents/CS201/jonguyen$ sho[K[K[K./showBits 01[K[KFF FF FF
-Must enter two arguments.
-jonguyen@ada:~/Documents/CS201/jonguyen$ ./showBits FF FF FF[K[K[K[K[K[K[K[K[K FFFFFFFF[K[K[K[K[K[KFFFFFF FFFF[K[K[K[KAAAAAAAA
-Bit: 1
-Bit: 3
-Bit: 5
-Bit: 7
-Bit: 9
-Bit: 11
-Bit: 13
-Bit: 15
-Bit: 17
-Bit: 19
-Bit: 21
-Bit: 23
-Bit: 25
-Bit: 27
-Bit: 29
-Bit: 31
-Hexdecimal: aaaaaaaa 
-Unsigned: 2863311530 
-Signed: -1431655766 
-jonguyen@ada:~/Documents/CS201/jonguyen$ ./showBits FFFFFFFF AAAAAAAA[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K 0[KFFFFFF[K[KFFFF 55555555
-Bit: 0
-Bit: 2
-Bit: 4
-Bit: 6
-Bit: 8
-Bit: 10
-Bit: 12
-Bit: 14
-Bit: 16
-Bit: 18
-Bit: 20
-Bit: 22
-Bit: 24
-Bit: 26
-Bit: 28
-Bit: 30
-Hexdecimal: 55555555 
-Unsigned: 1431655765 
-Signed: 1431655765 
-jonguyen@ada:~/Documents/CS201/jonguyen$ script[K[K[K[K[K[Kexit
+gcc   fp_parse.c -lm -o fp_parse
+jonguyen@ada:~/Documents/CS201/jonguyen$ ./fp_parse 4 4 a8
+12.000000
+jonguyen@ada:~/Documents/CS201/jonguyen$ ./fp_parse 4 4 a8[K[K[K[K[K[K[K
+<# of frac_bits> <# of exp_bits> <hex_to_convert>
+jonguyen@ada:~/Documents/CS201/jonguyen$ ./fp_parse 11 4 33f
+Number of fraction bits between 2 and 10
+jonguyen@ada:~/Documents/CS201/jonguyen$ ./fp_parse 11 4 33f[1P 33f[1P33f[1P 33f[1P 33f4 33f[C 33f8 33f
+Number of exponent bits (k) between 3 and 5
+jonguyen@ada:~/Documents/CS201/jonguyen$ ./fp_parse 4 8 33f3[K4 4 [K[K[K[K[K[K[K[K[K4 1af
+-15.500000
+jonguyen@ada:~/Documents/CS201/jonguyen$ ./fp_parse 4 4 1af[1Paf
+15.500000
+jonguyen@ada:~/Documents/CS201/jonguyen$ ./fp_parse 4 4 af[K[K[K[K[K[K33[K[K 3 [K[K[K3 3 3c
+NaN
+jonguyen@ada:~/Documents/CS201/jonguyen$ ./fp_parse 3 3 3c[K8
++inf
+jonguyen@ada:~/Documents/CS201/jonguyen$ ./fp_parse 3 3 38[K[K78
+-inf
+jonguyen@ada:~/Documents/CS201/jonguyen$ ./fp_parse 3 3 78[K[K26
+3.500000
+jonguyen@ada:~/Documents/CS201/jonguyen$ ./fp_parse 3 3 26[K[K18
+1.000000
+jonguyen@ada:~/Documents/CS201/jonguyen$ ./fp_parse 3 3 1826[K[K3f
+NaN
+jonguyen@ada:~/Documents/CS201/jonguyen$ ./fp_parse 3 3 3f[K7
+15.000000
+jonguyen@ada:~/Documents/CS201/jonguyen$ ./fp_parse 3 3 37[K[K[K[K[K[K4 4 0
+0.000000
+jonguyen@ada:~/Documents/CS201/jonguyen$ 4 4 100./fp_parse 4 4 0[K100
+-0.000000
+jonguyen@ada:~/Documents/CS201/jonguyen$ exit
 exit
 
-Script done on Fri 02 Feb 2018 06:11:25 PM PST
+Script done on Sun 18 Feb 2018 10:18:06 PM PST
