@@ -105,6 +105,7 @@ void fp_funct()
 	printf("fp_value: %f\n", fp_value);
 	printf("m_value: %f\n",m_value);
 	printf("e_value: %i\n",e_value);
+	printf("%s\n", );
 }
 
 
