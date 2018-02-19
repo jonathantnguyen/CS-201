@@ -62,6 +62,7 @@ void fp_funct()
 	uint32_t temp_exp_value = HEXDECIMAL;
 	uint32_t temp_frac_value = HEXDECIMAL;
 	int e_value = 0;
+	float e_val_temp = 0;
 	double fp_value = 0;
 	double m_value = 0;
 	double frac_value = 0;
@@ -75,9 +76,9 @@ void fp_funct()
 	{
 		printf("\nDENORMALIZED\n\n");
 
-		e_value = pow(2,1 - BIAS); 
-		printf("e_value: %i\n",e_value);
-		printf("pow(2,1 - BIAS): %i\n",pow(2,1 - BIAS));
+		e_val_tmep = pow(2,1 - BIAS); 
+		printf("e_val_temp: %i\n",e_value);
+		printf("pow(2,1 - BIAS): %f\n",pow(2,1 - BIAS));
 
 		for (int i = 0; i < FRAC_BIT; i++)	
 		{	
@@ -90,7 +91,7 @@ void fp_funct()
 		printf("frac_value: %f\n",frac_value );
 		printf("(pow(2,EXP_BIT)): %f\n",(pow(2,EXP_BIT-1)));
 		m_value = frac_value/(pow(2,EXP_BIT-1));
-		fp_value = m_value * e_value;
+		fp_value = m_value * e_val_temp;
 		
 	}
 	else // NORMALIZED
