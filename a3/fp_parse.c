@@ -85,7 +85,7 @@ void fp_funct()
 
 		}
 		printf("frac_value: %f\n",frac_value );
-		printf("(pow(2,EXP_BIT)): %i\n",(pow(2,EXP_BIT-1)));
+		printf("(pow(2,EXP_BIT)): %f\n",(pow(2,EXP_BIT-1)));
 		m_value = frac_value/(pow(2,EXP_BIT-1));
 		fp_value = m_value * e_value;
 
