@@ -61,10 +61,10 @@ void fp_funct()
 	BIAS = pow(2, (EXP_BIT - 1)) - 1; // Solving for the bias
 	uint32_t temp_exp_value = HEXDECIMAL;
 	uint32_t temp_frac_value = HEXDECIMAL;
-	float e_value = 0;
-	float fp_value = 0;
-	float m_value = 0;
-	float frac_value = 0;
+	double e_value = 0;
+	double fp_value = 0;
+	double m_value = 0;
+	double frac_value = 0;
 
 	temp_exp_value <<= (32 - (FRAC_BIT + EXP_BIT));
 	temp_exp_value >>= (32 - FRAC_BIT);
