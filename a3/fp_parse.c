@@ -81,17 +81,18 @@ void fp_funct()
 				frac_value += pow(2,i);
 			}
 			temp_frac_value >>= 1;
+
 		}
+		printf("frac_value: %f\n",frac_value );
 		m_value = frac_value;
 		fp_value = m_value * e_value;
 
 	}
 	else // NORMALIZED
 	{	
-		printf("NORMALIZED\n");
-		e_value = temp_exp_value - BIAS;
-		printf("e_value:  %f\n",e_value);
+		printf("NORMALIZED\n\n");
 
+		e_value = temp_exp_value - BIAS;
 		for (int i = FRAC_BIT; i > 0; i--)	
 		{	
 			if (temp_frac_value & 1)
@@ -107,6 +108,7 @@ void fp_funct()
 	{
 		fp_value *= (-1);
 	}
+	printf("FINAL VALUES:\n\n");
 	printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i\n",FRAC_BIT,EXP_BIT, HEXDECIMAL);
 	printf("Bias: %i\n", BIAS);
 	printf("Sign: %i\n", SIGN);
