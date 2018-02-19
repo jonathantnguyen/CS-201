@@ -117,7 +117,7 @@ void fp_funct()
  */
 void check(int argc)
 {
-		if(argc != 4)
+	if(argc != 4)
 	{
 		printf("<# of frac_bits> <# of exp_bits> <hex_to_convert>\n");
 		exit(0);
