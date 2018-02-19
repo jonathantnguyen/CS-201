@@ -76,7 +76,7 @@ void fp_funct()
 	{
 		printf("\nDENORMALIZED\n\n");
 
-		e_val_tmep = pow(2,1 - BIAS); 
+		e_val_temp = pow(2,1 - BIAS); 
 		printf("e_val_temp: %i\n",e_value);
 		printf("pow(2,1 - BIAS): %f\n",pow(2,1 - BIAS));
 
