@@ -96,7 +96,7 @@ void fp_funct()
 		printf("temp_exp_value: %i\n",temp_exp_value);
 		printf("temp_exp_value - BIAS: %i\n", temp_exp_value - BIAS );
 		e_value = temp_exp_value - BIAS;
-		printf("e_value: %f\n",e_value );
+		printf("e_value: %i\n",e_value );
 		for (int i = FRAC_BIT; i > 0; i--)	
 		{	
 			if (temp_frac_value & 1)
