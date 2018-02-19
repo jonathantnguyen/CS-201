@@ -77,6 +77,7 @@ void fp_funct()
 
 		e_value = pow(2,1 - BIAS); 
 		printf("e_value: %i\n",e_value);
+		printf("pow(2,1 - BIAS): %i\n",pow(2,1 - BIAS));
 
 		for (int i = 0; i < FRAC_BIT; i++)	
 		{	
