@@ -1,3 +1,8 @@
+/**
+ * Jonathan Nguyen
+ * CS 201
+ */
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdint.h>
@@ -40,8 +45,7 @@ int main(int argc, char const *argv[])
 	FRAC_BIT = strtol(argv[1], &end, 10);
 	EXP_BIT = strtol(argv[2], &end, 10);
 	HEXDECIMAL = strtol(argv[3], &end, 16);
-	printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i\n",FRAC_BIT,EXP_BIT, HEXDECIMAL);
-
+	//printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i\n",FRAC_BIT,EXP_BIT, HEXDECIMAL);
 	SIGN = (HEXDECIMAL & (1 << (FRAC_BIT + EXP_BIT))) ? 1 : 0;
 
 	check(argc);
@@ -50,11 +54,9 @@ int main(int argc, char const *argv[])
 	exit(0);
 }
 
+
 /**
- * @brief      Solves for floating point based on the hexdecimal given.
- *
- * @param[in]  sign  The sign
- * @param      argv  The argv
+ * @brief      Solving for the floating point
  */
 void fp_funct()
 {
@@ -66,21 +68,17 @@ void fp_funct()
 	double fp_value = 0;
 	double m_value = 0;
 	double frac_value = 0;
-	int temp_inf = (pow(2,EXP_BIT)-1);
-	printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i, temp_exp_value: %i\n",FRAC_BIT,EXP_BIT, HEXDECIMAL,temp_exp_value);
-	temp_exp_value <<= (32 - (FRAC_BIT + EXP_BIT));
-	printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i, temp_exp_value: %i\n",FRAC_BIT,EXP_BIT, HEXDECIMAL,temp_exp_value);
+	int temp_inf = (pow(2,EXP_BIT)-1); //finding the max exponent MAX
+	
+	temp_exp_value <<= (32 - (FRAC_BIT + EXP_BIT)); // bit shifting to isolate exp
 	temp_exp_value >>= (32 - EXP_BIT);
-	printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i, temp_exp_value: %i\n",FRAC_BIT,EXP_BIT, HEXDECIMAL,temp_exp_value);
+
 	if (temp_exp_value == 0) // DENORMALIZED
 	{
-		printf("\nDENORMALIZED\n\n");
+		//printf("\nDENORMALIZED\n\n");
 
 		e_val_temp = pow(2,1 - BIAS); 
-		printf("e_val_temp: %i\n",e_value);
-		printf("pow(2,1 - BIAS): %f\n",pow(2,1 - BIAS));
-
-		for (int i = 0; i < FRAC_BIT; i++)	
+		for (int i = 0; i < FRAC_BIT; i++)	 //solving for frac
 		{	
 			if (temp_frac_value & 1)
 			{	
@@ -88,21 +86,17 @@ void fp_funct()
 			}
 				temp_frac_value >>= 1;
 		}
-		printf("frac_value: %f\n",frac_value );
-		printf("(pow(2,EXP_BIT)): %f\n",(pow(2,EXP_BIT-1)));
-		m_value = frac_value/(pow(2,EXP_BIT-1));
+		//printf("frac_value: %f\n",frac_value );
+		//printf("(pow(2,EXP_BIT)): %f\n",(pow(2,EXP_BIT-1)));
+		m_value = frac_value/(pow(2,EXP_BIT-1)); // solving for mantissa
 		fp_value = m_value * e_val_temp;
 		
 	}
 	else // NORMALIZED
 	{	
-		printf("\nNORMALIZED\n\n");
+		//printf("\nNORMALIZED\n\n");
 
-		printf("temp_exp_value: %i\n",temp_exp_value);
-		printf("temp_exp_value - BIAS: %i\n", temp_exp_value - BIAS );
 		e_value = temp_exp_value - BIAS;
-		printf("e_value: %i\n",e_value );
-
 
 		if (temp_inf == temp_exp_value) //CHECKING FOR INFINITY
 		{
@@ -114,7 +108,7 @@ void fp_funct()
 				}
 				temp_frac_value >>= 1;
 			}
-			if (frac_value != 0)
+			if (frac_value != 0) //checking for NaNs
 			{
 				printf("NaN\n");
 			}
@@ -151,6 +145,9 @@ void fp_funct()
 	{
 		fp_value *= (-1);
 	}
+	printf("%f\n", fp_value);
+
+	/*
 	printf("FINAL VALUES:\n\n");
 	printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i\n",FRAC_BIT,EXP_BIT, HEXDECIMAL);
 	printf("Bias: %i\n", BIAS);
@@ -158,6 +155,7 @@ void fp_funct()
 	printf("fp_value: %f\n", fp_value);
 	printf("m_value: %f\n",m_value);
 	printf("e_value: %i\n",e_value);
+	*/
 }
 
 
