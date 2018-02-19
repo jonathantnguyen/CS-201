@@ -101,21 +101,36 @@ void fp_funct()
 		printf("e_value: %i\n",e_value );
 
 
-		if (temp_inf == temp_exp_value)
+		if (temp_inf == temp_exp_value) //CHECKING FOR INFINITY
 		{
-			if (SIGN == 1)
-			{
-				printf("-inf\n");
-				exit(0);
+			for (int i = FRAC_BIT; i > 0; i--)	
+			{	
+				if (temp_frac_value & 1)
+				{	
+					frac_value += pow(2,-i);
+				}
+				temp_frac_value >>= 1;
 			}
-			else
+			if (frac_value != 0)
 			{
-				printf("inf\n");
-				exit(0);
+				printf("NaN\n");
+			}
+			else{
+				if (SIGN == 1)
+				{
+					printf("-inf\n");
+					exit(0);
+				}
+				else
+				{
+					printf("+inf\n");
+					exit(0);
+				}
 			}
 		}
 		else
-		{
+		{	
+			temp_frac_value = HEXDECIMAL;
 			for (int i = FRAC_BIT; i > 0; i--)	
 			{	
 				if (temp_frac_value & 1)
