@@ -65,6 +65,7 @@ void fp_funct()
 	double fp_value = 0;
 	double m_value = 0;
 	double frac_value = 0;
+	int temp_inf = (pow(2,EXP_BIT)-1);
 	printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i, temp_exp_value: %i\n",FRAC_BIT,EXP_BIT, HEXDECIMAL,temp_exp_value);
 	temp_exp_value <<= (32 - (FRAC_BIT + EXP_BIT));
 	printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i, temp_exp_value: %i\n",FRAC_BIT,EXP_BIT, HEXDECIMAL,temp_exp_value);
@@ -73,22 +74,35 @@ void fp_funct()
 	if (temp_exp_value == 0) // DENORMALIZED
 	{
 		printf("\nDENORMALIZED\n\n");
-		e_value = pow(2,1 - BIAS);
-		printf("e_value:  %i\n",e_value);
-		for (int i = 0; i < FRAC_BIT; i++)	
-		{	
-			if (temp_frac_value & 1)
-			{	
-				frac_value += pow(2,i);
+		if (temp_inf == temp_exp_value)
+		{
+			if (SIGN == 1)
+			{
+				printf("-inf\n");
 			}
-			temp_frac_value >>= 1;
-
+			else
+			{
+				printf("inf\n");
+			}
 		}
-		printf("frac_value: %f\n",frac_value );
-		printf("(pow(2,EXP_BIT)): %f\n",(pow(2,EXP_BIT-1)));
-		m_value = frac_value/(pow(2,EXP_BIT-1));
-		fp_value = m_value * e_value;
+		else
+		{
+			e_value = pow(2,1 - BIAS);
+			printf("e_value:  %i\n",e_value);
+			for (int i = 0; i < FRAC_BIT; i++)	
+			{	
+				if (temp_frac_value & 1)
+				{	
+					frac_value += pow(2,i);
+				}
+				temp_frac_value >>= 1;
 
+			}
+			printf("frac_value: %f\n",frac_value );
+			printf("(pow(2,EXP_BIT)): %f\n",(pow(2,EXP_BIT-1)));
+			m_value = frac_value/(pow(2,EXP_BIT-1));
+			fp_value = m_value * e_value;
+		}
 	}
 	else // NORMALIZED
 	{	
