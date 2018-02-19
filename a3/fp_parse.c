@@ -31,6 +31,12 @@ int main(int argc, char const *argv[])
 	char * end;
 	uint32_t mask;
 
+	if(argc != 4)
+	{
+		printf("<# of frac_bits> <# of exp_bits> <hex_to_convert>\n");
+		exit(0);
+	}
+
 	FRAC_BIT = strtol(argv[1], &end, 10);
 	EXP_BIT = strtol(argv[2], &end, 10);
 	HEXDECIMAL = strtol(argv[3], &end, 16);
@@ -117,12 +123,6 @@ void fp_funct()
  */
 void check(int argc)
 {
-	if(argc != 4)
-	{
-		printf("<# of frac_bits> <# of exp_bits> <hex_to_convert>\n");
-		exit(0);
-	}
-
 	if(( FRAC_BIT < 2) || ( FRAC_BIT > 10))
 	{
 		FLAG_ERROR = 1;
