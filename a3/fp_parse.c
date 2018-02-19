@@ -67,6 +67,7 @@ void fp_funct()
 	{
 		printf("DENORMALIZED\n");
 		e_value = pow(2,1 - BIAS);
+		printf("e_value:  %f\n",e_value);
 		for (int i = EXP_BIT; i > 0; i--)	
 		{	
 			if (temp_frac_value & 1)
