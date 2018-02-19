@@ -71,7 +71,7 @@ void fp_funct()
 	printf("FRAC_BIT: %i, EXP_BIT: %i, HEXDECIMAL: %i\n",FRAC_BIT,EXP_BIT, HEXDECIMAL);
 	if (temp_exp_value == 0) // DENORMALIZED
 	{
-		printf("DENORMALIZED\n");
+		printf("\nDENORMALIZED\n\n");
 		e_value = pow(2,1 - BIAS);
 		printf("e_value:  %f\n",e_value);
 		for (int i = 0; i < FRAC_BIT; i++)	
@@ -91,7 +91,7 @@ void fp_funct()
 	}
 	else // NORMALIZED
 	{	
-		printf("NORMALIZED\n\n");
+		printf("\nNORMALIZED\n\n");
 		printf("temp_exp_value: %i\n",temp_exp_value);
 		e_value = temp_exp_value - BIAS;
 		for (int i = FRAC_BIT; i > 0; i--)	
