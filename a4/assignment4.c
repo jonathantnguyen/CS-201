@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <math.h>
+#include <ctype.h>
 
 int _menu();
 
@@ -25,7 +26,7 @@ int _menu()
 
 	scanf("%d", &choice);
 
-	if ((choice < 0) ||(choice > 6))
+	if ((choice < 0) || (choice > 6) || isalpha(choice))
 	{
 		printf("Invalid input. Try again.\n");
 		_menu();
