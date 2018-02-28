@@ -26,7 +26,7 @@ int _menu()
 
 	scanf("%d", &choice);
 
-	if ((choice < 0) || (choice > 6) || isalpha(choice))
+	if ((choice < 0) || (choice > 6) || (!isalpha(choice)))
 	{
 		printf("Invalid input. Try again.\n");
 		_menu();
