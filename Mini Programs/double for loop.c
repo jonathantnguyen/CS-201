@@ -6,6 +6,7 @@ int main(){
 	int l = 0;
 	int i;
 	int j;
+	int k = 0;
 
 	for(i = 0; i < n; i++)
 	{
@@ -16,7 +17,9 @@ int main(){
 			printf("j: %i\n", j);
 			//l += 1;
 		//	printf("%i\n", l );
+			k++;
 		}
 	}
+	printf("%i\n",k);
 exit;
 }
