@@ -19,7 +19,7 @@ int main(int argc, char const *argv[])
 
 int _menu()
 {
-	int choice = NULL;
+	int choice = 0;
 
 	printf("Please enter one of the following options by it's corresponding number, and press ENTER\n");
 	printf("\n 0. Exit\n 1. Addition\n 2. Subtraction\n 3. Multiplication\n 4. Division\n 5. Module\n 6. Reverse Input\n\n");
