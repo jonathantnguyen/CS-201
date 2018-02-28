@@ -18,6 +18,5 @@ int main(int argc, char const *argv[])
 void print_menu()
 {
 	printf("Please enter one of the following options by it's corresponding number, and press ENTER\n");
-	printf("     0. Exit\n     1. Addition\n     2.Subtraction\n     3.Multiplication\n
-	     4.Division\n     5.Module\n     6.Reverse Input\n");
+	printf("0. Exit\n 1. Addition\n 2. Subtraction\n 3. Multiplication\n 4. Division\n 5. Module\n 6. Reverse Input\n");
 } 
