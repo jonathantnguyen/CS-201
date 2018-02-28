@@ -3,11 +3,12 @@
 #include <stdint.h>
 #include <math.h>
 
-void print_menu();
+int _menu();
 
 int main(int argc, char const *argv[])
 {
-	print_menu();
+	int choice = _menu();
+
 
 
 
@@ -15,8 +16,20 @@ int main(int argc, char const *argv[])
 
 }
 
-void print_menu()
+int _menu()
 {
+	int choice;
+
 	printf("Please enter one of the following options by it's corresponding number, and press ENTER\n");
-	printf("\n 0. Exit\n 1. Addition\n 2. Subtraction\n 3. Multiplication\n 4. Division\n 5. Module\n 6. Reverse Input\n");
+	printf("\n 0. Exit\n 1. Addition\n 2. Subtraction\n 3. Multiplication\n 4. Division\n 5. Module\n 6. Reverse Input\n\n");
+
+	scanf("%i", choice);
+
+	if ((choice < 0) ||(choice > 6))
+	{
+		printf("Invalid input. Try again.\n");
+		_menu();
+	}
+
+	return choice;
 } 
