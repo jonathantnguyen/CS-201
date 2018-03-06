@@ -17,7 +17,7 @@ int main(int argc, char const *argv[])
 
 	char * end;
 	char key[] = "0x";
-	for (int i = 0; i < argv; ++i)
+	for (int i = 0; i < argc; ++i)
 	{
 		if (strcmp(key,*argv[i]) >= 2)
 		{
