@@ -6,7 +6,7 @@
 
 int main(int argc, char const *argv[])
 {
-	if ((argc =< 1) || (argc > 16))
+	if ((argc < 2) || (argc > 16))
 		{
 			printf("[Error] Enter between 2 to 15 arguments.\n");
 			return 0;
