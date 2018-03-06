@@ -3,6 +3,7 @@
 #include <stdint.h>
 #include <math.h>
 #include <ctype.h>
+#include <string.h>
 
 int main(int argc, char const *argv[])
 {
