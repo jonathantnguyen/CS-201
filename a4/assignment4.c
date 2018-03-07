@@ -34,7 +34,7 @@ int main(int argc, char const *argv[])
 {
 	Menu menu;
 	menu.menu_Size = min(count, max_Menu_Size);
-  	for (i=0; i < menu.menu_Size; i++)
+  	for (int i=0; i < menu.menu_Size; i++)
   	{
     	menu.items[i] = choices[i];
   	}
