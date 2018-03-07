@@ -16,7 +16,7 @@ typedef struct _Menu
 
 char *choices[] = {"Exit", "Addition", "Subtraction",
   "Multiplication", "Division", "Modulo", "Reverse Input"};
-int menu_size = sizeof(choices)/sizeof(choice[0]);
+int menu_size = sizeof(choices)/sizeof(choices[0]);
 
 void printMenu(Menu *menu)
 {
