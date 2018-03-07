@@ -10,20 +10,20 @@
 #define max_menu_size 7
 typedef struct _Menu
 {
-	int menu_size;
-	char *items[max_menu_size];
+	int menu_Size;
+	char *items[max_Menu_Size];
 } Menu;
 
 char *choices[] = {"Exit", "Addition", "Subtraction",
   "Multiplication", "Division", "Modulo", "Reverse Input"};
-int menu_size = sizeof(choices)/sizeof(choices[0]);
+int menu_Size = sizeof(choices)/sizeof(choices[0]);
 
 void printMenu(Menu *menu)
 {
   int i;
 
   printf("\n");
-  for (i=0; i< menu->menu_size; i++) 
+  for (i=0; i< menu->menu_Size; i++) 
   {
     printf("%d. %s\n", i, menu->items[i]);
   }
@@ -33,8 +33,8 @@ void printMenu(Menu *menu)
 int main(int argc, char const *argv[])
 {
 	Menu menu;
-	menu.menu_size = min(count, maxItems);
-  	for (i=0; i < menu.menu_size; i++)
+	menu.menu_Size = min(count, max_Menu_Size);
+  	for (i=0; i < menu.menu_Size; i++)
   	{
     	menu.items[i] = choices[i];
   	}
