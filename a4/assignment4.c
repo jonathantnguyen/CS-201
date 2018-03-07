@@ -19,6 +19,8 @@ int main(int argc, char const *argv[])
 	char key[] = "x";
 	for (int i = 1; i < argc; ++i)
 	{	int j = strcmp(key,argv[i]);
+		int k = sizeof(argv[i]);
+		printf("sizeof: %d\n", k);
 		printf("strcmp: %d\n", j);
 		if (strcmp(key,argv[i][2]) == 0)
 		{
