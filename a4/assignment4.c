@@ -20,7 +20,7 @@ int main(int argc, char const *argv[])
 	for (int i = 1; i < argc; ++i)
 	{	int j = strcmp(key,argv[i]);
 		printf("strcmp: %d\n", j);
-		if (strcmp(key,argv[i]) >= 2)
+		if (strcmp(key,argv[i]) < 0)
 		{
 			printf("It's hex.\n");
 		}
