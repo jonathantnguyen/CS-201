@@ -5,7 +5,39 @@
 #include <ctype.h>
 #include <string.h>
 
+typedef struct _Menu
+{
+	int menu_size;
+	char *items[menu_size]
+} Menu;
+
+char *choices[] = {"Exit", "Addition", "Subtraction",
+  "Multiplication", "Division", "Modulo", "Reverse Input"};
+
+int menu_size = sizeof(choices);
+
+void printMenu(Menu *menu)
+{
+  int i;
+
+  printf("\n");
+  for (i=0; i< menu->menu_size; i++) 
+  {
+    printf("%d. %s\n", i, menu->items[i]);
+  }
+  printf("\n");
+}
+
 int main(int argc, char const *argv[])
+{
+	Menu * menu;
+
+	printMenu(&menu);
+}
+
+
+
+/*int main(int argc, char const *argv[])
 {
 	int argi[argc];
 
@@ -23,9 +55,11 @@ int main(int argc, char const *argv[])
 		if (strncmp(key,argv[i], size_str) >= 0)
 		{
 			printf("It's hex.\n");
+			argi[i] = strtol(argv[i], &end, 16)
 		}
 		else
 			printf("It's dec.\n");
 	}
 }
+*/
 
