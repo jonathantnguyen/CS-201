@@ -33,6 +33,12 @@ void printMenu(Menu *menu)
 int main(int argc, char const *argv[])
 {
 	Menu menu;
+	menu.menu_size = min(count, maxItems);
+  	for (i=0; i < menu.menu_size; i++)
+  	{
+    	menu.items[i] = choices[i];
+  	}
+	
 	printMenu(&menu);
 	return 0;
 }
