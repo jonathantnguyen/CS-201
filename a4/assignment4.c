@@ -18,7 +18,8 @@ int main(int argc, char const *argv[])
 	char * end;
 	char key[] = "0x";
 	for (int i = 1; i < argc; ++i)
-	{
+	{	int j = strcmp(key,argv[i]);
+		printf("strcmp: %d\n", j);
 		if (strcmp(key,argv[i]) >= 2)
 		{
 			printf("It's hex.\n");
