@@ -7,7 +7,7 @@
 
 
 #define min(a, b) ((a) < (b) ? (a) : (b))
-#define maxItems 7
+#define max_menu_size 7
 typedef struct _Menu
 {
 	int menu_size;
