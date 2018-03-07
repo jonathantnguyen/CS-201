@@ -22,7 +22,7 @@ int main(int argc, char const *argv[])
 		int k = sizeof(argv[i]);
 		printf("sizeof: %d\n", k);
 		printf("strcmp: %d\n", j);
-		if (strcmp(key,argv[i][2]) == 0)
+		if (strcmp(key,argv[i]) >= 0)
 		{
 			printf("It's hex.\n");
 		}
