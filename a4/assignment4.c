@@ -5,16 +5,18 @@
 #include <ctype.h>
 #include <string.h>
 
+
+#define min(a, b) ((a) < (b) ? (a) : (b))
+#define maxItems 7
 typedef struct _Menu
 {
 	int menu_size;
-	char *items[menu_size]
+	char *items[max_menu_size];
 } Menu;
 
 char *choices[] = {"Exit", "Addition", "Subtraction",
   "Multiplication", "Division", "Modulo", "Reverse Input"};
-
-int menu_size = sizeof(choices);
+int menu_size = sizeof(choices)/sizeof(choice[0]);
 
 void printMenu(Menu *menu)
 {
@@ -30,14 +32,14 @@ void printMenu(Menu *menu)
 
 int main(int argc, char const *argv[])
 {
-	Menu * menu;
-
+	Menu menu;
 	printMenu(&menu);
+	return 0;
 }
 
 
-
-/*int main(int argc, char const *argv[])
+/*
+int main(int argc, char const *argv[])
 {
 	int argi[argc];
 
@@ -52,7 +54,7 @@ int main(int argc, char const *argv[])
 	int size_str = 2;
 	for (int i = 1; i < argc; ++i)
 	{
-		if (strncmp(key,argv[i], size_str) >= 0)
+		if (strncmp(key,argv[i], size_str) == 0)
 		{
 			printf("It's hex.\n");
 			argi[i] = strtol(argv[i], &end, 16)
@@ -61,5 +63,5 @@ int main(int argc, char const *argv[])
 			printf("It's dec.\n");
 	}
 }
-*/
 
+*/
