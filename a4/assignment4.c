@@ -16,13 +16,11 @@ int main(int argc, char const *argv[])
 		}
 
 	char * end;
-	char key[] = "x";
+	char key[] = "0x";
+	int size_str = 2;
 	for (int i = 1; i < argc; ++i)
-	{	int j = strcmp(key,argv[i]);
-		int k = sizeof(argv[i]);
-		printf("sizeof: %d\n", k);
-		printf("strcmp: %d\n", j);
-		if (strcmp(key,argv[i]) >= 0)
+	{
+		if (strncmp(key,argv[i], size_str) >= 0)
 		{
 			printf("It's hex.\n");
 		}
