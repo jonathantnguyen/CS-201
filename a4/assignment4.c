@@ -6,68 +6,286 @@
 #include <string.h>
 
 
+/**
+ * @brief      So we do not exceed boundaries for our menu list (7) and the
+ *             command-line arguments (15)
+ *
+ * @param      a     menu_Size (7), arg_Size (15)
+ * @param      b     MAXMENUSIZE (7), MAXARGS (15)
+ *
+ * @return     (7) for menu_Size, (1 - 15) for arg_Size
+ */
 #define min(a, b) ((a) < (b) ? (a) : (b))
-#define max_menu_size 7
+
+#define MAXMENUSIZE 15
+#define MAXARGS 15
+
+/**
+ * Menu struct, to hold, delete, or add options. Currently max items is 15
+ */
 typedef struct _Menu
 {
-	int menu_Size;
-	char *items[max_Menu_Size];
+	int 		menu_Size;
+	char 	   *items[MAXMENUSIZE];
 } Menu;
 
-char *choices[] = {"Exit", "Addition", "Subtraction",
-  "Multiplication", "Division", "Modulo", "Reverse Input"};
-int menu_Size = sizeof(choices)/sizeof(choices[0]);
-
-void printMenu(Menu *menu)
+/**
+ * Command-line argument struct, holds up to 15 arguments integer or string; String length has no current limit;
+ */
+typedef struct argList
 {
-  int i;
+	int 		arg_Size;
+	char 	   *args[MAXARGS];
+	float 		argi[MAXARGS];
+} ArgList;
+ArgList argList;
 
-  printf("\n");
-  for (i=0; i< menu->menu_Size; i++) 
-  {
-    printf("%d. %s\n", i, menu->items[i]);
-  }
-  printf("\n");
-}
+/**
+ *  Function call struct, we're holding the size of each string 
+ */
+typedef struct 
+{
+    char   	   *string;
+} funcParam_t;
+
+/**
+ * Dispatch Table Struct, 
+ */
+typedef void funcPtr_t(funcParam_t *);
+typedef struct 
+{
+    char       *description;
+    funcPtr_t  *name;
+}dispatch_Table_Entry;
+
+
+void printMenu();
+void menu_Setup();
+void convert(int argc, char const *argv[]);
+void func_exit();
+void addition();
+void subtraction();
+void multiplication();
+void division();
+void modulo();
+void reverse_input();
+
+dispatch_Table_Entry fdt[] =
+{
+	{"Exit",  func_exit},
+	{"Addition", addition},
+	{"Subtraction",	subtraction},
+	{"Multiplication", multiplication},
+	{"Division", division},
+	{"Modulo", modulo},
+	{"Reverse Input", reverse_input},
+};
+int fdt_Size = sizeof(fdt) / sizeof(fdt[0]);
+
+
+char *choices[] = {"Exit", "Addition", "Subtraction",
+  "Multiplication", "Division", "Modulo", "Reverse Input",};
+int menu_Size = sizeof(choices)/sizeof(choices[0]);
 
 int main(int argc, char const *argv[])
 {
+
+	convert(argc, argv);
+	printMenu();
+	menu_Setup();
+
+	exit(0);
+}
+
+
+/**
+ * @brief      Printing out the Menu from the struct _Menu (Menu)
+ *
+ * @param      menu  ptr to the menu.
+ */
+void printMenu()
+{
 	Menu menu;
-	menu.menu_Size = min(count, max_Menu_Size);
+	menu.menu_Size = min(menu_Size, MAXMENUSIZE);
+
   	for (int i=0; i < menu.menu_Size; i++)
   	{
     	menu.items[i] = choices[i];
   	}
-	
-	printMenu(&menu);
-	return 0;
+	int i;
+
+  	printf("\n");
+  	for (i=0; i< menu.menu_Size; i++) 
+  	{
+    	printf("%d. %s\n", i, menu.items[i]);
+  	}
+  	printf("\n");
 }
 
-
-/*
-int main(int argc, char const *argv[])
+void menu_Setup()
 {
-	int argi[argc];
+	int i;
+	int index;
+	fdt_Size = min(fdt_Size, menu_Size);
 
-	if ((argc < 3) || (argc > 16))
-		{
-			printf("[Error] Enter between 2 to 15 arguments.\n");
-			return 0;
-		}
+    funcParam_t *paramList[fdt_Size];
+
+    for (i=0; i<fdt_Size; i++) 
+    {
+        paramList[i] = (funcParam_t *)malloc(sizeof(funcParam_t));
+        paramList[i]->string = fdt[i].description;
+    }
+    printf("Enter Number: ");
+    scanf("%i", &index);
+
+	if (index >= 0 && index <= (fdt_Size-1))
+	{
+		printf("Invoking %s\n\n", fdt[index].description);
+    	(*fdt[index].name)(paramList[index]);
+    }
+    else
+    {
+    	printf("[ERROR]: Invalid option. \n");
+    	menu_Setup();
+    }
+    for (i = 0; i < fdt_Size; i++)
+    {
+    	free(paramList[i]);
+    }
+}
+
+/**
+ * @brief      Convert hex to decimal in command-line arguments
+ *
+ * @param[in]  argc   the size (count) of command line arguments
+ * @param      argv   the values of command-line arguments
+ * @param[in]  manip  The manip
+ */
+void convert(int argc, char const *argv[])
+{
+	argList.arg_Size = min(argc-1,MAXARGS);
+
+	if ((argList.arg_Size == 0) || (argc-1 >= 16))
+	{
+		printf("[ERROR]: Enter between 1 to 15 command-line arguments. \n\n");
+		exit(0);
+	}
 
 	char * end;
 	char key[] = "0x";
 	int size_str = 2;
-	for (int i = 1; i < argc; ++i)
+
+
+	for (int i = 0; i < argList.arg_Size; i++)
 	{
-		if (strncmp(key,argv[i], size_str) == 0)
+		//paramList[i] = (funcParam_t *)malloc(sizeof(funcParam_t));
+        //paramList[i]->string = fdt[i].description;
+
+        argList[i]->args = (ArgList * argList)malloc(sizeof(ArgList));
+        argList[i]->args = argv[i+1];
+
+		if (strncmp(key,argv[i+1], size_str) == 0)
 		{
-			printf("It's hex.\n");
-			argi[i] = strtol(argv[i], &end, 16)
+			//printf("It's hex.\n");
+			argList.argi[i] = strtol( argv[i+1], &end, 16 );
 		}
 		else
-			printf("It's dec.\n");
+		{
+			//printf("It's dec.\n");
+			argList.argi[i] = strtol( argv[i+1], &end, 10 );
+		}
 	}
 }
 
-*/
+void func_exit()
+{
+	printf("Exited");
+}
+
+void addition()
+{	
+	float total = 0;
+	for (int i = 0; i < argList.arg_Size; i++)
+	{
+		total += argList.argi[i];
+		printf("Total: %f\n", total);
+		printf("argList.argi[%i]: %f\n", i,argList.argi[i]);
+	}
+	printf("Total: %f\n", total);
+}
+void subtraction()
+{	
+	float total = argList.argi[0];
+	for (int i = 1; i < argList.arg_Size; i++)
+	{
+		total -= argList.argi[i];
+		//printf("Total: %f\n", total);
+		//printf("argList.argi[%i]: %f\n", i,argList.argi[i]);
+	}
+	printf("Total: %f\n", total);	
+
+}
+void multiplication()
+{
+	float total = argList.argi[0];
+	for (int i = 1; i < argList.arg_Size; i++)
+	{
+		total *= argList.argi[i];
+		//printf("Total: %f\n", total);
+		//printf("argList.argi[%i]: %f\n", i,argList.argi[i]);
+	}
+	printf("Total: %f\n", total);	
+
+}
+void division()
+{
+	if(argList.arg_Size < 2)
+	{
+		printf("[ERROR]: 2nd argument is needed to compute. \n");
+		exit(0);
+	}
+	//printf("1: %f 2: %f \n",argList.argi[0],argList.argi[1]);
+	float total = (argList.argi[0])/(argList.argi[1]);
+	printf("Total: %f\n", total);
+
+}
+void modulo()
+{
+	if(argList.arg_Size < 2)
+	{
+		printf("[ERROR]: 2nd argument is needed to compute. \n");
+		exit(0);
+	}
+	int arg_zero = (argList.argi[0]);
+	int arg_one = (argList.argi[1]);
+	//printf("1: %f 2: %f \n",argList.argi[0],argList.argi[1]);
+	int total = arg_zero % arg_one;
+	printf("Total: %d\n", total);	
+
+}
+void reverse_input()
+{
+	for (int i = argList.arg_Size; i >=0 ; i--)
+	{
+		printf("%s\n",argList.args[i]);
+		//int stringLength = strlen(argList.args[i]);
+		// for (int j = stringLength; j >= 0; j--)
+		// {
+		// 	//printf("%c\n", argList.args[i][j]);
+		// }
+	}
+}
+
+	// 	for (int i = argList.arg_Size; i >= 0; i--)
+	// {	
+	// 	printf("argList.arg_Size: %i\n", argList.arg_Size);
+	// 	printf("i: %i\n", i );
+
+	// }
+	// 	//printf("%s\n", argList.args[i] );
+	// 	int stringLength = strlen(argList.args[i]);
+	// 	//printf("stringLength: %i\n", stringLength);
+	// 	for (int j = stringLength; j >= 0; j--)
+	// 	{
+	// 		printf("%c\n", argList.args[i][j]);
+	// 	}
