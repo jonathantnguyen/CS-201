@@ -35,7 +35,7 @@ typedef struct _Menu
 typedef struct argList
 {
 	int 		arg_Size;
-	char 	   *args;
+	char 	   *args[MAXARGS];
 	float 		argi[MAXARGS];
 } ArgList;
 ArgList argList;
@@ -180,19 +180,12 @@ void convert(int argc, char const *argv[])
 	{
 		//paramList[i] = (funcParam_t *)malloc(sizeof(funcParam_t));
         //paramList[i]->string = fdt[i].description;
-		argList.args = (char**)malloc(sizeof(char*) * (argc-1);
+		// argList.args = (char**)malloc(sizeof(char*) * (argc-1));
 
 		int stringLength = strlen(argv[i+1]);
 		argList.args[i] = (char *)malloc(sizeof(char) * stringLength);
 
-		printf("stringLength: %i\n", stringLength);
-		for (int j = 0; j < stringLength; j++)
-		{
-
-		}
-
-
-
+		strcpy(argList.args[i], argv[i+1]);
 
 		if (strncmp(key,argv[i+1], size_str) == 0)
 		{
@@ -275,14 +268,18 @@ void modulo()
 }
 void reverse_input()
 {
-	for (int i = argList.arg_Size; i >=0 ; i--)
+	//printf("argList.arg_Size: %i\n", argList.arg_Size );
+	for (int i = argList.arg_Size-1; i >=0 ; --i)
 	{
-		//int stringLength = strlen(argList.args[i]);
-		// for (int j = stringLength; j >= 0; j--)
-		// {
-		// 	//printf("%c\n", argList.args[i][j]);
-		// }
+		//printf("i:%i\n", i);
+		int stringLength = strlen(argList.args[i]);
+		for (int j = stringLength-1; j >= 0; --j)
+		{//			printf("j: %i\n", j);
+			printf("%c", argList.args[i][j]);
+		}
+		printf(" ");
 	}
+	printf("\n");
 }
 
 	// 	for (int i = argList.arg_Size; i >= 0; i--)
