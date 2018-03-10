@@ -35,7 +35,7 @@ typedef struct _Menu
 typedef struct argList
 {
 	int 		arg_Size;
-	char 	   *args[MAXARGS];
+	char 	   *args;
 	float 		argi[MAXARGS];
 } ArgList;
 ArgList argList;
@@ -180,9 +180,17 @@ void convert(int argc, char const *argv[])
 	{
 		//paramList[i] = (funcParam_t *)malloc(sizeof(funcParam_t));
         //paramList[i]->string = fdt[i].description;
+		int stringLength = strlen(argv[i+1]);
+		argList.args[i] = (char *)malloc(sizeof(argv[i+1]) * stringLength);
 
-        argList[i]->args = (ArgList * argList)malloc(sizeof(ArgList));
-        argList[i]->args = argv[i+1];
+		printf("stringLength: %i\n", stringLength);
+		for (int j = 0; j < stringLength; j++)
+		{
+
+		}
+
+
+
 
 		if (strncmp(key,argv[i+1], size_str) == 0)
 		{
@@ -267,7 +275,6 @@ void reverse_input()
 {
 	for (int i = argList.arg_Size; i >=0 ; i--)
 	{
-		printf("%s\n",argList.args[i]);
 		//int stringLength = strlen(argList.args[i]);
 		// for (int j = stringLength; j >= 0; j--)
 		// {
