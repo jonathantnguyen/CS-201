@@ -180,8 +180,10 @@ void convert(int argc, char const *argv[])
 	{
 		//paramList[i] = (funcParam_t *)malloc(sizeof(funcParam_t));
         //paramList[i]->string = fdt[i].description;
+		argList.args = (char**)malloc(sizeof(char*) * (argc-1);
+
 		int stringLength = strlen(argv[i+1]);
-		argList.args[i] = (char *)malloc(sizeof(argv[i+1]) * stringLength);
+		argList.args[i] = (char *)malloc(sizeof(char) * stringLength);
 
 		printf("stringLength: %i\n", stringLength);
 		for (int j = 0; j < stringLength; j++)
