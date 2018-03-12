@@ -1,37 +1,149 @@
-Script started on Sun 18 Feb 2018 10:15:28 PM PST
+Script started on Sun 11 Mar 2018 07:53:04 PM PDT
+jonguyen@ada:~/Documents/CS201/jonguyen$ exitmake[2Plscd DocumentsOc[K[4Plscd DOcocumentsls[Kmakeexit[Kls
+assignment4.c  makefile  typescript
 jonguyen@ada:~/Documents/CS201/jonguyen$ make
-gcc   fp_parse.c -lm -o fp_parse
-jonguyen@ada:~/Documents/CS201/jonguyen$ ./fp_parse 4 4 a8
-12.000000
-jonguyen@ada:~/Documents/CS201/jonguyen$ ./fp_parse 4 4 a8[K[K[K[K[K[K[K
-<# of frac_bits> <# of exp_bits> <hex_to_convert>
-jonguyen@ada:~/Documents/CS201/jonguyen$ ./fp_parse 11 4 33f
-Number of fraction bits between 2 and 10
-jonguyen@ada:~/Documents/CS201/jonguyen$ ./fp_parse 11 4 33f[1P 33f[1P33f[1P 33f[1P 33f4 33f[C 33f8 33f
-Number of exponent bits (k) between 3 and 5
-jonguyen@ada:~/Documents/CS201/jonguyen$ ./fp_parse 4 8 33f3[K4 4 [K[K[K[K[K[K[K[K[K4 1af
--15.500000
-jonguyen@ada:~/Documents/CS201/jonguyen$ ./fp_parse 4 4 1af[1Paf
-15.500000
-jonguyen@ada:~/Documents/CS201/jonguyen$ ./fp_parse 4 4 af[K[K[K[K[K[K33[K[K 3 [K[K[K3 3 3c
-NaN
-jonguyen@ada:~/Documents/CS201/jonguyen$ ./fp_parse 3 3 3c[K8
-+inf
-jonguyen@ada:~/Documents/CS201/jonguyen$ ./fp_parse 3 3 38[K[K78
--inf
-jonguyen@ada:~/Documents/CS201/jonguyen$ ./fp_parse 3 3 78[K[K26
-3.500000
-jonguyen@ada:~/Documents/CS201/jonguyen$ ./fp_parse 3 3 26[K[K18
-1.000000
-jonguyen@ada:~/Documents/CS201/jonguyen$ ./fp_parse 3 3 1826[K[K3f
-NaN
-jonguyen@ada:~/Documents/CS201/jonguyen$ ./fp_parse 3 3 3f[K7
-15.000000
-jonguyen@ada:~/Documents/CS201/jonguyen$ ./fp_parse 3 3 37[K[K[K[K[K[K4 4 0
-0.000000
-jonguyen@ada:~/Documents/CS201/jonguyen$ 4 4 100./fp_parse 4 4 0[K100
--0.000000
+gcc   assignment4.c -lm -o assignment4
+jonguyen@ada:~/Documents/CS201/jonguyen$ make[2Plsexitmake[2Plsmakeexit[2Plsmake[K./assignment4 FF12[K[K[K21[K[K[K0xFA -12 0x31 300
+
+0. Exit
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Modulo
+6. Reverse Input
+
+Enter Number: 0
+Invoking Exit
+
+Exitedjonguyen@ada:~/Documents/CS201/jonguyen$ ./assignment4 0xFA -12 0x31 300
+
+0. Exit
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Modulo
+6. Reverse Input
+
+Enter Number: 1^[[A     1
+Invoking Addition
+
+Total: 250.000000
+argList.argi[0]: 250.000000
+Total: 238.000000
+argList.argi[1]: -12.000000
+Total: 287.000000
+argList.argi[2]: 49.000000
+Total: 587.000000
+argList.argi[3]: 300.000000
+Total: 587.000000
+jonguyen@ada:~/Documents/CS201/jonguyen$ ./assignment4 0xFA -12 0x31 3002[K
+
+0. Exit
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Modulo
+6. Reverse Input
+
+Enter Number: 2
+Invoking Subtraction
+
+Total: -87.000000
+jonguyen@ada:~/Documents/CS201/jonguyen$ ./assignment4 0xFA -12 0x31 300
+
+0. Exit
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Modulo
+6. Reverse Input
+
+Enter Number: 3
+Invoking Multiplication
+
+Total: -44100000.000000
+jonguyen@ada:~/Documents/CS201/jonguyen$ ./assignment4 0xFA -12 0x31 300[K[K[K[K[K[K[K[K[K
+
+0. Exit
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Modulo
+6. Reverse Input
+
+Enter Number: 4
+Invoking Division
+
+Total: -20.833334
+jonguyen@ada:~/Documents/CS201/jonguyen$ ./assignment4 0xFA -12
+
+0. Exit
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Modulo
+6. Reverse Input
+
+Enter Number: 5
+Invoking Modulo
+
+Total: 10
+jonguyen@ada:~/Documents/CS201/jonguyen$ ./assignment4 0xFA -12
+
+0. Exit
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Modulo
+6. Reverse Input
+
+Enter Number: 6
+Invoking Reverse Input
+
+21- AFx0 
+jonguyen@ada:~/Documents/CS201/jonguyen$ ./assignment4 0xFA -12[K[K[K[K[K[K[K[K[K hello  -12 [K[K[K[K[K-12 )X[K[K0[K)x[K[K0x12[K[K12 3000[K )[K0x3[KFA
+
+0. Exit
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Modulo
+6. Reverse Input
+
+Enter Number: 6
+Invoking Reverse Input
+
+AFx0 003 21x0 21- olleh 
+jonguyen@ada:~/Documents/CS201/jonguyen$ ./assignment4 hello -12 0x12 300 0xFA
+
+0. Exit
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Modulo
+6. Reverse Input
+
+Enter Number: 7
+[ERROR]: Invalid option. 
+Enter Number: ^[[A    0
+Invoking Exit
+
+Exitedjonguyen@ada:~/Documents/CS201/jonguyen$ ./assignment4 hello -12 0x12 300 0xFA [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K1 2 3 4 5 6 7 8 19[K[K9 10 11 12 13 14 15 16
+[ERROR]: Enter between 1 to 15 command-line arguments. 
+
+jonguyen@ada:~/Documents/CS201/jonguyen$ ./assignment4 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+[ERROR]: Enter between 1 to 15 command-line arguments. 
+
 jonguyen@ada:~/Documents/CS201/jonguyen$ exit
 exit
 
-Script done on Sun 18 Feb 2018 10:18:06 PM PST
+Script done on Sun 11 Mar 2018 07:56:09 PM PDT

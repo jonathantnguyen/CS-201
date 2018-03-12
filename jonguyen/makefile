@@ -1,7 +1,7 @@
 CC=gcc
 CFLAGS=
 DFLAGS=
-PROGS= fp_parse
+PROGS= assignment4
 
 all: $(PROGS)
 
