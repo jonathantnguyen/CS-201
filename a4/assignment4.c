@@ -58,7 +58,9 @@ typedef struct
     funcPtr_t  *name;
 }dispatch_Table_Entry;
 
-
+/**
+ * @brief      Functions needed to execute each option
+ */
 void printMenu();
 void menu_Setup();
 void convert(int argc, char const *argv[]);
@@ -87,6 +89,14 @@ char *choices[] = {"Exit", "Addition", "Subtraction",
   "Multiplication", "Division", "Modulo", "Reverse Input",};
 int menu_Size = sizeof(choices)/sizeof(choices[0]);
 
+/**
+ * @brief      Main just to call the functions
+ *
+ * @param[in]  argc  Size of Command-Line arguements
+ * @param      argv  Command-Line Values
+ *
+ * @return     No return, exit(0)
+ */				
 int main(int argc, char const *argv[])
 {
 
@@ -122,6 +132,9 @@ void printMenu()
   	printf("\n");
 }
 
+/**
+ * @brief      Store and call
+ */
 void menu_Setup()
 {
 	int i;
@@ -178,9 +191,6 @@ void convert(int argc, char const *argv[])
 
 	for (int i = 0; i < argList.arg_Size; i++)
 	{
-		//paramList[i] = (funcParam_t *)malloc(sizeof(funcParam_t));
-        //paramList[i]->string = fdt[i].description;
-		// argList.args = (char**)malloc(sizeof(char*) * (argc-1));
 
 		int stringLength = strlen(argv[i+1]);
 		argList.args[i] = (char *)malloc(sizeof(char) * stringLength);
@@ -278,20 +288,6 @@ void reverse_input()
 			printf("%c", argList.args[i][j]);
 		}
 		printf(" ");
-	}
+	}  	
 	printf("\n");
 }
-
-	// 	for (int i = argList.arg_Size; i >= 0; i--)
-	// {	
-	// 	printf("argList.arg_Size: %i\n", argList.arg_Size);
-	// 	printf("i: %i\n", i );
-
-	// }
-	// 	//printf("%s\n", argList.args[i] );
-	// 	int stringLength = strlen(argList.args[i]);
-	// 	//printf("stringLength: %i\n", stringLength);
-	// 	for (int j = stringLength; j >= 0; j--)
-	// 	{
-	// 		printf("%c\n", argList.args[i][j]);
-	// 	}
