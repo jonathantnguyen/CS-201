@@ -165,11 +165,6 @@ void menu_Setup()
     {
     	free(paramList[i]);
     }
-    for (int i = 0; i < argList.arg_Size; i++)
-    {
-    	free(argList.args[i]);
-    	free(argList.argi[i]);
-    }
 }
 
 /**
