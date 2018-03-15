@@ -1,9 +1,9 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <stdint.h>
-#include <unistd.h>
-#include <sys/types.h>
 
+
+int getuid()
+{
+	return 603375;
+}
 
 int main()
 {
